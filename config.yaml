@@ -1,0 +1,42 @@
+seed: 42
+study_area:
+  nuts0: UK
+  nuts1: UKI
+  nuts_year: 2021
+  name: Greater London
+  # west, south, east, north — padded envelope; the place fetch tightens
+  # this to the borough polygons when those have been downloaded
+  bbox: [-0.52, 51.28, 0.34, 51.70]
+municipality_source: ons_lad   # gisco_lau | ons_lad
+ons_lad:
+  vintage: "December 2021"
+  code_prefix: E09             # 32 London boroughs plus the City of London
+overture_release: "2026-11-18.0"
+places:
+  sample_size: 300
+  border_buffer_m: 50
+  min_confidence: 0.5
+  dedupe_distance_m: 30
+truth:
+  # lengths at or below this are treated as corner contact or generalisation noise
+  adjacency_min_length_m: 10
+  # a borough must lie mostly inside one NUTS-3 polygon
+  parent_min_share: 0.8
+metric_crs: "EPSG:27700"
+gisco:
+  resolution: "01M"
+  crs: "EPSG:4326"
+tasks:
+  types: [spatial_inference, category_inference, combined_filter, not_determinable]
+  difficulties: [easy, medium, hard]
+  per_type_per_difficulty: 4
+  anonymised: true
+conditions:
+  - {version: v0, format: en}
+  - {version: v1, format: en}
+  - {version: v2, format: en}
+  - {version: v2, format: ttl}
+  - {version: v2, format: json}
+models: [TBD-small, TBD-mid, TBD-frontier]
+n_runs: 3
+temperature: 0.7

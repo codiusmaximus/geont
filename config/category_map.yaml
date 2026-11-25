@@ -1,0 +1,95 @@
+# Hand-reviewed map from Overture taxonomy.primary (release 2026-11-18.0)
+# onto the benchmark subcategories. Any primary category not listed here is
+# dropped. Overture has no "supermarket" label. grocery_store and superstore
+# are stand-ins, and only the chain names in name_include are kept: the rest
+# of those two labels are corner shops, traders and non-food stores.
+
+categories:
+  Retail: [Supermarket, ConvenienceStore]
+  Mobility: [TrainStation, PetrolStation]
+  ParcelServices: [PostOffice, ParcelShop, ParcelLocker]
+  Healthcare: [Hospital, Clinic, Pharmacy]
+  Education: [School, University]
+
+map:
+  superstore: Supermarket
+  grocery_store: Supermarket
+  convenience_store: ConvenienceStore
+  train_station: TrainStation
+  # A petrol station with a shop stays a petrol station.
+  gas_station: PetrolStation
+  post_office: PostOffice
+  shipping_center: ParcelShop
+  mailbox_center: ParcelShop
+  package_locker: ParcelLocker
+  hospital: Hospital
+  general_hospital: Hospital
+  specialty_hospital: Hospital
+  childrens_hospital: Hospital
+  psychiatric_hospital: Hospital
+  rehabilitation_hospital: Hospital
+  veterans_hospital: Hospital
+  long_term_care_hospital: Hospital
+  urgent_care_clinic: Clinic
+  walk_in_clinic: Clinic
+  primary_care_or_general_clinic: Clinic
+  pediatric_clinic: Clinic
+  pharmacy: Pharmacy
+  drugstore: Pharmacy
+  school: School
+  elementary_school: School
+  high_school: School
+  middle_school: School
+  secondary_school: School
+  # Overture collapses colleges and universities. Classified here as University.
+  college_university: University
+
+# Present in the raw extract and written to borderline.parquet, not sampled.
+# official: excluded means the place is deliberately outside the hierarchy,
+# so a later task can ask the model to apply the ontology rather than the name.
+borderline:
+  veterinarian:
+    official: excluded
+    note: Veterinary care is not Healthcare.
+  veterinary_care:
+    official: excluded
+    note: Veterinary care is not Healthcare.
+  assisted_living_facility:
+    official: excluded
+    note: A care home is not a Hospital or a Clinic.
+  university_housing:
+    official: excluded
+    note: Student housing is not a University.
+  dental_clinic:
+    official: excluded
+    note: Dentistry is not the Clinic subcategory used here.
+  light_rail_and_subway_station:
+    official: excluded
+    note: A tube or light-rail station is not a TrainStation.
+
+# A mapped place is kept only when its name matches. Categories not listed here
+# are kept on the category string alone.
+name_include:
+  grocery_store: '(?i)(?:\btesco\s+(?:extra|superstore)\b|\bsainsbury.?\s*s\s+superstore\b|\basda\b|\bmorrisons\b|\baldi\b|\blidl\b|\bwaitrose\b|\biceland\b)'
+  superstore: '(?i)(?:\btesco\s+(?:extra|superstore)\b|\bsainsbury.?\s*s\s+superstore\b|\basda\b|\bmorrisons\b|\baldi\b|\blidl\b|\bwaitrose\b|\biceland\b)'
+  hospital: '(?i)\bhospitals?\b'
+  college_university: '(?i)\buniversity\b|\bimperial college\b|\blondon school of economics\b'
+  school: '(?i)\b(?:school|academy)\b'
+  pediatric_clinic: '(?i)\bclinic\b'
+  walk_in_clinic: '(?i)\bclinic\b'
+  urgent_care_clinic: '(?i)\bclinic\b'
+  primary_care_or_general_clinic: '(?i)\bclinic\b'
+  train_station: '(?i)station|railway'
+  gas_station: '(?i)esso|shell|\bbp\b|\bjet\b|gulf|texaco|petrol|service station|filling station'
+
+# Applied to the benchmark subcategory, so every source that maps to it is covered.
+subcategory_include:
+  Hospital: '(?i)\bhospitals?\b'
+
+# Dropped even if the category string mapped, or the include rule matched.
+name_exclude:
+  grocery_store: '(?i)\blittle waitrose\b|travel money'
+  superstore: '(?i)\blittle waitrose\b|travel money'
+  train_station: '(?i)tube|underground|subway|\bdlr\b|light rail|\btram\b|elizabeth line|\blocker\b|docklands light|platform\s*9|\btavern\b'
+  hospital: '(?i)social club|commissioning|patient panel|charity'
+  college_university: '(?i)\bschool\b'

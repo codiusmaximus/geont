@@ -1,0 +1,17 @@
+Ground truth validation: PASS
+Regions: NUTS0=1, NUTS1=1, NUTS2=5, NUTS3=21, MUNI=33 (total 61)
+Places: 300
+  Clinic: 14
+  ConvenienceStore: 36
+  Hospital: 25
+  ParcelLocker: 25
+  ParcelShop: 25
+  PetrolStation: 25
+  Pharmacy: 25
+  PostOffice: 25
+  School: 25
+  Supermarket: 25
+  TrainStation: 25
+  University: 25
+Adjacency pairs: NUTS0=0, NUTS1=0, NUTS2=9, NUTS3=41, MUNI=69
+Facts: adjacent_to=119, is_a=300, subclass_of=12, within=360 (total 791)
