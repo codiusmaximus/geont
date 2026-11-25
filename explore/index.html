@@ -214,6 +214,11 @@
       if (view) show(view);
     });
 
+    function checksLabel(summary) {
+      const body = String(summary || "not run").replace(/ in [\d.]+s$/, "");
+      return "pytest " + body;
+    }
+
     function chip(text, bad) {
       const node = document.createElement("span");
       node.textContent = text;
@@ -225,15 +230,15 @@
       const manifest = await fetch("data/manifest.json").then((response) => response.json());
       const history = await fetch("data/history.json").then((response) => response.json());
       chip(manifest.sha + (manifest.dirty ? " dirty" : ""));
-      chip(manifest.tests, manifest.tests_ok === false);
+      chip(checksLabel(manifest.tests), manifest.tests_ok === false);
       chip(manifest.validation);
       chip(manifest.tasks + " tasks");
       chip(manifest.places + " places");
       const table = document.getElementById("history");
-      table.innerHTML = "<tr><th>Commit</th><th>Date</th><th>Tests</th><th>Tasks</th><th>Places</th><th>Validation</th></tr>";
+      table.innerHTML = "<tr><th>Commit</th><th>Date</th><th>Pytest</th><th>Tasks</th><th>Places</th><th>Validation</th></tr>";
       for (const row of history) {
         const tr = document.createElement("tr");
-        tr.innerHTML = `<td>${row.sha}</td><td>${row.date}</td><td>${row.tests}</td><td>${row.tasks}</td><td>${row.places}</td><td>${row.validation}</td>`;
+        tr.innerHTML = `<td>${row.sha}</td><td>${row.date}</td><td>${checksLabel(row.tests)}</td><td>${row.tasks}</td><td>${row.places}</td><td>${row.validation}</td>`;
         table.appendChild(tr);
       }
     }
