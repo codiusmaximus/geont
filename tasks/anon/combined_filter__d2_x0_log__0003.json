@@ -1,0 +1,45 @@
+{
+  "task_id": "combined_filter__d2_x0_log__0003",
+  "base_id": "combined_filter__0003",
+  "type": "combined_filter",
+  "preset": "easy",
+  "dials": {
+    "depth": 2,
+    "distractors": 0,
+    "order": "logical"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "within_transitive",
+    "is_a_inheritance"
+  ],
+  "anonymised": true,
+  "question": "Which Mobility places are within U012?",
+  "facts": [
+    [
+      "P0182",
+      "within",
+      "E09000025"
+    ],
+    [
+      "E09000025",
+      "within",
+      "UKI41"
+    ],
+    [
+      "P0182",
+      "is_a",
+      "TrainStation"
+    ]
+  ],
+  "proof_facts": [
+    0,
+    1,
+    2
+  ],
+  "answer_type": "set",
+  "answer": [
+    "P0182"
+  ],
+  "seed": 42
+}

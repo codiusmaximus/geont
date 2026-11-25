@@ -1,0 +1,161 @@
+{
+  "task_id": "not_determinable__d3_x25_shuf__0002",
+  "base_id": "not_determinable__0002",
+  "type": "not_determinable",
+  "preset": "medium",
+  "dials": {
+    "depth": 3,
+    "distractors": 25,
+    "order": "shuffled"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "closed_world"
+  ],
+  "anonymised": false,
+  "question": "Which NUTS-2 region is InPost within?",
+  "facts": [
+    [
+      "P0072",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "P0177",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "P0289",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "P0216",
+      "within",
+      "E09000030"
+    ],
+    [
+      "P0059",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "P0294",
+      "within",
+      "E09000033"
+    ],
+    [
+      "P0138",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "UKI33",
+      "within",
+      "UKI3"
+    ],
+    [
+      "P0081",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "E09000001",
+      "adjacent_to",
+      "E09000030"
+    ],
+    [
+      "P0261",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "P0197",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "E09000018",
+      "within",
+      "UKI75"
+    ],
+    [
+      "E09000027",
+      "within",
+      "UKI75"
+    ],
+    [
+      "P0181",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "P0242",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "UKI6",
+      "within",
+      "UKI"
+    ],
+    [
+      "P0037",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "P0219",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "P0146",
+      "within",
+      "E09000016"
+    ],
+    [
+      "E09000012",
+      "adjacent_to",
+      "E09000014"
+    ],
+    [
+      "E09000006",
+      "adjacent_to",
+      "E09000023"
+    ],
+    [
+      "P0084",
+      "within",
+      "E09000005"
+    ],
+    [
+      "P0048",
+      "within",
+      "E09000019"
+    ],
+    [
+      "P0029",
+      "within",
+      "E09000008"
+    ],
+    [
+      "P0297",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "P0193",
+      "within",
+      "E09000027"
+    ]
+  ],
+  "proof_facts": [
+    13,
+    26
+  ],
+  "answer_type": "CANNOT_DETERMINE",
+  "answer": "CANNOT_DETERMINE",
+  "seed": 42
+}

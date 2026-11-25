@@ -1,6 +1,6 @@
 # Definitions
 
-Same types and relations as v1.
+Same types and relations as v1, including `VeterinaryClinic` under `AnimalServices`. A veterinary clinic is not a Healthcare facility.
 
 # Rules
 

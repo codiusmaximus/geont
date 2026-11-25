@@ -1,0 +1,84 @@
+{
+  "task_id": "combined_filter__d2_x0_log__0001",
+  "base_id": "combined_filter__0001",
+  "type": "combined_filter",
+  "preset": "easy",
+  "dials": {
+    "depth": 2,
+    "distractors": 0,
+    "order": "logical"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "within_transitive",
+    "is_a_inheritance"
+  ],
+  "anonymised": true,
+  "question": "Which Healthcare places are within U020?",
+  "facts": [
+    [
+      "P0128",
+      "within",
+      "E09000010"
+    ],
+    [
+      "E09000010",
+      "within",
+      "UKI54"
+    ],
+    [
+      "P0128",
+      "is_a",
+      "Clinic"
+    ],
+    [
+      "P0180",
+      "within",
+      "E09000010"
+    ],
+    [
+      "P0180",
+      "is_a",
+      "Pharmacy"
+    ],
+    [
+      "P0192",
+      "within",
+      "E09000010"
+    ],
+    [
+      "P0192",
+      "is_a",
+      "Hospital"
+    ],
+    [
+      "P0227",
+      "within",
+      "E09000010"
+    ],
+    [
+      "P0227",
+      "is_a",
+      "Hospital"
+    ]
+  ],
+  "proof_facts": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "answer_type": "set",
+  "answer": [
+    "P0128",
+    "P0180",
+    "P0192",
+    "P0227"
+  ],
+  "seed": 42
+}

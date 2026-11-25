@@ -1,0 +1,30 @@
+{
+  "task_id": "category_inference__dx_x0_log__0000",
+  "base_id": "category_inference__0000",
+  "type": "category_inference",
+  "preset": "easy",
+  "dials": {
+    "depth": null,
+    "distractors": 0,
+    "order": "logical"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "is_a_inheritance"
+  ],
+  "anonymised": false,
+  "question": "Is Amazon Locker - Broad a Mobility place?",
+  "facts": [
+    [
+      "P0167",
+      "is_a",
+      "ParcelLocker"
+    ]
+  ],
+  "proof_facts": [
+    0
+  ],
+  "answer_type": "bool",
+  "answer": false,
+  "seed": 42
+}

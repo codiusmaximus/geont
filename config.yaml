@@ -28,8 +28,13 @@ gisco:
   crs: "EPSG:4326"
 tasks:
   types: [spatial_inference, category_inference, combined_filter, not_determinable]
-  difficulties: [easy, medium, hard]
-  per_type_per_difficulty: 4
+  base_tasks_per_type: 4
+  presets:
+    easy: {depth: 2, distractors: 0, order: logical}
+    medium: {depth: 3, distractors: 25, order: shuffled}
+    hard: {depth: 4, distractors: 100, order: shuffled}
+  answer_size: {min: 1, max: 12}
+  context_mode: crafted
   anonymised: true
 conditions:
   - {version: v0, format: en}

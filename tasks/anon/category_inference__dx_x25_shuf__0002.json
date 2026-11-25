@@ -1,0 +1,155 @@
+{
+  "task_id": "category_inference__dx_x25_shuf__0002",
+  "base_id": "category_inference__0002",
+  "type": "category_inference",
+  "preset": "medium",
+  "dials": {
+    "depth": null,
+    "distractors": 25,
+    "order": "shuffled"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "is_a_inheritance"
+  ],
+  "anonymised": true,
+  "question": "Is F185 a Healthcare facility?",
+  "facts": [
+    [
+      "P0142",
+      "within",
+      "E09000007"
+    ],
+    [
+      "P0062",
+      "is_a",
+      "Clinic"
+    ],
+    [
+      "UKI31",
+      "adjacent_to",
+      "UKI41"
+    ],
+    [
+      "V0025",
+      "is_a",
+      "VeterinaryClinic"
+    ],
+    [
+      "P0085",
+      "is_a",
+      "Clinic"
+    ],
+    [
+      "P0255",
+      "is_a",
+      "Hospital"
+    ],
+    [
+      "P0245",
+      "is_a",
+      "Hospital"
+    ],
+    [
+      "P0282",
+      "within",
+      "E09000014"
+    ],
+    [
+      "P0192",
+      "is_a",
+      "Hospital"
+    ],
+    [
+      "P0221",
+      "is_a",
+      "Hospital"
+    ],
+    [
+      "E09000018",
+      "adjacent_to",
+      "E09000027"
+    ],
+    [
+      "UKI44",
+      "adjacent_to",
+      "UKI51"
+    ],
+    [
+      "UKI74",
+      "within",
+      "UKI7"
+    ],
+    [
+      "P0200",
+      "within",
+      "E09000024"
+    ],
+    [
+      "P0135",
+      "within",
+      "E09000023"
+    ],
+    [
+      "V0016",
+      "is_a",
+      "VeterinaryClinic"
+    ],
+    [
+      "P0021",
+      "within",
+      "E09000007"
+    ],
+    [
+      "P0185",
+      "is_a",
+      "Hospital"
+    ],
+    [
+      "V0003",
+      "is_a",
+      "VeterinaryClinic"
+    ],
+    [
+      "P0096",
+      "is_a",
+      "Clinic"
+    ],
+    [
+      "P0046",
+      "within",
+      "E09000005"
+    ],
+    [
+      "E09000020",
+      "adjacent_to",
+      "E09000033"
+    ],
+    [
+      "P0208",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "E09000013",
+      "within",
+      "UKI33"
+    ],
+    [
+      "V0009",
+      "is_a",
+      "VeterinaryClinic"
+    ],
+    [
+      "P0068",
+      "is_a",
+      "Hospital"
+    ]
+  ],
+  "proof_facts": [
+    17
+  ],
+  "answer_type": "bool",
+  "answer": true,
+  "seed": 42
+}

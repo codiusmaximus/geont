@@ -18,3 +18,4 @@
 :Pharmacy rdfs:subClassOf :Healthcare .
 :School rdfs:subClassOf :Education .
 :University rdfs:subClassOf :Education .
+:VeterinaryClinic rdfs:subClassOf :AnimalServices .

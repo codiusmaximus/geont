@@ -3,6 +3,14 @@
 from src.tasks.generate import build_tasks
 
 
+def _focus(task: dict) -> str:
+    for index in task["proof_facts"]:
+        subject, pred, _obj = task["facts"][index]
+        if pred in {"within", "is_a"} and subject.startswith("P"):
+            return subject
+    raise AssertionError(f"no focus place in {task['task_id']}")
+
+
 def test_tasks_cover_the_v1_grid_and_repeat():
     first, _entities = build_tasks()
     second, _entities = build_tasks()
@@ -24,9 +32,23 @@ def test_tasks_cover_the_v1_grid_and_repeat():
         assert twin["answer"] == task["answer"]
         assert twin["question"] != task["question"]
         assert "subclass_of" not in {fact[1] for fact in task["facts"]}
+        assert task["context_mode"] == "crafted"
+        proof = [task["facts"][index] for index in task["proof_facts"]]
+        assert task["dials"]["distractors"] == len(task["facts"]) - len(proof)
+        if task["dials"]["order"] == "logical":
+            assert task["facts"][: len(proof)] == proof
     undetermined = [task for task in real if task["type"] == "not_determinable"]
-    assert undetermined
     assert {task["answer"] for task in undetermined} == {"CANNOT_DETERMINE"}
     sets = [task for task in real if task["answer_type"] == "set"]
     assert sets
     assert all(1 <= len(task["answer"]) <= 12 for task in sets)
+    spatial = [task for task in real if task["type"] == "spatial_inference"]
+    by_base: dict[str, list] = {}
+    for task in spatial:
+        by_base.setdefault(task["base_id"], []).append(task)
+    for group in by_base.values():
+        assert len({_focus(task) for task in group}) == 1
+        hard = next(task for task in group if task["preset"] == "hard")
+        assert hard["dials"] == {"depth": 4, "distractors": 100, "order": "shuffled"}
+    categories = [task for task in real if task["type"] == "category_inference"]
+    assert all(task["dials"]["depth"] is None for task in categories)

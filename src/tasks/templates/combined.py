@@ -1,67 +1,79 @@
 """List the places of a top-level category inside a region."""
 
-from src.tasks.templates.common import answer_with, fill_facts, within_chain
-from src.tasks.world import World, category_of
-
-LEVEL_FOR = {"easy": "MUNI", "medium": "NUTS3", "hard": "NUTS2"}
-
-
-def _candidates(world: World, level: str) -> list[tuple[str, str, list[str]]]:
-    by_region: dict[tuple[str, str], list[str]] = {}
-    for place in world.places:
-        top = category_of(place["subcategory"])
-        region = place["muni_id"]
-        while region is not None and world.levels[region] != level:
-            region = world.parents[region]
-        if region is None:
-            continue
-        by_region.setdefault((region, top), []).append(place["place_id"])
-    found = []
-    for (region, top), place_ids in by_region.items():
-        if 1 <= len(place_ids) <= 12:
-            found.append((region, top, sorted(place_ids)))
-    return sorted(found)
+from src.tasks.distractors import assemble, top_of
+from src.tasks.templates.common import level_at, region_at_depth, within_chain
+from src.tasks.world import World
 
 
-def build(world: World, difficulty: str, rng) -> dict:
-    level = LEVEL_FOR[difficulty]
-    options = _candidates(world, level)
-    if not options and level != "MUNI":
-        options = _candidates(world, "MUNI")
-        level = "MUNI"
-    if not options:
-        raise RuntimeError(f"no combined-filter target at {difficulty}")
-    region_id, top, expected_ids = options[rng.randrange(len(options))]
-    required = []
-    for place_id in expected_ids:
-        place = next(item for item in world.places if item["place_id"] == place_id)
-        chain, _ = within_chain(place["place_id"], place["muni_id"], world, world.levels[region_id])
+def _members(world: World, place: dict, depth: int) -> tuple[str, list[dict]]:
+    region_id = region_at_depth(place["muni_id"], depth, world)
+    top = top_of(place["subcategory"])
+    members = [
+        other
+        for other in world.places
+        if top_of(other["subcategory"]) == top and region_at_depth(other["muni_id"], depth, world) == region_id
+    ]
+    return region_id, sorted(members, key=lambda item: item["place_id"])
+
+
+def _fits(world: World, place: dict, depth: int, limits: dict) -> bool:
+    _region, members = _members(world, place, depth)
+    return limits["min"] <= len(members) <= limits["max"]
+
+
+def anchor(world: World, rng, limits: dict | None = None) -> dict:
+    limits = limits or {"min": 1, "max": 12}
+    places = list(world.places)
+    rng.shuffle(places)
+    for place in places:
+        if _fits(world, place, 2, limits) and _fits(world, place, 3, limits):
+            return {"place": place}
+    raise RuntimeError("no combined-filter place fits the answer-size limit")
+
+
+def materialise(world: World, base: dict, dials: dict, rng, limits: dict | None = None) -> dict:
+    limits = limits or {"min": 1, "max": 12}
+    place = base["place"]
+    dials = dict(dials)
+    depth = int(dials["depth"])
+    while depth > 1 and not _fits(world, place, depth, limits):
+        depth -= 1
+    dials["depth"] = depth
+    if not _fits(world, place, depth, limits):
+        raise RuntimeError(f"combined filter cannot keep the answer size at depth {depth}")
+    region_id, members = _members(world, place, depth)
+    top = top_of(place["subcategory"])
+    level = level_at(depth)
+    required: list[tuple[str, str, str]] = []
+    for member in members:
+        chain, _region = within_chain(member["place_id"], member["muni_id"], world, level)
         required.extend(chain)
-        required.append((place["place_id"], "is_a", place["subcategory"]))
-    protected = {
-        place["place_id"]
-        for place in world.places
-        if category_of(place["subcategory"]) == top
+        required.append((member["place_id"], "is_a", member["subcategory"]))
+    blocked = {fact[0] for fact in required}
+    scope = {
+        "focus_id": place["place_id"],
+        "focus_name": place["name"],
+        "focus_sub": place["subcategory"],
+        "focus_top": top,
+        "focus_muni": place["muni_id"],
+        "asked_region": region_id,
+        "blocked_within": blocked,
+        "forbidden": set(),
     }
-    cursor = region_id
-    while cursor is not None:
-        protected.add(cursor)
-        cursor = world.parents.get(cursor)
-    facts = fill_facts(required, world, rng, difficulty, protected)
-    reasoned = answer_with(facts, world)
-    if reasoned.contradictions:
-        raise RuntimeError(f"combined task contradicted itself: {reasoned.contradictions[:3]}")
-    answer = reasoned.places_in(region_id, top)
-    if answer != expected_ids:
-        raise RuntimeError(f"reasoner listed {answer}, geometry listed {expected_ids}")
+    expected = [member["place_id"] for member in members]
+
+    def ok(reasoned) -> bool:
+        return not reasoned.contradictions and reasoned.places_in(region_id, top) == expected
+
+    facts, proof_facts = assemble(world, required, dials, rng, scope, ok)
     return {
         "type": "combined_filter",
-        "difficulty": difficulty,
         "rule_tags": ["within_transitive", "is_a_inheritance"],
         "facts": facts,
+        "proof_facts": proof_facts,
         "answer_type": "set",
-        "answer": answer,
+        "answer": expected,
         "question_template": "Which " + top + " places are within {region}?",
         "slots": {"region": region_id},
-        "focus": region_id,
+        "dials": dials,
     }

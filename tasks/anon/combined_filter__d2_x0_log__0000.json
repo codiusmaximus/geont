@@ -1,0 +1,103 @@
+{
+  "task_id": "combined_filter__d2_x0_log__0000",
+  "base_id": "combined_filter__0000",
+  "type": "combined_filter",
+  "preset": "easy",
+  "dials": {
+    "depth": 2,
+    "distractors": 0,
+    "order": "logical"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "within_transitive",
+    "is_a_inheritance"
+  ],
+  "anonymised": true,
+  "question": "Which Retail places are within U027?",
+  "facts": [
+    [
+      "P0028",
+      "within",
+      "E09000015"
+    ],
+    [
+      "E09000015",
+      "within",
+      "UKI74"
+    ],
+    [
+      "P0028",
+      "is_a",
+      "Supermarket"
+    ],
+    [
+      "P0145",
+      "within",
+      "E09000017"
+    ],
+    [
+      "E09000017",
+      "within",
+      "UKI74"
+    ],
+    [
+      "P0145",
+      "is_a",
+      "Supermarket"
+    ],
+    [
+      "P0150",
+      "within",
+      "E09000015"
+    ],
+    [
+      "P0150",
+      "is_a",
+      "ConvenienceStore"
+    ],
+    [
+      "P0234",
+      "within",
+      "E09000017"
+    ],
+    [
+      "P0234",
+      "is_a",
+      "Supermarket"
+    ],
+    [
+      "P0259",
+      "within",
+      "E09000017"
+    ],
+    [
+      "P0259",
+      "is_a",
+      "Supermarket"
+    ]
+  ],
+  "proof_facts": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "answer_type": "set",
+  "answer": [
+    "P0028",
+    "P0145",
+    "P0150",
+    "P0234",
+    "P0259"
+  ],
+  "seed": 42
+}

@@ -60,7 +60,8 @@ def _task_index() -> list[dict]:
         rows.append({
             "task_id": task["task_id"],
             "type": task["type"],
-            "difficulty": task["difficulty"],
+            "difficulty": task.get("preset", task.get("difficulty")),
+            "dials": task.get("dials", {}),
             "rule_tags": task["rule_tags"],
             "question": task["question"],
             "question_anon": question_anon,

@@ -1,0 +1,30 @@
+{
+  "task_id": "not_determinable__d2_x0_log__0000",
+  "base_id": "not_determinable__0000",
+  "type": "not_determinable",
+  "preset": "easy",
+  "dials": {
+    "depth": 2,
+    "distractors": 0,
+    "order": "logical"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "closed_world"
+  ],
+  "anonymised": true,
+  "question": "Which NUTS-3 region is F225 within?",
+  "facts": [
+    [
+      "P0225",
+      "within",
+      "E09000024"
+    ]
+  ],
+  "proof_facts": [
+    0
+  ],
+  "answer_type": "CANNOT_DETERMINE",
+  "answer": "CANNOT_DETERMINE",
+  "seed": 42
+}

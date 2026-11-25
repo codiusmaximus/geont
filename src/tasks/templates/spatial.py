@@ -1,30 +1,44 @@
 """Which region, above the municipality, contains this place?"""
 
-from src.tasks.templates.common import answer_with, fill_facts, pick_place, within_chain
-from src.tasks.world import World
+from src.tasks.distractors import assemble
+from src.tasks.templates.common import level_at, pick_place, within_chain
+from src.tasks.world import World, category_of
 
 
-def build(world: World, difficulty: str, rng, level: str | None = None) -> dict:
-    level = level or {"easy": "NUTS3", "medium": "NUTS2", "hard": "NUTS1"}[difficulty]
-    place = pick_place(world, rng)
+def anchor(world: World, rng) -> dict:
+    return {"place": pick_place(world, rng)}
+
+
+def materialise(world: World, base: dict, dials: dict, rng) -> dict:
+    place = base["place"]
+    depth = int(dials["depth"])
+    level = level_at(depth)
     chain, region_id = within_chain(place["place_id"], place["muni_id"], world, level)
-    protected = {place["place_id"], *(fact[0] for fact in chain), *(fact[2] for fact in chain)}
-    facts = fill_facts(chain, world, rng, difficulty, protected)
-    reasoned = answer_with(facts, world)
-    if reasoned.contradictions:
-        raise RuntimeError(f"spatial task contradicted itself: {reasoned.contradictions[:3]}")
-    answer = reasoned.region_at(place["place_id"], level)
-    if answer != region_id:
-        raise RuntimeError(f"reasoner answered {answer}, chain ends at {region_id}")
+    blocked = {fact[0] for fact in chain}
+    scope = {
+        "focus_id": place["place_id"],
+        "focus_name": place["name"],
+        "focus_sub": place["subcategory"],
+        "focus_top": category_of(place["subcategory"]),
+        "focus_muni": place["muni_id"],
+        "asked_region": region_id,
+        "blocked_within": blocked,
+        "forbidden": set(),
+    }
+
+    def ok(reasoned) -> bool:
+        return not reasoned.contradictions and reasoned.region_at(place["place_id"], level) == region_id
+
+    facts, proof_facts = assemble(world, chain, dials, rng, scope, ok)
     phrase = "borough" if level == "MUNI" else level.replace("NUTS", "NUTS-") + " region"
     return {
         "type": "spatial_inference",
-        "difficulty": difficulty,
         "rule_tags": ["within_transitive"],
         "facts": facts,
+        "proof_facts": proof_facts,
         "answer_type": "value",
-        "answer": answer,
+        "answer": region_id,
         "question_template": "Which " + phrase + " is {place} within?",
         "slots": {"place": place["place_id"]},
-        "focus": place["place_id"],
+        "dials": dict(dials),
     }

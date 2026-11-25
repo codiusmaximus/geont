@@ -1,0 +1,167 @@
+{
+  "task_id": "spatial_inference__d3_x25_shuf__0003",
+  "base_id": "spatial_inference__0003",
+  "type": "spatial_inference",
+  "preset": "medium",
+  "dials": {
+    "depth": 3,
+    "distractors": 25,
+    "order": "shuffled"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "within_transitive"
+  ],
+  "anonymised": false,
+  "question": "Which NUTS-2 region is JET within?",
+  "facts": [
+    [
+      "P0274",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "P0012",
+      "is_a",
+      "School"
+    ],
+    [
+      "P0178",
+      "within",
+      "E09000007"
+    ],
+    [
+      "E09000010",
+      "adjacent_to",
+      "E09000014"
+    ],
+    [
+      "P0269",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "P0265",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "P0056",
+      "within",
+      "E09000031"
+    ],
+    [
+      "P0253",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "P0148",
+      "within",
+      "E09000008"
+    ],
+    [
+      "P0238",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "P0237",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "P0155",
+      "within",
+      "E09000009"
+    ],
+    [
+      "P0190",
+      "is_a",
+      "ConvenienceStore"
+    ],
+    [
+      "P0270",
+      "within",
+      "E09000021"
+    ],
+    [
+      "P0172",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "UKI53",
+      "within",
+      "UKI5"
+    ],
+    [
+      "P0147",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "P0080",
+      "within",
+      "E09000008"
+    ],
+    [
+      "UKI41",
+      "adjacent_to",
+      "UKI43"
+    ],
+    [
+      "E09000022",
+      "adjacent_to",
+      "E09000024"
+    ],
+    [
+      "UKI44",
+      "within",
+      "UKI4"
+    ],
+    [
+      "P0181",
+      "within",
+      "E09000006"
+    ],
+    [
+      "P0111",
+      "within",
+      "E09000002"
+    ],
+    [
+      "E09000017",
+      "within",
+      "UKI74"
+    ],
+    [
+      "E09000031",
+      "within",
+      "UKI53"
+    ],
+    [
+      "P0140",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "E09000027",
+      "adjacent_to",
+      "E09000032"
+    ],
+    [
+      "P0299",
+      "is_a",
+      "PetrolStation"
+    ]
+  ],
+  "proof_facts": [
+    6,
+    15,
+    24
+  ],
+  "answer_type": "value",
+  "answer": "UKI5",
+  "seed": 42
+}

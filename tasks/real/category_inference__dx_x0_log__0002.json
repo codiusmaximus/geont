@@ -1,0 +1,30 @@
+{
+  "task_id": "category_inference__dx_x0_log__0002",
+  "base_id": "category_inference__0002",
+  "type": "category_inference",
+  "preset": "easy",
+  "dials": {
+    "depth": null,
+    "distractors": 0,
+    "order": "logical"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "is_a_inheritance"
+  ],
+  "anonymised": false,
+  "question": "Is Stanmore Hospital a Healthcare facility?",
+  "facts": [
+    [
+      "P0185",
+      "is_a",
+      "Hospital"
+    ]
+  ],
+  "proof_facts": [
+    0
+  ],
+  "answer_type": "bool",
+  "answer": true,
+  "seed": 42
+}

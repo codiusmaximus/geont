@@ -77,7 +77,7 @@
       padding: 8px 10px;
     }
     .task-list .tag { color: var(--muted); font-size: 12px; }
-    pre {
+    pre, .prompt {
       white-space: pre-wrap;
       background: white;
       border: 1px solid var(--line);
@@ -85,6 +85,24 @@
       padding: 12px 14px;
       max-width: 78ch;
       font: 12.5px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .slot {
+      display: inline-block;
+      margin: 4px 0;
+      padding: 2px 8px;
+      border: 1px dashed var(--line);
+      border-radius: 6px;
+      color: var(--muted);
+      background: var(--panel);
+    }
+    .prompt .part { margin: 0 0 14px; }
+    .prompt .label {
+      display: block;
+      margin: 0 0 4px;
+      font: 11px/1.2 ui-sans-serif, system-ui, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
     }
     .split { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
     @media (max-width: 800px) {
@@ -118,11 +136,12 @@
       </table>
       <h3>Difficulty</h3>
       <table>
-        <tr><th></th><th>Facts</th><th>Order</th><th>Distractors</th><th>Chain</th></tr>
-        <tr><td>easy</td><td>about 5</td><td>logical</td><td>none</td><td>1–2</td></tr>
-        <tr><td>medium</td><td>about 30</td><td>shuffled</td><td>yes</td><td>2–3</td></tr>
-        <tr><td>hard</td><td>about 100</td><td>shuffled</td><td>yes</td><td>3–4</td></tr>
+        <tr><th></th><th>Depth</th><th>Distractors</th><th>Order</th></tr>
+        <tr><td>easy</td><td>2</td><td>0</td><td>logical</td></tr>
+        <tr><td>medium</td><td>3</td><td>25</td><td>shuffled</td></tr>
+        <tr><td>hard</td><td>4</td><td>100</td><td>shuffled</td></tr>
       </table>
+      <p class="muted">Distractors are near misses: the right category in the wrong region, the right region with the wrong category, a chain that stops early, a similar name, or hierarchy facts off the proof. A category question has no region to deepen, so its depth stays unset.</p>
       <p class="muted">Each task also has an anonymised twin. Place and region names become F001 and U001. The type words stay readable.</p>
       <h3>Versions</h3>
       <p class="muted">One row is written each time the indexes are rebuilt at a new commit. The pre-push check runs the tests first and stops the push if they fail or these files are not committed.</p>
@@ -183,8 +202,7 @@
         <pre id="onto-text">Loading…</pre>
         <div>
           <p class="muted" id="onto-note"></p>
-          <h3>This task</h3>
-          <div id="onto-task"><p class="muted">Open a task to see its facts next to the ontology.</p></div>
+          <div id="onto-task"><p class="muted">Open a task to see the prompt. The facts stay one block.</p></div>
         </div>
       </div>
     </section>
@@ -363,7 +381,10 @@
         button.type = "button";
         const anon = document.getElementById("anon").checked;
         const question = anon ? task.question_anon || task.question : task.question;
-        button.innerHTML = `<div>${question}</div><div class="tag">${task.type} · ${task.difficulty} · ${task.n_facts} facts</div>`;
+        const dials = task.dials && task.dials.order
+          ? `d${task.dials.depth == null ? "x" : task.dials.depth} · x${task.dials.distractors} · ${task.dials.order}`
+          : `${task.n_facts} facts`;
+        button.innerHTML = `<div>${question}</div><div class="tag">${task.type} · ${task.difficulty} · ${dials}</div>`;
         button.addEventListener("click", () => openTask(task.task_id));
         item.appendChild(button);
         list.appendChild(item);
@@ -374,9 +395,47 @@
       const anon = document.getElementById("anon").checked;
       const lines = task.facts.map((fact) => factLine(fact, anon));
       const answer = Array.isArray(task.answer) ? task.answer.map((id) => nameOf(id, anon)).join(", ") : nameOf(String(task.answer), anon);
-      const html = `<h3>${task.question}</h3><p class="muted">${task.rule_tags.join(", ")} · answer ${answer}</p><pre>${lines.join("\n")}</pre>`;
-      document.getElementById("task-detail").innerHTML = html;
-      document.getElementById("onto-task").innerHTML = html;
+      document.getElementById("task-detail").innerHTML =
+        `<h3>${task.question}</h3><p class="muted">${task.rule_tags.join(", ")} · answer ${answer}</p><pre>${lines.join("\n")}</pre>`;
+      renderPrompt(task);
+    }
+
+    function escapeText(value) {
+      return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+    }
+
+    function renderPrompt(task) {
+      const node = document.getElementById("onto-task");
+      if (!task) {
+        node.innerHTML = `<p class="muted">Open a task to see the prompt. The facts stay one block.</p>`;
+        return;
+      }
+      const version = document.getElementById("onto-version").value;
+      const format = document.getElementById("onto-format").value;
+      const formatName = format === "en" ? "English" : format === "json" ? "JSON" : "Turtle";
+      const anon = document.getElementById("anon").checked;
+      const shown = task.facts.slice(0, 2).map((fact) => factLine(fact, anon));
+      const ontology = version === "v0"
+        ? `<p class="muted">None. This condition is facts only.</p>`
+        : excerptBlock(document.getElementById("onto-text").textContent, `read the rest in ${formatName}`);
+      node.innerHTML = `<h3>Prompt</h3><div class="prompt">
+<div class="part"><span class="label">Instructions</span>${version === "v0" ? "You are given facts about places and regions." : "You are given an ontology and facts about places and regions."}
+Answer using ONLY the information provided. Do not use outside knowledge.
+If the answer cannot be derived, answer "CANNOT_DETERMINE".
+If the facts contain a contradiction, answer "CONTRADICTION".</div>
+<div class="part"><span class="label">Ontology · ${version} · ${formatName}</span>${ontology}</div>
+<div class="part"><span class="label">Facts</span>${escapeText(shown.join("\n"))}
+<div class="slot">read the rest in ${formatName} · ${task.facts.length} facts</div></div>
+<div class="part"><span class="label">Question</span>${escapeText(task.question)}</div>
+<div class="part"><span class="label">Answer</span>{"answer": …}</div>
+</div>`;
+    }
+
+    function excerptBlock(text, restLabel) {
+      const lines = text.trim().split("\n");
+      const sample = lines.slice(0, 5).join("\n").trim();
+      const rest = lines.length > 5 ? `\n<div class="slot">${restLabel}</div>\n\n` : "\n\n";
+      return `${escapeText(sample)}${rest}`;
     }
 
     async function openTask(taskId) {
@@ -412,6 +471,7 @@
       document.getElementById("onto-note").textContent = version === "v2" && format === "ttl"
         ? "Same-level disjointness is in the rdfs:comment on adjacent_to. Turtle cannot state it as an axiom."
         : "";
+      if (state.task) renderPrompt(state.task);
     }
 
     async function loadMetrics() {

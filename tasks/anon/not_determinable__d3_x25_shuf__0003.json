@@ -1,0 +1,161 @@
+{
+  "task_id": "not_determinable__d3_x25_shuf__0003",
+  "base_id": "not_determinable__0003",
+  "type": "not_determinable",
+  "preset": "medium",
+  "dials": {
+    "depth": 3,
+    "distractors": 25,
+    "order": "shuffled"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "closed_world"
+  ],
+  "anonymised": true,
+  "question": "Which NUTS-2 region is F017 within?",
+  "facts": [
+    [
+      "P0256",
+      "is_a",
+      "ConvenienceStore"
+    ],
+    [
+      "P0046",
+      "is_a",
+      "ConvenienceStore"
+    ],
+    [
+      "P0033",
+      "within",
+      "E09000020"
+    ],
+    [
+      "UKI45",
+      "adjacent_to",
+      "UKI62"
+    ],
+    [
+      "P0131",
+      "within",
+      "E09000003"
+    ],
+    [
+      "P0246",
+      "is_a",
+      "ConvenienceStore"
+    ],
+    [
+      "P0243",
+      "within",
+      "E09000016"
+    ],
+    [
+      "P0015",
+      "is_a",
+      "ConvenienceStore"
+    ],
+    [
+      "E09000021",
+      "adjacent_to",
+      "E09000029"
+    ],
+    [
+      "E09000029",
+      "within",
+      "UKI63"
+    ],
+    [
+      "E09000021",
+      "adjacent_to",
+      "E09000027"
+    ],
+    [
+      "E09000026",
+      "adjacent_to",
+      "E09000031"
+    ],
+    [
+      "P0017",
+      "within",
+      "E09000022"
+    ],
+    [
+      "E09000022",
+      "within",
+      "UKI45"
+    ],
+    [
+      "P0165",
+      "is_a",
+      "Supermarket"
+    ],
+    [
+      "P0012",
+      "within",
+      "E09000016"
+    ],
+    [
+      "P0298",
+      "within",
+      "E09000026"
+    ],
+    [
+      "P0014",
+      "is_a",
+      "ConvenienceStore"
+    ],
+    [
+      "P0188",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "P0142",
+      "is_a",
+      "ConvenienceStore"
+    ],
+    [
+      "P0299",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "P0129",
+      "is_a",
+      "Supermarket"
+    ],
+    [
+      "P0190",
+      "is_a",
+      "ConvenienceStore"
+    ],
+    [
+      "P0253",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "UKI",
+      "within",
+      "UK"
+    ],
+    [
+      "P0026",
+      "within",
+      "E09000021"
+    ],
+    [
+      "P0115",
+      "is_a",
+      "TrainStation"
+    ]
+  ],
+  "proof_facts": [
+    12,
+    13
+  ],
+  "answer_type": "CANNOT_DETERMINE",
+  "answer": "CANNOT_DETERMINE",
+  "seed": 42
+}

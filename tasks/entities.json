@@ -1803,5 +1803,205 @@
     "name": "Westminster",
     "anon": "U061",
     "kind": "region"
+  },
+  "V0001": {
+    "name": "A J M Robson",
+    "anon": "V001",
+    "kind": "place"
+  },
+  "V0002": {
+    "name": "Abbeyvet",
+    "anon": "V002",
+    "kind": "place"
+  },
+  "V0003": {
+    "name": "Abingdon Veterinary Clinic",
+    "anon": "V003",
+    "kind": "place"
+  },
+  "V0004": {
+    "name": "Ace Vets Cranham",
+    "anon": "V004",
+    "kind": "place"
+  },
+  "V0005": {
+    "name": "Acevets",
+    "anon": "V005",
+    "kind": "place"
+  },
+  "V0006": {
+    "name": "Addiscombe Road Veterinary Centre",
+    "anon": "V006",
+    "kind": "place"
+  },
+  "V0007": {
+    "name": "Addison & Holland Park Veterinary Clinic",
+    "anon": "V007",
+    "kind": "place"
+  },
+  "V0008": {
+    "name": "Agd Brito",
+    "anon": "V008",
+    "kind": "place"
+  },
+  "V0009": {
+    "name": "Alcombe Veterinary Surgery",
+    "anon": "V009",
+    "kind": "place"
+  },
+  "V0010": {
+    "name": "Alcombe Veterinary Surgery",
+    "anon": "V010",
+    "kind": "place"
+  },
+  "V0011": {
+    "name": "Alcombe Veterinary Surgery",
+    "anon": "V011",
+    "kind": "place"
+  },
+  "V0012": {
+    "name": "Alcombe Veterinary Surgery",
+    "anon": "V012",
+    "kind": "place"
+  },
+  "V0013": {
+    "name": "Alexandra Park Road Veterinary Surgery",
+    "anon": "V013",
+    "kind": "place"
+  },
+  "V0014": {
+    "name": "All Creatures",
+    "anon": "V014",
+    "kind": "place"
+  },
+  "V0015": {
+    "name": "All Creatures Clinic",
+    "anon": "V015",
+    "kind": "place"
+  },
+  "V0016": {
+    "name": "All Creatures Clinic - Locksbottom",
+    "anon": "V016",
+    "kind": "place"
+  },
+  "V0017": {
+    "name": "All Creatures Veterinary Surgery",
+    "anon": "V017",
+    "kind": "place"
+  },
+  "V0018": {
+    "name": "All Pets Veterinary Clinic",
+    "anon": "V018",
+    "kind": "place"
+  },
+  "V0019": {
+    "name": "Allpets Sidmouth",
+    "anon": "V019",
+    "kind": "place"
+  },
+  "V0020": {
+    "name": "Allpets Veterinary Clinic",
+    "anon": "V020",
+    "kind": "place"
+  },
+  "V0021": {
+    "name": "Allpets Veterinary Surgery",
+    "anon": "V021",
+    "kind": "place"
+  },
+  "V0022": {
+    "name": "Alpha Veterinary Surgery",
+    "anon": "V022",
+    "kind": "place"
+  },
+  "V0023": {
+    "name": "Amwell Veterinary Practice",
+    "anon": "V023",
+    "kind": "place"
+  },
+  "V0024": {
+    "name": "Anderson Vets",
+    "anon": "V024",
+    "kind": "place"
+  },
+  "V0025": {
+    "name": "Anderson's Veterinary Surgery",
+    "anon": "V025",
+    "kind": "place"
+  },
+  "V0026": {
+    "name": "Andrew Carmichael",
+    "anon": "V026",
+    "kind": "place"
+  },
+  "V0027": {
+    "name": "Animal Ark Vets",
+    "anon": "V027",
+    "kind": "place"
+  },
+  "V0028": {
+    "name": "Animal Care And Therapy",
+    "anon": "V028",
+    "kind": "place"
+  },
+  "V0029": {
+    "name": "Animal Choice",
+    "anon": "V029",
+    "kind": "place"
+  },
+  "V0030": {
+    "name": "Animal Justice Project",
+    "anon": "V030",
+    "kind": "place"
+  },
+  "V0031": {
+    "name": "Animal Medical Centre",
+    "anon": "V031",
+    "kind": "place"
+  },
+  "V0032": {
+    "name": "Animal Wellbeing Centre",
+    "anon": "V032",
+    "kind": "place"
+  },
+  "V0033": {
+    "name": "Animal health centre",
+    "anon": "V033",
+    "kind": "place"
+  },
+  "V0034": {
+    "name": "Animals Are Us",
+    "anon": "V034",
+    "kind": "place"
+  },
+  "V0035": {
+    "name": "Anne Nelson Vets",
+    "anon": "V035",
+    "kind": "place"
+  },
+  "V0036": {
+    "name": "Anwell Veterinary Centre",
+    "anon": "V036",
+    "kind": "place"
+  },
+  "V0037": {
+    "name": "Arc Veterinary Centre",
+    "anon": "V037",
+    "kind": "place"
+  },
+  "V0038": {
+    "name": "Arden House Animal Hospital",
+    "anon": "V038",
+    "kind": "place"
+  },
+  "V0039": {
+    "name": "Arden House Veterinary Surgery",
+    "anon": "V039",
+    "kind": "place"
+  },
+  "V0040": {
+    "name": "Ark Veterinary Clinic",
+    "anon": "V040",
+    "kind": "place"
   }
 }

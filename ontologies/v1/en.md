@@ -9,6 +9,7 @@ Place categories, each a kind of its group:
 - ParcelServices: PostOffice, ParcelShop, ParcelLocker
 - Healthcare: Hospital, Clinic, Pharmacy
 - Education: School, University
+- AnimalServices (borderline, not in the place sample): VeterinaryClinic
 
 Relations:
 
@@ -16,5 +17,7 @@ Relations:
 - `subclass_of` — a category is a kind of a broader category.
 - `within` — a place is in a municipality, or a region is in its parent region.
 - `adjacent_to` — two regions of the same level share a boundary.
+
+A VeterinaryClinic is an AnimalServices place. It is not a Healthcare facility.
 
 No inference rules are stated in this version.

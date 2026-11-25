@@ -1,0 +1,167 @@
+{
+  "task_id": "spatial_inference__d3_x25_shuf__0002",
+  "base_id": "spatial_inference__0002",
+  "type": "spatial_inference",
+  "preset": "medium",
+  "dials": {
+    "depth": 3,
+    "distractors": 25,
+    "order": "shuffled"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "within_transitive"
+  ],
+  "anonymised": true,
+  "question": "Which NUTS-2 region is F134 within?",
+  "facts": [
+    [
+      "P0072",
+      "within",
+      "E09000022"
+    ],
+    [
+      "P0229",
+      "within",
+      "E09000030"
+    ],
+    [
+      "P0145",
+      "is_a",
+      "Supermarket"
+    ],
+    [
+      "P0026",
+      "is_a",
+      "Hospital"
+    ],
+    [
+      "UKI72",
+      "within",
+      "UKI7"
+    ],
+    [
+      "E09000005",
+      "adjacent_to",
+      "E09000033"
+    ],
+    [
+      "P0200",
+      "within",
+      "E09000024"
+    ],
+    [
+      "P0091",
+      "within",
+      "E09000031"
+    ],
+    [
+      "V0030",
+      "is_a",
+      "VeterinaryClinic"
+    ],
+    [
+      "P0234",
+      "is_a",
+      "Supermarket"
+    ],
+    [
+      "P0134",
+      "within",
+      "E09000005"
+    ],
+    [
+      "E09000003",
+      "adjacent_to",
+      "E09000010"
+    ],
+    [
+      "P0108",
+      "within",
+      "E09000003"
+    ],
+    [
+      "E09000005",
+      "within",
+      "UKI72"
+    ],
+    [
+      "P0281",
+      "is_a",
+      "Pharmacy"
+    ],
+    [
+      "P0264",
+      "within",
+      "E09000009"
+    ],
+    [
+      "P0007",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "UKI71",
+      "adjacent_to",
+      "UKI74"
+    ],
+    [
+      "E09000003",
+      "adjacent_to",
+      "E09000005"
+    ],
+    [
+      "E09000019",
+      "within",
+      "UKI43"
+    ],
+    [
+      "V0011",
+      "is_a",
+      "VeterinaryClinic"
+    ],
+    [
+      "V0022",
+      "is_a",
+      "VeterinaryClinic"
+    ],
+    [
+      "P0251",
+      "within",
+      "E09000025"
+    ],
+    [
+      "UKI53",
+      "within",
+      "UKI5"
+    ],
+    [
+      "P0253",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "P0289",
+      "within",
+      "E09000033"
+    ],
+    [
+      "P0275",
+      "is_a",
+      "Hospital"
+    ],
+    [
+      "P0045",
+      "is_a",
+      "Pharmacy"
+    ]
+  ],
+  "proof_facts": [
+    4,
+    10,
+    13
+  ],
+  "answer_type": "value",
+  "answer": "UKI7",
+  "seed": 42
+}

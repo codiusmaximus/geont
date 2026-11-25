@@ -1,696 +1,991 @@
 [
   {
-    "task_id": "category_inference__easy__0000",
+    "task_id": "category_inference__dx_x0_log__0000",
     "type": "category_inference",
     "difficulty": "easy",
+    "dials": {
+      "depth": null,
+      "distractors": 0,
+      "order": "logical"
+    },
     "rule_tags": [
       "is_a_inheritance"
     ],
-    "question": "Is Osm Pharma a Healthcare facility?",
-    "question_anon": "Is F178 a Healthcare facility?",
-    "answer_type": "bool",
-    "answer": true,
-    "n_facts": 1
-  },
-  {
-    "task_id": "category_inference__easy__0001",
-    "type": "category_inference",
-    "difficulty": "easy",
-    "rule_tags": [
-      "is_a_inheritance"
-    ],
-    "question": "Is Yeep a ParcelServices place?",
-    "question_anon": "Is F132 a ParcelServices place?",
-    "answer_type": "bool",
-    "answer": true,
-    "n_facts": 1
-  },
-  {
-    "task_id": "category_inference__easy__0002",
-    "type": "category_inference",
-    "difficulty": "easy",
-    "rule_tags": [
-      "is_a_inheritance"
-    ],
-    "question": "Is Harris Academy Tottenham a Healthcare facility?",
-    "question_anon": "Is F095 a Healthcare facility?",
+    "question": "Is Amazon Locker - Broad a Mobility place?",
+    "question_anon": "Is F167 a Mobility place?",
     "answer_type": "bool",
     "answer": false,
     "n_facts": 1
   },
   {
-    "task_id": "category_inference__easy__0003",
+    "task_id": "category_inference__dx_x0_log__0001",
     "type": "category_inference",
     "difficulty": "easy",
+    "dials": {
+      "depth": null,
+      "distractors": 0,
+      "order": "logical"
+    },
     "rule_tags": [
       "is_a_inheritance"
     ],
-    "question": "Is Mail Boxes Etc. UK a ParcelServices place?",
-    "question_anon": "Is F289 a ParcelServices place?",
+    "question": "Is Gidea Park railway station an Education place?",
+    "question_anon": "Is F141 an Education place?",
+    "answer_type": "bool",
+    "answer": false,
+    "n_facts": 1
+  },
+  {
+    "task_id": "category_inference__dx_x0_log__0002",
+    "type": "category_inference",
+    "difficulty": "easy",
+    "dials": {
+      "depth": null,
+      "distractors": 0,
+      "order": "logical"
+    },
+    "rule_tags": [
+      "is_a_inheritance"
+    ],
+    "question": "Is Stanmore Hospital a Healthcare facility?",
+    "question_anon": "Is F185 a Healthcare facility?",
     "answer_type": "bool",
     "answer": true,
     "n_facts": 1
   },
   {
-    "task_id": "category_inference__hard__0000",
+    "task_id": "category_inference__dx_x0_log__0003",
     "type": "category_inference",
-    "difficulty": "hard",
+    "difficulty": "easy",
+    "dials": {
+      "depth": null,
+      "distractors": 0,
+      "order": "logical"
+    },
     "rule_tags": [
       "is_a_inheritance"
     ],
-    "question": "Is Amazon Locker - Agate a ParcelServices place?",
-    "question_anon": "Is F232 a ParcelServices place?",
+    "question": "Is Bromley Post Office a ParcelServices place?",
+    "question_anon": "Is F077 a ParcelServices place?",
     "answer_type": "bool",
     "answer": true,
-    "n_facts": 100
+    "n_facts": 1
   },
   {
-    "task_id": "category_inference__hard__0001",
+    "task_id": "category_inference__dx_x100_shuf__0000",
     "type": "category_inference",
     "difficulty": "hard",
+    "dials": {
+      "depth": null,
+      "distractors": 100,
+      "order": "shuffled"
+    },
     "rule_tags": [
       "is_a_inheritance"
     ],
-    "question": "Is Esso a Mobility place?",
-    "question_anon": "Is F282 a Mobility place?",
-    "answer_type": "bool",
-    "answer": true,
-    "n_facts": 100
-  },
-  {
-    "task_id": "category_inference__hard__0002",
-    "type": "category_inference",
-    "difficulty": "hard",
-    "rule_tags": [
-      "is_a_inheritance"
-    ],
-    "question": "Is LloydsPharmacy a Healthcare facility?",
-    "question_anon": "Is F180 a Healthcare facility?",
-    "answer_type": "bool",
-    "answer": true,
-    "n_facts": 100
-  },
-  {
-    "task_id": "category_inference__hard__0003",
-    "type": "category_inference",
-    "difficulty": "hard",
-    "rule_tags": [
-      "is_a_inheritance"
-    ],
-    "question": "Is Aldi Sud a ParcelServices place?",
-    "question_anon": "Is F129 a ParcelServices place?",
+    "question": "Is Amazon Locker - Broad a Mobility place?",
+    "question_anon": "Is F167 a Mobility place?",
     "answer_type": "bool",
     "answer": false,
-    "n_facts": 100
+    "n_facts": 101
   },
   {
-    "task_id": "category_inference__medium__0000",
+    "task_id": "category_inference__dx_x100_shuf__0001",
     "type": "category_inference",
-    "difficulty": "medium",
+    "difficulty": "hard",
+    "dials": {
+      "depth": null,
+      "distractors": 100,
+      "order": "shuffled"
+    },
     "rule_tags": [
       "is_a_inheritance"
     ],
-    "question": "Is Waitrose & Partners a Retail place?",
-    "question_anon": "Is F076 a Retail place?",
-    "answer_type": "bool",
-    "answer": true,
-    "n_facts": 30
-  },
-  {
-    "task_id": "category_inference__medium__0001",
-    "type": "category_inference",
-    "difficulty": "medium",
-    "rule_tags": [
-      "is_a_inheritance"
-    ],
-    "question": "Is St Helen's School an Education place?",
-    "question_anon": "Is F272 an Education place?",
-    "answer_type": "bool",
-    "answer": true,
-    "n_facts": 30
-  },
-  {
-    "task_id": "category_inference__medium__0002",
-    "type": "category_inference",
-    "difficulty": "medium",
-    "rule_tags": [
-      "is_a_inheritance"
-    ],
-    "question": "Is Broadford Primary School a Mobility place?",
-    "question_anon": "Is F008 a Mobility place?",
+    "question": "Is Gidea Park railway station an Education place?",
+    "question_anon": "Is F141 an Education place?",
     "answer_type": "bool",
     "answer": false,
-    "n_facts": 30
+    "n_facts": 101
   },
   {
-    "task_id": "category_inference__medium__0003",
+    "task_id": "category_inference__dx_x100_shuf__0002",
+    "type": "category_inference",
+    "difficulty": "hard",
+    "dials": {
+      "depth": null,
+      "distractors": 100,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "is_a_inheritance"
+    ],
+    "question": "Is Stanmore Hospital a Healthcare facility?",
+    "question_anon": "Is F185 a Healthcare facility?",
+    "answer_type": "bool",
+    "answer": true,
+    "n_facts": 101
+  },
+  {
+    "task_id": "category_inference__dx_x100_shuf__0003",
+    "type": "category_inference",
+    "difficulty": "hard",
+    "dials": {
+      "depth": null,
+      "distractors": 100,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "is_a_inheritance"
+    ],
+    "question": "Is Bromley Post Office a ParcelServices place?",
+    "question_anon": "Is F077 a ParcelServices place?",
+    "answer_type": "bool",
+    "answer": true,
+    "n_facts": 101
+  },
+  {
+    "task_id": "category_inference__dx_x25_shuf__0000",
     "type": "category_inference",
     "difficulty": "medium",
+    "dials": {
+      "depth": null,
+      "distractors": 25,
+      "order": "shuffled"
+    },
     "rule_tags": [
       "is_a_inheritance"
     ],
-    "question": "Is Sion Manning Secondary School a ParcelServices place?",
-    "question_anon": "Is F022 a ParcelServices place?",
+    "question": "Is Amazon Locker - Broad a Mobility place?",
+    "question_anon": "Is F167 a Mobility place?",
     "answer_type": "bool",
     "answer": false,
-    "n_facts": 30
+    "n_facts": 26
   },
   {
-    "task_id": "combined_filter__easy__0000",
-    "type": "combined_filter",
-    "difficulty": "easy",
-    "rule_tags": [
-      "within_transitive",
-      "is_a_inheritance"
-    ],
-    "question": "Which Healthcare places are within Kingston upon Thames?",
-    "question_anon": "Which Healthcare places are within U049?",
-    "answer_type": "set",
-    "answer": [
-      "P0026"
-    ],
-    "n_facts": 2
-  },
-  {
-    "task_id": "combined_filter__easy__0001",
-    "type": "combined_filter",
-    "difficulty": "easy",
-    "rule_tags": [
-      "within_transitive",
-      "is_a_inheritance"
-    ],
-    "question": "Which Education places are within Brent?",
-    "question_anon": "Which Education places are within U033?",
-    "answer_type": "set",
-    "answer": [
-      "P0042",
-      "P0084"
-    ],
-    "n_facts": 4
-  },
-  {
-    "task_id": "combined_filter__easy__0002",
-    "type": "combined_filter",
-    "difficulty": "easy",
-    "rule_tags": [
-      "within_transitive",
-      "is_a_inheritance"
-    ],
-    "question": "Which Education places are within Hammersmith and Fulham?",
-    "question_anon": "Which Education places are within U041?",
-    "answer_type": "set",
-    "answer": [
-      "P0087"
-    ],
-    "n_facts": 2
-  },
-  {
-    "task_id": "combined_filter__easy__0003",
-    "type": "combined_filter",
-    "difficulty": "easy",
-    "rule_tags": [
-      "within_transitive",
-      "is_a_inheritance"
-    ],
-    "question": "Which Healthcare places are within Southwark?",
-    "question_anon": "Which Healthcare places are within U056?",
-    "answer_type": "set",
-    "answer": [
-      "P0045"
-    ],
-    "n_facts": 2
-  },
-  {
-    "task_id": "combined_filter__hard__0000",
-    "type": "combined_filter",
-    "difficulty": "hard",
-    "rule_tags": [
-      "within_transitive",
-      "is_a_inheritance"
-    ],
-    "question": "Which Mobility places are within Inner London \u2014 East?",
-    "question_anon": "Which Mobility places are within U004?",
-    "answer_type": "set",
-    "answer": [
-      "P0025",
-      "P0057",
-      "P0067",
-      "P0069",
-      "P0135",
-      "P0157",
-      "P0182",
-      "P0216",
-      "P0277",
-      "P0282",
-      "P0283"
-    ],
-    "n_facts": 100
-  },
-  {
-    "task_id": "combined_filter__hard__0001",
-    "type": "combined_filter",
-    "difficulty": "hard",
-    "rule_tags": [
-      "within_transitive",
-      "is_a_inheritance"
-    ],
-    "question": "Which Mobility places are within Inner London \u2014 East?",
-    "question_anon": "Which Mobility places are within U004?",
-    "answer_type": "set",
-    "answer": [
-      "P0025",
-      "P0057",
-      "P0067",
-      "P0069",
-      "P0135",
-      "P0157",
-      "P0182",
-      "P0216",
-      "P0277",
-      "P0282",
-      "P0283"
-    ],
-    "n_facts": 100
-  },
-  {
-    "task_id": "combined_filter__hard__0002",
-    "type": "combined_filter",
-    "difficulty": "hard",
-    "rule_tags": [
-      "within_transitive",
-      "is_a_inheritance"
-    ],
-    "question": "Which Mobility places are within Outer London \u2014 South?",
-    "question_anon": "Which Mobility places are within U006?",
-    "answer_type": "set",
-    "answer": [
-      "P0034",
-      "P0099",
-      "P0160",
-      "P0235",
-      "P0237",
-      "P0247",
-      "P0257"
-    ],
-    "n_facts": 100
-  },
-  {
-    "task_id": "combined_filter__hard__0003",
-    "type": "combined_filter",
-    "difficulty": "hard",
-    "rule_tags": [
-      "within_transitive",
-      "is_a_inheritance"
-    ],
-    "question": "Which Mobility places are within Outer London \u2014 South?",
-    "question_anon": "Which Mobility places are within U006?",
-    "answer_type": "set",
-    "answer": [
-      "P0034",
-      "P0099",
-      "P0160",
-      "P0235",
-      "P0237",
-      "P0247",
-      "P0257"
-    ],
-    "n_facts": 100
-  },
-  {
-    "task_id": "combined_filter__medium__0000",
-    "type": "combined_filter",
+    "task_id": "category_inference__dx_x25_shuf__0001",
+    "type": "category_inference",
     "difficulty": "medium",
+    "dials": {
+      "depth": null,
+      "distractors": 25,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "is_a_inheritance"
+    ],
+    "question": "Is Gidea Park railway station an Education place?",
+    "question_anon": "Is F141 an Education place?",
+    "answer_type": "bool",
+    "answer": false,
+    "n_facts": 26
+  },
+  {
+    "task_id": "category_inference__dx_x25_shuf__0002",
+    "type": "category_inference",
+    "difficulty": "medium",
+    "dials": {
+      "depth": null,
+      "distractors": 25,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "is_a_inheritance"
+    ],
+    "question": "Is Stanmore Hospital a Healthcare facility?",
+    "question_anon": "Is F185 a Healthcare facility?",
+    "answer_type": "bool",
+    "answer": true,
+    "n_facts": 26
+  },
+  {
+    "task_id": "category_inference__dx_x25_shuf__0003",
+    "type": "category_inference",
+    "difficulty": "medium",
+    "dials": {
+      "depth": null,
+      "distractors": 25,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "is_a_inheritance"
+    ],
+    "question": "Is Bromley Post Office a ParcelServices place?",
+    "question_anon": "Is F077 a ParcelServices place?",
+    "answer_type": "bool",
+    "answer": true,
+    "n_facts": 26
+  },
+  {
+    "task_id": "combined_filter__d2_x0_log__0000",
+    "type": "combined_filter",
+    "difficulty": "easy",
+    "dials": {
+      "depth": 2,
+      "distractors": 0,
+      "order": "logical"
+    },
     "rule_tags": [
       "within_transitive",
       "is_a_inheritance"
     ],
-    "question": "Which Healthcare places are within Bexley and Greenwich?",
-    "question_anon": "Which Healthcare places are within U017?",
+    "question": "Which Retail places are within Harrow and Hillingdon?",
+    "question_anon": "Which Retail places are within U027?",
     "answer_type": "set",
     "answer": [
+      "P0028",
+      "P0145",
+      "P0150",
+      "P0234",
+      "P0259"
+    ],
+    "n_facts": 12
+  },
+  {
+    "task_id": "combined_filter__d2_x0_log__0001",
+    "type": "combined_filter",
+    "difficulty": "easy",
+    "dials": {
+      "depth": 2,
+      "distractors": 0,
+      "order": "logical"
+    },
+    "rule_tags": [
+      "within_transitive",
+      "is_a_inheritance"
+    ],
+    "question": "Which Healthcare places are within Enfield?",
+    "question_anon": "Which Healthcare places are within U020?",
+    "answer_type": "set",
+    "answer": [
+      "P0128",
+      "P0180",
+      "P0192",
+      "P0227"
+    ],
+    "n_facts": 9
+  },
+  {
+    "task_id": "combined_filter__d2_x0_log__0002",
+    "type": "combined_filter",
+    "difficulty": "easy",
+    "dials": {
+      "depth": 2,
+      "distractors": 0,
+      "order": "logical"
+    },
+    "rule_tags": [
+      "within_transitive",
+      "is_a_inheritance"
+    ],
+    "question": "Which ParcelServices places are within Westminster?",
+    "question_anon": "Which ParcelServices places are within U009?",
+    "answer_type": "set",
+    "answer": [
+      "P0038",
+      "P0053",
+      "P0289"
+    ],
+    "n_facts": 7
+  },
+  {
+    "task_id": "combined_filter__d2_x0_log__0003",
+    "type": "combined_filter",
+    "difficulty": "easy",
+    "dials": {
+      "depth": 2,
+      "distractors": 0,
+      "order": "logical"
+    },
+    "rule_tags": [
+      "within_transitive",
+      "is_a_inheritance"
+    ],
+    "question": "Which Mobility places are within Hackney and Newham?",
+    "question_anon": "Which Mobility places are within U012?",
+    "answer_type": "set",
+    "answer": [
+      "P0182"
+    ],
+    "n_facts": 3
+  },
+  {
+    "task_id": "combined_filter__d3_x100_shuf__0000",
+    "type": "combined_filter",
+    "difficulty": "hard",
+    "dials": {
+      "depth": 3,
+      "distractors": 100,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "within_transitive",
+      "is_a_inheritance"
+    ],
+    "question": "Which Retail places are within Outer London \u2014 West and North West?",
+    "question_anon": "Which Retail places are within U007?",
+    "answer_type": "set",
+    "answer": [
+      "P0028",
+      "P0046",
+      "P0108",
+      "P0130",
+      "P0145",
+      "P0150",
+      "P0186",
+      "P0234",
+      "P0240",
+      "P0244",
+      "P0259"
+    ],
+    "n_facts": 134
+  },
+  {
+    "task_id": "combined_filter__d3_x100_shuf__0001",
+    "type": "combined_filter",
+    "difficulty": "hard",
+    "dials": {
+      "depth": 3,
+      "distractors": 100,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "within_transitive",
+      "is_a_inheritance"
+    ],
+    "question": "Which Healthcare places are within Outer London \u2014 East and North East?",
+    "question_anon": "Which Healthcare places are within U005?",
+    "answer_type": "set",
+    "answer": [
+      "P0078",
+      "P0111",
+      "P0112",
       "P0118",
-      "P0170"
+      "P0128",
+      "P0170",
+      "P0180",
+      "P0192",
+      "P0227",
+      "P0280",
+      "P0298"
     ],
-    "n_facts": 30
+    "n_facts": 133
   },
   {
-    "task_id": "combined_filter__medium__0001",
+    "task_id": "combined_filter__d3_x100_shuf__0002",
     "type": "combined_filter",
-    "difficulty": "medium",
+    "difficulty": "hard",
+    "dials": {
+      "depth": 3,
+      "distractors": 100,
+      "order": "shuffled"
+    },
     "rule_tags": [
       "within_transitive",
       "is_a_inheritance"
     ],
-    "question": "Which ParcelServices places are within Brent?",
-    "question_anon": "Which ParcelServices places are within U025?",
+    "question": "Which ParcelServices places are within Inner London \u2014 West?",
+    "question_anon": "Which ParcelServices places are within U003?",
     "answer_type": "set",
     "answer": [
-      "P0242"
+      "P0038",
+      "P0053",
+      "P0101",
+      "P0133",
+      "P0139",
+      "P0175",
+      "P0201",
+      "P0208",
+      "P0258",
+      "P0279",
+      "P0289"
     ],
-    "n_facts": 30
+    "n_facts": 131
   },
   {
-    "task_id": "combined_filter__medium__0002",
+    "task_id": "combined_filter__d3_x100_shuf__0003",
     "type": "combined_filter",
-    "difficulty": "medium",
+    "difficulty": "hard",
+    "dials": {
+      "depth": 3,
+      "distractors": 100,
+      "order": "shuffled"
+    },
     "rule_tags": [
       "within_transitive",
       "is_a_inheritance"
     ],
-    "question": "Which ParcelServices places are within Brent?",
-    "question_anon": "Which ParcelServices places are within U025?",
+    "question": "Which Mobility places are within Inner London \u2014 East?",
+    "question_anon": "Which Mobility places are within U004?",
     "answer_type": "set",
     "answer": [
-      "P0242"
+      "P0025",
+      "P0057",
+      "P0067",
+      "P0069",
+      "P0135",
+      "P0157",
+      "P0182",
+      "P0216",
+      "P0277",
+      "P0282",
+      "P0283"
     ],
-    "n_facts": 30
+    "n_facts": 132
   },
   {
-    "task_id": "combined_filter__medium__0003",
+    "task_id": "combined_filter__d3_x25_shuf__0000",
     "type": "combined_filter",
     "difficulty": "medium",
+    "dials": {
+      "depth": 3,
+      "distractors": 25,
+      "order": "shuffled"
+    },
     "rule_tags": [
       "within_transitive",
       "is_a_inheritance"
     ],
-    "question": "Which Healthcare places are within Merton, Kingston upon Thames and Sutton?",
-    "question_anon": "Which Healthcare places are within U023?",
+    "question": "Which Retail places are within Outer London \u2014 West and North West?",
+    "question_anon": "Which Retail places are within U007?",
     "answer_type": "set",
     "answer": [
-      "P0026"
+      "P0028",
+      "P0046",
+      "P0108",
+      "P0130",
+      "P0145",
+      "P0150",
+      "P0186",
+      "P0234",
+      "P0240",
+      "P0244",
+      "P0259"
     ],
-    "n_facts": 30
+    "n_facts": 59
   },
   {
-    "task_id": "not_determinable__easy__0000",
+    "task_id": "combined_filter__d3_x25_shuf__0001",
+    "type": "combined_filter",
+    "difficulty": "medium",
+    "dials": {
+      "depth": 3,
+      "distractors": 25,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "within_transitive",
+      "is_a_inheritance"
+    ],
+    "question": "Which Healthcare places are within Outer London \u2014 East and North East?",
+    "question_anon": "Which Healthcare places are within U005?",
+    "answer_type": "set",
+    "answer": [
+      "P0078",
+      "P0111",
+      "P0112",
+      "P0118",
+      "P0128",
+      "P0170",
+      "P0180",
+      "P0192",
+      "P0227",
+      "P0280",
+      "P0298"
+    ],
+    "n_facts": 58
+  },
+  {
+    "task_id": "combined_filter__d3_x25_shuf__0002",
+    "type": "combined_filter",
+    "difficulty": "medium",
+    "dials": {
+      "depth": 3,
+      "distractors": 25,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "within_transitive",
+      "is_a_inheritance"
+    ],
+    "question": "Which ParcelServices places are within Inner London \u2014 West?",
+    "question_anon": "Which ParcelServices places are within U003?",
+    "answer_type": "set",
+    "answer": [
+      "P0038",
+      "P0053",
+      "P0101",
+      "P0133",
+      "P0139",
+      "P0175",
+      "P0201",
+      "P0208",
+      "P0258",
+      "P0279",
+      "P0289"
+    ],
+    "n_facts": 56
+  },
+  {
+    "task_id": "combined_filter__d3_x25_shuf__0003",
+    "type": "combined_filter",
+    "difficulty": "medium",
+    "dials": {
+      "depth": 3,
+      "distractors": 25,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "within_transitive",
+      "is_a_inheritance"
+    ],
+    "question": "Which Mobility places are within Inner London \u2014 East?",
+    "question_anon": "Which Mobility places are within U004?",
+    "answer_type": "set",
+    "answer": [
+      "P0025",
+      "P0057",
+      "P0067",
+      "P0069",
+      "P0135",
+      "P0157",
+      "P0182",
+      "P0216",
+      "P0277",
+      "P0282",
+      "P0283"
+    ],
+    "n_facts": 57
+  },
+  {
+    "task_id": "not_determinable__d2_x0_log__0000",
     "type": "not_determinable",
     "difficulty": "easy",
+    "dials": {
+      "depth": 2,
+      "distractors": 0,
+      "order": "logical"
+    },
     "rule_tags": [
       "closed_world"
     ],
-    "question": "Which NUTS-3 region is LloydsPharmacy within?",
-    "question_anon": "Which NUTS-3 region is F054 within?",
+    "question": "Which NUTS-3 region is Martin Way within?",
+    "question_anon": "Which NUTS-3 region is F225 within?",
     "answer_type": "CANNOT_DETERMINE",
     "answer": "CANNOT_DETERMINE",
     "n_facts": 1
   },
   {
-    "task_id": "not_determinable__easy__0001",
+    "task_id": "not_determinable__d2_x0_log__0001",
     "type": "not_determinable",
     "difficulty": "easy",
+    "dials": {
+      "depth": 2,
+      "distractors": 0,
+      "order": "logical"
+    },
     "rule_tags": [
       "closed_world"
     ],
-    "question": "Which NUTS-3 region is Woodlands Healthcare Hospitals within?",
-    "question_anon": "Which NUTS-3 region is F093 within?",
+    "question": "Which NUTS-3 region is The University of Law - London Bloomsbury within?",
+    "question_anon": "Which NUTS-3 region is F061 within?",
     "answer_type": "CANNOT_DETERMINE",
     "answer": "CANNOT_DETERMINE",
     "n_facts": 1
   },
   {
-    "task_id": "not_determinable__easy__0002",
+    "task_id": "not_determinable__d2_x0_log__0002",
     "type": "not_determinable",
     "difficulty": "easy",
+    "dials": {
+      "depth": 2,
+      "distractors": 0,
+      "order": "logical"
+    },
     "rule_tags": [
       "closed_world"
     ],
-    "question": "Which NUTS-3 region is Woodlands Healthcare Hospitals within?",
-    "question_anon": "Which NUTS-3 region is F093 within?",
+    "question": "Which NUTS-3 region is InPost within?",
+    "question_anon": "Which NUTS-3 region is F193 within?",
     "answer_type": "CANNOT_DETERMINE",
     "answer": "CANNOT_DETERMINE",
     "n_facts": 1
   },
   {
-    "task_id": "not_determinable__easy__0003",
+    "task_id": "not_determinable__d2_x0_log__0003",
     "type": "not_determinable",
     "difficulty": "easy",
+    "dials": {
+      "depth": 2,
+      "distractors": 0,
+      "order": "logical"
+    },
     "rule_tags": [
       "closed_world"
     ],
-    "question": "Which NUTS-3 region is London Road 494 Post Office within?",
-    "question_anon": "Which NUTS-3 region is F169 within?",
+    "question": "Which NUTS-3 region is Tesco Express within?",
+    "question_anon": "Which NUTS-3 region is F017 within?",
     "answer_type": "CANNOT_DETERMINE",
     "answer": "CANNOT_DETERMINE",
     "n_facts": 1
   },
   {
-    "task_id": "not_determinable__hard__0000",
+    "task_id": "not_determinable__d3_x25_shuf__0000",
+    "type": "not_determinable",
+    "difficulty": "medium",
+    "dials": {
+      "depth": 3,
+      "distractors": 25,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "closed_world"
+    ],
+    "question": "Which NUTS-2 region is Martin Way within?",
+    "question_anon": "Which NUTS-2 region is F225 within?",
+    "answer_type": "CANNOT_DETERMINE",
+    "answer": "CANNOT_DETERMINE",
+    "n_facts": 27
+  },
+  {
+    "task_id": "not_determinable__d3_x25_shuf__0001",
+    "type": "not_determinable",
+    "difficulty": "medium",
+    "dials": {
+      "depth": 3,
+      "distractors": 25,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "closed_world"
+    ],
+    "question": "Which NUTS-2 region is The University of Law - London Bloomsbury within?",
+    "question_anon": "Which NUTS-2 region is F061 within?",
+    "answer_type": "CANNOT_DETERMINE",
+    "answer": "CANNOT_DETERMINE",
+    "n_facts": 27
+  },
+  {
+    "task_id": "not_determinable__d3_x25_shuf__0002",
+    "type": "not_determinable",
+    "difficulty": "medium",
+    "dials": {
+      "depth": 3,
+      "distractors": 25,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "closed_world"
+    ],
+    "question": "Which NUTS-2 region is InPost within?",
+    "question_anon": "Which NUTS-2 region is F193 within?",
+    "answer_type": "CANNOT_DETERMINE",
+    "answer": "CANNOT_DETERMINE",
+    "n_facts": 27
+  },
+  {
+    "task_id": "not_determinable__d3_x25_shuf__0003",
+    "type": "not_determinable",
+    "difficulty": "medium",
+    "dials": {
+      "depth": 3,
+      "distractors": 25,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "closed_world"
+    ],
+    "question": "Which NUTS-2 region is Tesco Express within?",
+    "question_anon": "Which NUTS-2 region is F017 within?",
+    "answer_type": "CANNOT_DETERMINE",
+    "answer": "CANNOT_DETERMINE",
+    "n_facts": 27
+  },
+  {
+    "task_id": "not_determinable__d4_x100_shuf__0000",
     "type": "not_determinable",
     "difficulty": "hard",
+    "dials": {
+      "depth": 4,
+      "distractors": 100,
+      "order": "shuffled"
+    },
     "rule_tags": [
       "closed_world"
     ],
-    "question": "Which NUTS-1 region is Dandra Food & Wine London within?",
-    "question_anon": "Which NUTS-1 region is F046 within?",
+    "question": "Which NUTS-1 region is Martin Way within?",
+    "question_anon": "Which NUTS-1 region is F225 within?",
     "answer_type": "CANNOT_DETERMINE",
     "answer": "CANNOT_DETERMINE",
-    "n_facts": 100
+    "n_facts": 103
   },
   {
-    "task_id": "not_determinable__hard__0001",
+    "task_id": "not_determinable__d4_x100_shuf__0001",
     "type": "not_determinable",
     "difficulty": "hard",
+    "dials": {
+      "depth": 4,
+      "distractors": 100,
+      "order": "shuffled"
+    },
     "rule_tags": [
       "closed_world"
     ],
-    "question": "Which NUTS-1 region is Sychet News Ag London within?",
-    "question_anon": "Which NUTS-1 region is F058 within?",
+    "question": "Which NUTS-1 region is The University of Law - London Bloomsbury within?",
+    "question_anon": "Which NUTS-1 region is F061 within?",
     "answer_type": "CANNOT_DETERMINE",
     "answer": "CANNOT_DETERMINE",
-    "n_facts": 100
+    "n_facts": 103
   },
   {
-    "task_id": "not_determinable__hard__0002",
+    "task_id": "not_determinable__d4_x100_shuf__0002",
     "type": "not_determinable",
     "difficulty": "hard",
+    "dials": {
+      "depth": 4,
+      "distractors": 100,
+      "order": "shuffled"
+    },
     "rule_tags": [
       "closed_world"
     ],
     "question": "Which NUTS-1 region is InPost within?",
-    "question_anon": "Which NUTS-1 region is F196 within?",
+    "question_anon": "Which NUTS-1 region is F193 within?",
     "answer_type": "CANNOT_DETERMINE",
     "answer": "CANNOT_DETERMINE",
-    "n_facts": 100
+    "n_facts": 103
   },
   {
-    "task_id": "not_determinable__hard__0003",
+    "task_id": "not_determinable__d4_x100_shuf__0003",
     "type": "not_determinable",
     "difficulty": "hard",
+    "dials": {
+      "depth": 4,
+      "distractors": 100,
+      "order": "shuffled"
+    },
     "rule_tags": [
       "closed_world"
     ],
-    "question": "Which NUTS-1 region is Modern Montessori International Ltd. within?",
-    "question_anon": "Which NUTS-1 region is F200 within?",
+    "question": "Which NUTS-1 region is Tesco Express within?",
+    "question_anon": "Which NUTS-1 region is F017 within?",
     "answer_type": "CANNOT_DETERMINE",
     "answer": "CANNOT_DETERMINE",
-    "n_facts": 100
+    "n_facts": 103
   },
   {
-    "task_id": "not_determinable__medium__0000",
-    "type": "not_determinable",
-    "difficulty": "medium",
-    "rule_tags": [
-      "closed_world"
-    ],
-    "question": "Which NUTS-2 region is Gulf within?",
-    "question_anon": "Which NUTS-2 region is F295 within?",
-    "answer_type": "CANNOT_DETERMINE",
-    "answer": "CANNOT_DETERMINE",
-    "n_facts": 30
-  },
-  {
-    "task_id": "not_determinable__medium__0001",
-    "type": "not_determinable",
-    "difficulty": "medium",
-    "rule_tags": [
-      "closed_world"
-    ],
-    "question": "Which NUTS-2 region is Yeep within?",
-    "question_anon": "Which NUTS-2 region is F265 within?",
-    "answer_type": "CANNOT_DETERMINE",
-    "answer": "CANNOT_DETERMINE",
-    "n_facts": 30
-  },
-  {
-    "task_id": "not_determinable__medium__0002",
-    "type": "not_determinable",
-    "difficulty": "medium",
-    "rule_tags": [
-      "closed_world"
-    ],
-    "question": "Which NUTS-2 region is UPS Access Point within?",
-    "question_anon": "Which NUTS-2 region is F079 within?",
-    "answer_type": "CANNOT_DETERMINE",
-    "answer": "CANNOT_DETERMINE",
-    "n_facts": 30
-  },
-  {
-    "task_id": "not_determinable__medium__0003",
-    "type": "not_determinable",
-    "difficulty": "medium",
-    "rule_tags": [
-      "closed_world"
-    ],
-    "question": "Which NUTS-2 region is ACPD Academy within?",
-    "question_anon": "Which NUTS-2 region is F004 within?",
-    "answer_type": "CANNOT_DETERMINE",
-    "answer": "CANNOT_DETERMINE",
-    "n_facts": 30
-  },
-  {
-    "task_id": "spatial_inference__easy__0000",
+    "task_id": "spatial_inference__d2_x0_log__0000",
     "type": "spatial_inference",
     "difficulty": "easy",
+    "dials": {
+      "depth": 2,
+      "distractors": 0,
+      "order": "logical"
+    },
     "rule_tags": [
       "within_transitive"
     ],
-    "question": "Which NUTS-3 region is Bell Green Food&wine within?",
-    "question_anon": "Which NUTS-3 region is F050 within?",
-    "answer_type": "value",
-    "answer": "UKI44",
-    "n_facts": 2
-  },
-  {
-    "task_id": "spatial_inference__easy__0001",
-    "type": "spatial_inference",
-    "difficulty": "easy",
-    "rule_tags": [
-      "within_transitive"
-    ],
-    "question": "Which NUTS-3 region is Bromley Post Office within?",
-    "question_anon": "Which NUTS-3 region is F077 within?",
-    "answer_type": "value",
-    "answer": "UKI61",
-    "n_facts": 2
-  },
-  {
-    "task_id": "spatial_inference__easy__0002",
-    "type": "spatial_inference",
-    "difficulty": "easy",
-    "rule_tags": [
-      "within_transitive"
-    ],
-    "question": "Which NUTS-3 region is Yeep within?",
-    "question_anon": "Which NUTS-3 region is F100 within?",
-    "answer_type": "value",
-    "answer": "UKI54",
-    "n_facts": 2
-  },
-  {
-    "task_id": "spatial_inference__easy__0003",
-    "type": "spatial_inference",
-    "difficulty": "easy",
-    "rule_tags": [
-      "within_transitive"
-    ],
-    "question": "Which NUTS-3 region is Mon\u00e9t Ward - Goodmayes Hospital within?",
-    "question_anon": "Which NUTS-3 region is F298 within?",
+    "question": "Which NUTS-3 region is Post Office-Lea Bridge Road 333 within?",
+    "question_anon": "Which NUTS-3 region is F199 within?",
     "answer_type": "value",
     "answer": "UKI53",
     "n_facts": 2
   },
   {
-    "task_id": "spatial_inference__hard__0000",
+    "task_id": "spatial_inference__d2_x0_log__0001",
     "type": "spatial_inference",
-    "difficulty": "hard",
+    "difficulty": "easy",
+    "dials": {
+      "depth": 2,
+      "distractors": 0,
+      "order": "logical"
+    },
     "rule_tags": [
       "within_transitive"
     ],
-    "question": "Which NUTS-1 region is Canonbury Mini Market within?",
-    "question_anon": "Which NUTS-1 region is F048 within?",
+    "question": "Which NUTS-3 region is Gipsy Hill railway station within?",
+    "question_anon": "Which NUTS-3 region is F283 within?",
     "answer_type": "value",
-    "answer": "UKI",
-    "n_facts": 100
+    "answer": "UKI45",
+    "n_facts": 2
   },
   {
-    "task_id": "spatial_inference__hard__0001",
+    "task_id": "spatial_inference__d2_x0_log__0002",
     "type": "spatial_inference",
-    "difficulty": "hard",
+    "difficulty": "easy",
+    "dials": {
+      "depth": 2,
+      "distractors": 0,
+      "order": "logical"
+    },
     "rule_tags": [
       "within_transitive"
     ],
-    "question": "Which NUTS-1 region is Arsenal Mini Market London within?",
-    "question_anon": "Which NUTS-1 region is F194 within?",
+    "question": "Which NUTS-3 region is Coopers within?",
+    "question_anon": "Which NUTS-3 region is F134 within?",
     "answer_type": "value",
-    "answer": "UKI",
-    "n_facts": 100
+    "answer": "UKI72",
+    "n_facts": 2
   },
   {
-    "task_id": "spatial_inference__hard__0002",
+    "task_id": "spatial_inference__d2_x0_log__0003",
     "type": "spatial_inference",
-    "difficulty": "hard",
+    "difficulty": "easy",
+    "dials": {
+      "depth": 2,
+      "distractors": 0,
+      "order": "logical"
+    },
     "rule_tags": [
       "within_transitive"
     ],
-    "question": "Which NUTS-1 region is InPost within?",
-    "question_anon": "Which NUTS-1 region is F082 within?",
+    "question": "Which NUTS-3 region is JET within?",
+    "question_anon": "Which NUTS-3 region is F056 within?",
     "answer_type": "value",
-    "answer": "UKI",
-    "n_facts": 100
+    "answer": "UKI53",
+    "n_facts": 2
   },
   {
-    "task_id": "spatial_inference__hard__0003",
-    "type": "spatial_inference",
-    "difficulty": "hard",
-    "rule_tags": [
-      "within_transitive"
-    ],
-    "question": "Which NUTS-1 region is Tesco Express within?",
-    "question_anon": "Which NUTS-1 region is F256 within?",
-    "answer_type": "value",
-    "answer": "UKI",
-    "n_facts": 100
-  },
-  {
-    "task_id": "spatial_inference__medium__0000",
+    "task_id": "spatial_inference__d3_x25_shuf__0000",
     "type": "spatial_inference",
     "difficulty": "medium",
+    "dials": {
+      "depth": 3,
+      "distractors": 25,
+      "order": "shuffled"
+    },
     "rule_tags": [
       "within_transitive"
     ],
-    "question": "Which NUTS-2 region is Amazon Locker - Juniper within?",
-    "question_anon": "Which NUTS-2 region is F175 within?",
+    "question": "Which NUTS-2 region is Post Office-Lea Bridge Road 333 within?",
+    "question_anon": "Which NUTS-2 region is F199 within?",
     "answer_type": "value",
-    "answer": "UKI3",
-    "n_facts": 30
+    "answer": "UKI5",
+    "n_facts": 28
   },
   {
-    "task_id": "spatial_inference__medium__0001",
+    "task_id": "spatial_inference__d3_x25_shuf__0001",
     "type": "spatial_inference",
     "difficulty": "medium",
+    "dials": {
+      "depth": 3,
+      "distractors": 25,
+      "order": "shuffled"
+    },
     "rule_tags": [
       "within_transitive"
     ],
-    "question": "Which NUTS-2 region is Asda Superstore within?",
-    "question_anon": "Which NUTS-2 region is F040 within?",
+    "question": "Which NUTS-2 region is Gipsy Hill railway station within?",
+    "question_anon": "Which NUTS-2 region is F283 within?",
     "answer_type": "value",
-    "answer": "UKI6",
-    "n_facts": 30
+    "answer": "UKI4",
+    "n_facts": 28
   },
   {
-    "task_id": "spatial_inference__medium__0002",
+    "task_id": "spatial_inference__d3_x25_shuf__0002",
     "type": "spatial_inference",
     "difficulty": "medium",
+    "dials": {
+      "depth": 3,
+      "distractors": 25,
+      "order": "shuffled"
+    },
     "rule_tags": [
       "within_transitive"
     ],
-    "question": "Which NUTS-2 region is Ashford International Train Station within?",
-    "question_anon": "Which NUTS-2 region is F030 within?",
-    "answer_type": "value",
-    "answer": "UKI3",
-    "n_facts": 30
-  },
-  {
-    "task_id": "spatial_inference__medium__0003",
-    "type": "spatial_inference",
-    "difficulty": "medium",
-    "rule_tags": [
-      "within_transitive"
-    ],
-    "question": "Which NUTS-2 region is Saint Merry's Hospital. within?",
-    "question_anon": "Which NUTS-2 region is F163 within?",
+    "question": "Which NUTS-2 region is Coopers within?",
+    "question_anon": "Which NUTS-2 region is F134 within?",
     "answer_type": "value",
     "answer": "UKI7",
-    "n_facts": 30
+    "n_facts": 28
+  },
+  {
+    "task_id": "spatial_inference__d3_x25_shuf__0003",
+    "type": "spatial_inference",
+    "difficulty": "medium",
+    "dials": {
+      "depth": 3,
+      "distractors": 25,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "within_transitive"
+    ],
+    "question": "Which NUTS-2 region is JET within?",
+    "question_anon": "Which NUTS-2 region is F056 within?",
+    "answer_type": "value",
+    "answer": "UKI5",
+    "n_facts": 28
+  },
+  {
+    "task_id": "spatial_inference__d4_x100_shuf__0000",
+    "type": "spatial_inference",
+    "difficulty": "hard",
+    "dials": {
+      "depth": 4,
+      "distractors": 100,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "within_transitive"
+    ],
+    "question": "Which NUTS-1 region is Post Office-Lea Bridge Road 333 within?",
+    "question_anon": "Which NUTS-1 region is F199 within?",
+    "answer_type": "value",
+    "answer": "UKI",
+    "n_facts": 104
+  },
+  {
+    "task_id": "spatial_inference__d4_x100_shuf__0001",
+    "type": "spatial_inference",
+    "difficulty": "hard",
+    "dials": {
+      "depth": 4,
+      "distractors": 100,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "within_transitive"
+    ],
+    "question": "Which NUTS-1 region is Gipsy Hill railway station within?",
+    "question_anon": "Which NUTS-1 region is F283 within?",
+    "answer_type": "value",
+    "answer": "UKI",
+    "n_facts": 104
+  },
+  {
+    "task_id": "spatial_inference__d4_x100_shuf__0002",
+    "type": "spatial_inference",
+    "difficulty": "hard",
+    "dials": {
+      "depth": 4,
+      "distractors": 100,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "within_transitive"
+    ],
+    "question": "Which NUTS-1 region is Coopers within?",
+    "question_anon": "Which NUTS-1 region is F134 within?",
+    "answer_type": "value",
+    "answer": "UKI",
+    "n_facts": 104
+  },
+  {
+    "task_id": "spatial_inference__d4_x100_shuf__0003",
+    "type": "spatial_inference",
+    "difficulty": "hard",
+    "dials": {
+      "depth": 4,
+      "distractors": 100,
+      "order": "shuffled"
+    },
+    "rule_tags": [
+      "within_transitive"
+    ],
+    "question": "Which NUTS-1 region is JET within?",
+    "question_anon": "Which NUTS-1 region is F056 within?",
+    "answer_type": "value",
+    "answer": "UKI",
+    "n_facts": 104
   }
 ]

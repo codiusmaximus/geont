@@ -1,0 +1,36 @@
+{
+  "task_id": "spatial_inference__d2_x0_log__0002",
+  "base_id": "spatial_inference__0002",
+  "type": "spatial_inference",
+  "preset": "easy",
+  "dials": {
+    "depth": 2,
+    "distractors": 0,
+    "order": "logical"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "within_transitive"
+  ],
+  "anonymised": true,
+  "question": "Which NUTS-3 region is F134 within?",
+  "facts": [
+    [
+      "P0134",
+      "within",
+      "E09000005"
+    ],
+    [
+      "E09000005",
+      "within",
+      "UKI72"
+    ]
+  ],
+  "proof_facts": [
+    0,
+    1
+  ],
+  "answer_type": "value",
+  "answer": "UKI72",
+  "seed": 42
+}

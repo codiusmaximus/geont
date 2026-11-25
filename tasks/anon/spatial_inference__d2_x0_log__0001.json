@@ -1,0 +1,36 @@
+{
+  "task_id": "spatial_inference__d2_x0_log__0001",
+  "base_id": "spatial_inference__0001",
+  "type": "spatial_inference",
+  "preset": "easy",
+  "dials": {
+    "depth": 2,
+    "distractors": 0,
+    "order": "logical"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "within_transitive"
+  ],
+  "anonymised": true,
+  "question": "Which NUTS-3 region is F283 within?",
+  "facts": [
+    [
+      "P0283",
+      "within",
+      "E09000022"
+    ],
+    [
+      "E09000022",
+      "within",
+      "UKI45"
+    ]
+  ],
+  "proof_facts": [
+    0,
+    1
+  ],
+  "answer_type": "value",
+  "answer": "UKI45",
+  "seed": 42
+}

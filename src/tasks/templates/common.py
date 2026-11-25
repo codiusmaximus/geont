@@ -5,8 +5,7 @@ import random
 from src.reasoner import Reasoner
 from src.tasks.world import World
 
-FACT_TARGET = {"easy": 5, "medium": 30, "hard": 100}
-SPATIAL_LEVEL = {"easy": "NUTS3", "medium": "NUTS2", "hard": "NUTS1"}
+LEVEL_AT_DEPTH = {1: "MUNI", 2: "NUTS3", 3: "NUTS2", 4: "NUTS1"}
 ARTICLE = {
     "Healthcare": "a Healthcare facility",
     "Education": "an Education place",
@@ -29,23 +28,24 @@ def within_chain(place_id: str, muni_id: str, world: World, stop_level: str) -> 
     return facts, current
 
 
-def fill_facts(required: list[tuple[str, str, str]], world: World, rng: random.Random, difficulty: str, protected: set[str]) -> list[list[str]]:
-    """Pad with distractors that do not add within-links for the protected entities."""
-    chosen = list(dict.fromkeys(required))
-    target = FACT_TARGET[difficulty]
-    if difficulty != "easy" and len(chosen) < target:
-        pool = [
-            fact for fact in world.direct_facts
-            if fact not in chosen and fact[0] not in protected
-        ]
-        rng.shuffle(pool)
-        for fact in pool:
-            if len(chosen) >= target:
-                break
-            chosen.append(fact)
-    if difficulty != "easy":
-        rng.shuffle(chosen)
-    return [[subject, pred, obj] for subject, pred, obj in chosen]
+def level_at(depth: int) -> str:
+    return LEVEL_AT_DEPTH[depth]
+
+
+def region_at_depth(muni_id: str, depth: int, world: World) -> str:
+    """Walk up from a municipality to the region at this chain depth."""
+    target = level_at(depth)
+    current = muni_id
+    seen: set[str] = set()
+    while current not in seen:
+        if world.levels[current] == target:
+            return current
+        seen.add(current)
+        parent = world.parents.get(current)
+        if parent is None:
+            raise RuntimeError(f"{muni_id} has no {target} ancestor")
+        current = parent
+    raise RuntimeError(f"cycle walking from {muni_id}")
 
 
 def answer_with(facts: list[list[str]], world: World) -> Reasoner:

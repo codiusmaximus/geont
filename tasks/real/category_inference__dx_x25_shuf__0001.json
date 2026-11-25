@@ -1,0 +1,155 @@
+{
+  "task_id": "category_inference__dx_x25_shuf__0001",
+  "base_id": "category_inference__0001",
+  "type": "category_inference",
+  "preset": "medium",
+  "dials": {
+    "depth": null,
+    "distractors": 25,
+    "order": "shuffled"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "is_a_inheritance"
+  ],
+  "anonymised": false,
+  "question": "Is Gidea Park railway station an Education place?",
+  "facts": [
+    [
+      "P0234",
+      "within",
+      "E09000017"
+    ],
+    [
+      "P0226",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "UKI5",
+      "adjacent_to",
+      "UKI6"
+    ],
+    [
+      "P0247",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "E09000025",
+      "adjacent_to",
+      "E09000030"
+    ],
+    [
+      "P0034",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "P0141",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "P0283",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "P0157",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "P0032",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "P0044",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "P0258",
+      "within",
+      "E09000032"
+    ],
+    [
+      "P0277",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "P0239",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "P0142",
+      "within",
+      "E09000007"
+    ],
+    [
+      "UKI33",
+      "adjacent_to",
+      "UKI73"
+    ],
+    [
+      "UKI43",
+      "adjacent_to",
+      "UKI53"
+    ],
+    [
+      "UKI43",
+      "within",
+      "UKI4"
+    ],
+    [
+      "P0194",
+      "within",
+      "E09000019"
+    ],
+    [
+      "P0089",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "P0140",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "P0173",
+      "within",
+      "E09000019"
+    ],
+    [
+      "P0133",
+      "within",
+      "E09000020"
+    ],
+    [
+      "P0099",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "P0070",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "UKI41",
+      "adjacent_to",
+      "UKI53"
+    ]
+  ],
+  "proof_facts": [
+    6
+  ],
+  "answer_type": "bool",
+  "answer": false,
+  "seed": 42
+}

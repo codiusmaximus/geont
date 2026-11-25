@@ -1,0 +1,167 @@
+{
+  "task_id": "spatial_inference__d3_x25_shuf__0001",
+  "base_id": "spatial_inference__0001",
+  "type": "spatial_inference",
+  "preset": "medium",
+  "dials": {
+    "depth": 3,
+    "distractors": 25,
+    "order": "shuffled"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "within_transitive"
+  ],
+  "anonymised": true,
+  "question": "Which NUTS-2 region is F283 within?",
+  "facts": [
+    [
+      "P0155",
+      "within",
+      "E09000009"
+    ],
+    [
+      "P0071",
+      "within",
+      "E09000011"
+    ],
+    [
+      "P0260",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "P0110",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "P0105",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "E09000022",
+      "within",
+      "UKI45"
+    ],
+    [
+      "P0300",
+      "is_a",
+      "University"
+    ],
+    [
+      "P0066",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "UKI72",
+      "within",
+      "UKI7"
+    ],
+    [
+      "E09000001",
+      "adjacent_to",
+      "E09000007"
+    ],
+    [
+      "UKI45",
+      "within",
+      "UKI4"
+    ],
+    [
+      "E09000017",
+      "within",
+      "UKI74"
+    ],
+    [
+      "P0248",
+      "within",
+      "E09000028"
+    ],
+    [
+      "P0034",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "E09000017",
+      "adjacent_to",
+      "E09000018"
+    ],
+    [
+      "P0166",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "P0283",
+      "within",
+      "E09000022"
+    ],
+    [
+      "P0064",
+      "is_a",
+      "Clinic"
+    ],
+    [
+      "P0295",
+      "is_a",
+      "PetrolStation"
+    ],
+    [
+      "P0113",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "P0173",
+      "within",
+      "E09000019"
+    ],
+    [
+      "P0235",
+      "is_a",
+      "TrainStation"
+    ],
+    [
+      "P0231",
+      "within",
+      "E09000015"
+    ],
+    [
+      "P0139",
+      "within",
+      "E09000007"
+    ],
+    [
+      "P0228",
+      "is_a",
+      "Supermarket"
+    ],
+    [
+      "P0080",
+      "within",
+      "E09000008"
+    ],
+    [
+      "UKI6",
+      "adjacent_to",
+      "UKI7"
+    ],
+    [
+      "P0222",
+      "is_a",
+      "ParcelShop"
+    ]
+  ],
+  "proof_facts": [
+    5,
+    10,
+    16
+  ],
+  "answer_type": "value",
+  "answer": "UKI4",
+  "seed": 42
+}

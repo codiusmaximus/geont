@@ -1,0 +1,161 @@
+{
+  "task_id": "not_determinable__d3_x25_shuf__0000",
+  "base_id": "not_determinable__0000",
+  "type": "not_determinable",
+  "preset": "medium",
+  "dials": {
+    "depth": 3,
+    "distractors": 25,
+    "order": "shuffled"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "closed_world"
+  ],
+  "anonymised": false,
+  "question": "Which NUTS-2 region is Martin Way within?",
+  "facts": [
+    [
+      "P0166",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "P0225",
+      "within",
+      "E09000024"
+    ],
+    [
+      "E09000006",
+      "adjacent_to",
+      "E09000023"
+    ],
+    [
+      "P0196",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "P0273",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "E09000003",
+      "adjacent_to",
+      "E09000007"
+    ],
+    [
+      "P0123",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "E09000025",
+      "adjacent_to",
+      "E09000031"
+    ],
+    [
+      "P0002",
+      "within",
+      "E09000007"
+    ],
+    [
+      "UKI43",
+      "adjacent_to",
+      "UKI71"
+    ],
+    [
+      "P0290",
+      "within",
+      "E09000012"
+    ],
+    [
+      "P0118",
+      "within",
+      "E09000011"
+    ],
+    [
+      "P0057",
+      "within",
+      "E09000030"
+    ],
+    [
+      "P0246",
+      "within",
+      "E09000032"
+    ],
+    [
+      "UKI41",
+      "adjacent_to",
+      "UKI43"
+    ],
+    [
+      "P0142",
+      "within",
+      "E09000007"
+    ],
+    [
+      "P0071",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "UKI4",
+      "within",
+      "UKI"
+    ],
+    [
+      "P0208",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "P0220",
+      "within",
+      "E09000016"
+    ],
+    [
+      "E09000014",
+      "adjacent_to",
+      "E09000019"
+    ],
+    [
+      "E09000018",
+      "adjacent_to",
+      "E09000027"
+    ],
+    [
+      "P0079",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "P0254",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "P0275",
+      "within",
+      "E09000030"
+    ],
+    [
+      "P0132",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "E09000024",
+      "within",
+      "UKI63"
+    ]
+  ],
+  "proof_facts": [
+    1,
+    26
+  ],
+  "answer_type": "CANNOT_DETERMINE",
+  "answer": "CANNOT_DETERMINE",
+  "seed": 42
+}

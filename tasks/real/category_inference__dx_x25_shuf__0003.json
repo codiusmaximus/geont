@@ -1,0 +1,155 @@
+{
+  "task_id": "category_inference__dx_x25_shuf__0003",
+  "base_id": "category_inference__0003",
+  "type": "category_inference",
+  "preset": "medium",
+  "dials": {
+    "depth": null,
+    "distractors": 25,
+    "order": "shuffled"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "is_a_inheritance"
+  ],
+  "anonymised": false,
+  "question": "Is Bromley Post Office a ParcelServices place?",
+  "facts": [
+    [
+      "P0253",
+      "within",
+      "E09000009"
+    ],
+    [
+      "P0081",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "P0289",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "E09000011",
+      "adjacent_to",
+      "E09000023"
+    ],
+    [
+      "P0188",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "P0152",
+      "within",
+      "E09000021"
+    ],
+    [
+      "P0055",
+      "within",
+      "E09000001"
+    ],
+    [
+      "P0290",
+      "within",
+      "E09000012"
+    ],
+    [
+      "P0092",
+      "within",
+      "E09000001"
+    ],
+    [
+      "P0053",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "P0003",
+      "within",
+      "E09000005"
+    ],
+    [
+      "UKI4",
+      "adjacent_to",
+      "UKI7"
+    ],
+    [
+      "P0273",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "E09000007",
+      "adjacent_to",
+      "E09000014"
+    ],
+    [
+      "P0169",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "P0287",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "P0101",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "UKI45",
+      "adjacent_to",
+      "UKI62"
+    ],
+    [
+      "P0159",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "E09000005",
+      "adjacent_to",
+      "E09000007"
+    ],
+    [
+      "P0265",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "E09000003",
+      "adjacent_to",
+      "E09000014"
+    ],
+    [
+      "P0231",
+      "is_a",
+      "ParcelShop"
+    ],
+    [
+      "P0077",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "P0132",
+      "is_a",
+      "ParcelLocker"
+    ],
+    [
+      "P0237",
+      "is_a",
+      "PetrolStation"
+    ]
+  ],
+  "proof_facts": [
+    23
+  ],
+  "answer_type": "bool",
+  "answer": true,
+  "seed": 42
+}

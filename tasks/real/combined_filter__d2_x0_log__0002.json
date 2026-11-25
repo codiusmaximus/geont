@@ -1,0 +1,71 @@
+{
+  "task_id": "combined_filter__d2_x0_log__0002",
+  "base_id": "combined_filter__0002",
+  "type": "combined_filter",
+  "preset": "easy",
+  "dials": {
+    "depth": 2,
+    "distractors": 0,
+    "order": "logical"
+  },
+  "context_mode": "crafted",
+  "rule_tags": [
+    "within_transitive",
+    "is_a_inheritance"
+  ],
+  "anonymised": false,
+  "question": "Which ParcelServices places are within Westminster?",
+  "facts": [
+    [
+      "P0038",
+      "within",
+      "E09000033"
+    ],
+    [
+      "E09000033",
+      "within",
+      "UKI32"
+    ],
+    [
+      "P0038",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "P0053",
+      "within",
+      "E09000033"
+    ],
+    [
+      "P0053",
+      "is_a",
+      "PostOffice"
+    ],
+    [
+      "P0289",
+      "within",
+      "E09000033"
+    ],
+    [
+      "P0289",
+      "is_a",
+      "ParcelShop"
+    ]
+  ],
+  "proof_facts": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "answer_type": "set",
+  "answer": [
+    "P0038",
+    "P0053",
+    "P0289"
+  ],
+  "seed": 42
+}

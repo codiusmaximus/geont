@@ -27,9 +27,13 @@ Does refining a geospatial ontology's **format**, **structure** and **layering**
 | ID | Content | Formats |
 |---|---|---|
 | `v0` | No ontology: facts only | plain English |
-| `v1` | Facts + definitions of types and relations | plain English |
-| `v2` | Facts + definitions + rules | plain English, Turtle (RDF/OWL), JSON |
+| `v1` | Facts + definitions block (region levels, relation meanings, full category tree) | plain English |
+| `v2` | Facts + definitions + rules block | plain English, Turtle (RDF/OWL), JSON |
+| `v2S` *(optional)* | As v2, plus a structure section: the schema path and a lookup procedure | plain English |
 | `v2L` *(later)* | As v2, split into layers: vocabulary / rules / instances | plain English |
+| `v2M` *(optional)* | As v2, with facts materialised by the reasoner (closure added) | plain English |
+
+**The ontology block is static.** Each version's ontology block (the TBox) is identical for every task: the full vocabulary, the full category tree and, in v2, all the rules. It is never tailored to the question, since choosing what is relevant is part of the reasoning being measured. Only the facts (the ABox) vary per task, and they are identical across v0, v1 and v2.
 
 **v2 rules:**
 1. `within` is transitive.
@@ -52,19 +56,66 @@ Note: Turtle/OWL can't natively express rule 3 (spatial disjointness at the same
 
 **Build A and C now. B is out of scope for v1 of this repo.**
 
-### 3.3 Difficulty
+### 3.3 Difficulty dials
 
-Every task template is generated at several difficulty levels:
+Every task starts from a **proof chain**: the minimal set of facts from which the answer is derivable. Difficulty is then set by independent dials:
 
-| Level | Facts given | Order | Distractors | Chain depth |
-|---|---|---|---|---|
-| `easy` | ~5 | logical order | none | 1–2 |
-| `medium` | ~30 | shuffled | yes | 2–3 |
-| `hard` | ~100 | shuffled | yes | 3–4 |
+| Dial | Values | Notes |
+|---|---|---|
+| `depth` | 1, 2, 3, 4 hops | set by which region level the question targets |
+| `distractors` | 0, 25, 100 facts | drawn as described below |
+| `order` | `logical`, `shuffled` | |
 
-The main expected result is a curve of **accuracy vs difficulty, per condition**, showing where the baseline breaks and whether the ontology delays that.
+**Presets for the pilot:**
 
-### 3.4 Memorisation control
+| Preset | depth | distractors | order |
+|---|---|---|---|
+| `easy` | 2 | 0 | logical |
+| `medium` | 3 | 25 | shuffled |
+| `hard` | 4 | 100 | shuffled |
+
+The preset table in the proposal gave depth as a range (1–2, 2–3, 3–4). This build pins one depth per preset so a task is reproducible. For the full run, vary **one dial at a time** with the others fixed, so results show what makes a task hard. That sweep is not generated yet.
+
+**Distractor types.** Near misses, not random noise:
+
+- right category, wrong region
+- right region, wrong category
+- dead-end chains (a place whose municipality's parent link is missing)
+- similar names
+- unrelated hierarchy facts
+
+**Answer size** stays similar across all levels (at most 12 items), so harder tasks do not turn into a test of list length.
+
+**Why distractors:** without them, every place mentioned is in the answer, so a model can score perfectly without reasoning. Real use also never supplies a minimal proof. Because distractors mix selecting facts with reasoning over them, always report results at `distractors = 0` (pure reasoning) separately from results with distractors.
+
+A category question has no region target, so the depth dial does not apply to it. See `docs/decisions.md`.
+
+### 3.4 Layout dial
+
+The same facts can be laid out in two ways, to test whether organisation matters as much as rules:
+
+- `shuffled`: one flat, randomised list of sentences.
+- `grouped`: facts organised along the ontology's structure, the region hierarchy first, then places grouped by municipality with their type.
+
+The content and number of facts are identical in both layouts. Layout is applied at render time, to v0, v1 and v2 alike. `render.py` is not built yet, so this dial is specified but not generated.
+
+### 3.5 Context mode (optional)
+
+- `crafted` (default): proof chain plus chosen distractors.
+- `neighbourhood`: all facts about the target region and its neighbours, with some links removed so dead ends occur naturally. Not built yet.
+
+### 3.6 Hypotheses
+
+| Mechanism | What the ontology adds | Comparison that tests it | Expected to matter most when |
+|---|---|---|---|
+| Meaning | how relations behave, category membership | v0 → v1 → v2 | deep chains, ambiguous categories, traps |
+| Map | schema path and a lookup procedure | v2 vs v2S | many facts, complex questions |
+| Organisation | data laid out along the structure | shuffled vs grouped | many facts |
+| Access | querying instead of reading | in-prompt vs B / v2M | very many facts |
+
+The main expected result is a set of curves: **accuracy vs each dial, per condition**, showing where the baseline breaks and which mechanism delays that.
+
+### 3.7 Memorisation control
 
 Each task also exists in an **anonymised** variant: places become `F001…`, regions `U001…`, and the type and relation names stay readable. The answer is mapped through the same anonymisation table.
 
@@ -105,8 +156,9 @@ Decision for Greater London: `ons_lad`. GISCO LAU 2021 contains no UK units, so 
 | `ParcelServices` | `PostOffice`, `ParcelShop`, `ParcelLocker` |
 | `Healthcare` | `Hospital`, `Clinic`, `Pharmacy` |
 | `Education` | `School`, `University` |
+| `AnimalServices` *(borderline only)* | `VeterinaryClinic` |
 
-**Spec:** the mapping from Overture category strings to our subcategories lives in `config/category_map.yaml` and is reviewed by hand. Unmapped categories are dropped. A small set of borderline places (e.g. veterinary clinic, care home, petrol station shop) is kept with an explicit official classification, so the ontology's definitions decide the answer.
+**Spec:** the mapping from Overture category strings to our subcategories lives in `config/category_map.yaml` and is reviewed by hand. Unmapped categories are dropped. A small set of borderline places is kept with an explicit official classification, so the ontology's definitions decide the answer. Veterinary clinics are `AnimalServices`, not `Healthcare`. Borderline classes appear in the v1/v2 category tree and are used mainly as distractors. They are not part of the 300-place sample.
 
 ## 5. Data model (*Spec*)
 
@@ -202,23 +254,35 @@ Set answers have at most 12 items.
 
 ### 8.2 Generation
 
-- Each generator selects target entities from the ground truth, builds the minimal fact set that makes the answer derivable, then adds distractor facts and shuffles according to the difficulty level.
-- For `not_determinable`, remove one fact from the chain and check with the reasoner that the answer is no longer derivable.
-- For `contradiction`, inject one conflicting fact.
-- The expected answer is **always** computed by the reasoner on the given facts, never copied from real-world truth.
-- Deterministic given `seed`.
+1. Select a target from the ground truth. The same target is reused for every preset of that base task.
+2. Build the **proof chain** at the preset's depth. Mark these facts as `proof_facts`.
+3. Add near-miss distractors (§3.3), or build a neighbourhood context (§3.5). The pilot uses `crafted`.
+4. Apply `order` (logical or shuffled). Layout (§3.4) is applied later, at render time.
+5. Recompute the answer with the reasoner on the final fact set. If a distractor changed the answer, resample up to 10 times.
+6. Keep set answers inside 1–12 items. If a depth cannot, use the deepest depth that can and record that depth on the task.
+
+Special types:
+
+- `not_determinable`: remove the last hop of the chain, and check that the reasoner can no longer name the region.
+- `contradiction`: inject one conflicting fact. Not generated yet.
+
+The expected answer is **always** computed by the reasoner on the given facts, never copied from the geometry. Generation is deterministic given `seed`.
 
 ### 8.3 Task file format (`tasks/<split>/<task_id>.json`)
 
 ```json
 {
-  "task_id": "combined_filter__hard__0007",
+  "task_id": "combined_filter__d3_x100_shuf__0007",
+  "base_id": "combined_filter__0007",
   "type": "combined_filter",
-  "difficulty": "hard",
+  "preset": "hard",
+  "dials": {"depth": 3, "distractors": 100, "order": "shuffled"},
+  "context_mode": "crafted",
   "rule_tags": ["within_transitive", "is_a_inheritance"],
   "anonymised": false,
   "question": "Which Healthcare places are within Cumbria?",
   "facts": [["P0142", "within", "E06000063"], ["P0142", "is_a", "Hospital"]],
+  "proof_facts": [0, 1],
   "answer_type": "set",
   "answer": ["P0142", "P0201"],
   "seed": 42
@@ -229,8 +293,12 @@ Set answers have at most 12 items.
 
 ## 9. Ontology rendering (`src/ontology/render.py`) (*Spec*)
 
-`render(task, condition, fmt, anonymised) -> str`
+`render(task, version, fmt, layout, anonymised) -> str`
 
+- The **ontology block** comes from `ontologies/<version>/` and is the same for every task (§3.1). v0 has no block.
+- The **facts block** is rendered from `task.facts` in the given `layout`:
+  - `shuffled`: the task's stored order.
+  - `grouped`: the region hierarchy first, then places grouped by municipality. For Turtle and JSON, group by subject and order by hierarchy level.
 - **plain English facts:** `"Royal Hospital is a Hospital."`, `"Royal Hospital is within Carlisle."`
 - **Turtle:** prefixes, then the vocabulary (`owl:TransitiveProperty` for `within`, `owl:SymmetricProperty` for `adjacent_to`, `rdfs:subClassOf` for the categories), then the instances.
 - **JSON:** `{"vocabulary": …, "rules": […], "facts": [{"s":…, "p":…, "o":…}]}`
@@ -275,14 +343,16 @@ Respond with JSON only: {"answer": <bool | string | list of names | "CANNOT_DETE
 
 ### 10.3 Metrics and reports (`src/eval/report.py`)
 
-- accuracy by condition × difficulty × model
+- accuracy by condition × dial value × model (one curve per dial)
+- accuracy at `distractors = 0` versus with distractors, reported separately
+- shuffled versus grouped layout, per version
 - accuracy by rule tag × condition
 - correct-abstention rate (`CANNOT_DETERMINE` / `CONTRADICTION`)
 - mean tokens and latency per condition
 - variance across runs (std of accuracy per cell)
 - real vs anonymised gap
 
-**First chart (pilot):** accuracy vs difficulty, lines for v0 and v2, one model.
+**First chart (pilot):** accuracy vs preset (easy/medium/hard), one line per v0/v2 × shuffled/grouped, one model.
 
 ## Explore
 
@@ -329,7 +399,7 @@ geo-ontology-bench/
 ```bash
 make data        # fetch GISCO + Overture into data/raw
 make truth       # build regions, places, adjacency, facts; run validate
-make tasks       # generate tasks (real + anonymised) for all difficulty levels
+make tasks       # generate the pilot presets, real and anonymised
 make pilot       # run v0 vs v2-en on one cheap model, small task subset
 make run         # full run from config
 make report      # scores + charts
@@ -350,8 +420,13 @@ places:
   border_buffer_m: 50
 tasks:
   types: [spatial_inference, category_inference, combined_filter, not_determinable]
-  difficulties: [easy, medium, hard]
-  per_type_per_difficulty: 4
+  base_tasks_per_type: 4
+  presets:
+    easy: {depth: 2, distractors: 0, order: logical}
+    medium: {depth: 3, distractors: 25, order: shuffled}
+    hard: {depth: 4, distractors: 100, order: shuffled}
+  answer_size: {min: 1, max: 12}
+  context_mode: crafted
   anonymised: true
 conditions:
   - {version: v0, format: en}

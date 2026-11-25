@@ -50,10 +50,10 @@ map:
 borderline:
   veterinarian:
     official: excluded
-    note: Veterinary care is not Healthcare.
+    note: Veterinary care is AnimalServices / VeterinaryClinic, not Healthcare.
   veterinary_care:
     official: excluded
-    note: Veterinary care is not Healthcare.
+    note: Veterinary care is AnimalServices / VeterinaryClinic, not Healthcare.
   assisted_living_facility:
     official: excluded
     note: A care home is not a Hospital or a Clinic.
