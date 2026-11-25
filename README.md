@@ -286,7 +286,7 @@ Respond with JSON only: {"answer": <bool | string | list of names | "CANNOT_DETE
 
 ## Explore
 
-`explore/index.html` is a static dashboard: the design, the London map, the task list, and the ontology texts. It fetches small JSON indexes, so GitHub Pages can serve it with no build. `make explore` rewrites those indexes. `make check` runs the tests and rewrites them. The pre-push hook runs the tests and refuses the push when they fail, when `explore/data` is uncommitted, or when the map and task index do not match a fresh rebuild.
+`index.html` is a static dashboard: the design, the London map, the task list, and the ontology texts. It fetches small JSON indexes from `explore/data`, plus the task and ontology files beside it. GitHub Pages serves it from the root of `main` (folder `/`, not `/docs`), with no build. `.nojekyll` keeps Pages from running Jekyll over those files. `make explore` rewrites the indexes. `make check` runs the tests and rewrites them. The pre-push hook runs the tests and refuses the push when they fail, when `explore/data` is uncommitted, or when the map and task index do not match a fresh rebuild.
 
 ## 11. Repo layout
 
