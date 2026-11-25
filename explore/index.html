@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Greater London</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1c1917;
+      --muted: #57534e;
+      --line: #e7e5e4;
+      --panel: #fffcf8;
+      --map: #f4f1ea;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      font: 14px/1.4 "Iowan Old Style", Palatino, Georgia, serif;
+      color: var(--ink);
+      background: var(--panel);
+    }
+    aside {
+      border-right: 1px solid var(--line);
+      padding: 18px 16px 24px;
+      overflow: auto;
+    }
+    h1 { font-size: 20px; font-weight: 500; margin: 0 0 4px; }
+    .sub { color: var(--muted); margin: 0 0 16px; font-size: 13px; }
+    fieldset {
+      border: 0;
+      margin: 0 0 14px;
+      padding: 0;
+    }
+    legend {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 3px 0;
+      cursor: pointer;
+    }
+    label.zoom { display: block; }
+    input { accent-color: #44403c; }
+    .swatch {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      flex: none;
+    }
+    select, button {
+      font: inherit;
+      width: 100%;
+      background: white;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 6px 8px;
+    }
+    button { margin-top: 8px; cursor: pointer; }
+    #map { height: 100%; background: var(--map); }
+    .leaflet-popup-content { font: 13px/1.35 Palatino, Georgia, serif; margin: 10px 12px; }
+    .leaflet-popup-content strong { font-weight: 600; }
+    .leaflet-popup-content .meta { color: var(--muted); }
+    @media (max-width: 720px) {
+      body { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+      aside { border-right: 0; border-bottom: 1px solid var(--line); max-height: 42vh; }
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>Greater London</h1>
+    <p class="sub">Study area for the ontology benchmark. 33 boroughs, NUTS regions, 300 sampled places.</p>
+    <fieldset>
+      <legend>Regions</legend>
+      <label><input type="checkbox" data-level="NUTS1"> London</label>
+      <label><input type="checkbox" data-level="NUTS2"> NUTS-2</label>
+      <label><input type="checkbox" data-level="NUTS3" checked> NUTS-3</label>
+      <label><input type="checkbox" data-level="MUNI" checked> Boroughs</label>
+    </fieldset>
+    <label class="zoom">Zoom to
+      <select id="borough"></select>
+    </label>
+    <fieldset id="categories">
+      <legend>Places</legend>
+    </fieldset>
+    <button type="button" id="fit">Fit London</button>
+  </aside>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const COLORS = {
+      Hospital: "#9f2d2d",
+      Clinic: "#c46b4a",
+      Pharmacy: "#8c6a3d",
+      School: "#2f6b4f",
+      University: "#1d4e89",
+      Supermarket: "#a15c2f",
+      ConvenienceStore: "#c4922a",
+      TrainStation: "#3d405b",
+      PetrolStation: "#6d597a",
+      PostOffice: "#3f6f64",
+      ParcelShop: "#5e8f72",
+      ParcelLocker: "#4f6d7a"
+    };
+    const LEVEL_STYLE = {
+      NUTS1: { color: "#1c1917", weight: 2.5, fillOpacity: 0 },
+      NUTS2: { color: "#7c6f64", weight: 1.6, fillColor: "#d6cfc4", fillOpacity: 0.18 },
+      NUTS3: { color: "#a8a29e", weight: 1, fillColor: "#e7e5e4", fillOpacity: 0.12 },
+      MUNI: { color: "#44403c", weight: 1, fillColor: "#fff", fillOpacity: 0.04 }
+    };
+
+    const map = L.map("map", { zoomControl: true, attributionControl: true });
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "&copy; OpenStreetMap",
+      maxZoom: 19
+    }).addTo(map);
+
+    const regionLayers = {};
+    const placeLayers = {};
+    let boroughLayer = null;
+
+    function popup(title, lines) {
+      return `<strong>${title}</strong><div class="meta">${lines.join("<br>")}</div>`;
+    }
+
+    function addRegions(collection) {
+      const byLevel = {};
+      for (const feature of collection.features) {
+        const level = feature.properties.level;
+        (byLevel[level] ||= []).push(feature);
+      }
+      for (const [level, features] of Object.entries(byLevel)) {
+        const layer = L.geoJSON({ type: "FeatureCollection", features }, {
+          style: LEVEL_STYLE[level],
+          onEachFeature(feature, shape) {
+            const props = feature.properties;
+            shape.bindPopup(popup(props.name, [level === "MUNI" ? "Borough" : level.replace("NUTS", "NUTS-"), props.region_id]));
+            shape.bindTooltip(props.name, { sticky: true, opacity: 0.9 });
+          }
+        });
+        regionLayers[level] = layer;
+        if (document.querySelector(`input[data-level="${level}"]`).checked) layer.addTo(map);
+        if (level === "MUNI") boroughLayer = layer;
+      }
+      const select = document.getElementById("borough");
+      const names = collection.features
+        .filter((feature) => feature.properties.level === "MUNI")
+        .map((feature) => feature.properties)
+        .sort((a, b) => a.name.localeCompare(b.name));
+      select.innerHTML = `<option value="">Borough</option>` + names.map((props) =>
+        `<option value="${props.region_id}">${props.name}</option>`).join("");
+      select.addEventListener("change", () => {
+        const shape = boroughLayer.getLayers().find((layer) => layer.feature.properties.region_id === select.value);
+        if (shape) map.fitBounds(shape.getBounds(), { padding: [24, 24], maxZoom: 13 });
+      });
+    }
+
+    function addPlaces(collection) {
+      const box = document.getElementById("categories");
+      const groups = {};
+      for (const feature of collection.features) {
+        (groups[feature.properties.subcategory] ||= []).push(feature);
+      }
+      for (const name of Object.keys(COLORS)) {
+        const features = groups[name] || [];
+        const layer = L.geoJSON({ type: "FeatureCollection", features }, {
+          pointToLayer(feature, latlng) {
+            return L.circleMarker(latlng, {
+              radius: 5,
+              color: "#fff",
+              weight: 1,
+              fillColor: COLORS[name],
+              fillOpacity: 0.92
+            });
+          },
+          onEachFeature(feature, marker) {
+            const props = feature.properties;
+            marker.bindPopup(popup(props.name, [props.subcategory, props.place_id]));
+          }
+        });
+        placeLayers[name] = layer;
+        layer.addTo(map);
+        const label = document.createElement("label");
+        label.innerHTML = `<input type="checkbox" data-cat="${name}" checked><span class="swatch" style="background:${COLORS[name]}"></span>${name} <span class="meta">${features.length}</span>`;
+        box.appendChild(label);
+      }
+    }
+
+    document.getElementById("categories").addEventListener("change", (event) => {
+      const input = event.target;
+      if (!input.dataset.cat) return;
+      const layer = placeLayers[input.dataset.cat];
+      if (input.checked) layer.addTo(map);
+      else map.removeLayer(layer);
+    });
+    document.querySelector("aside").addEventListener("change", (event) => {
+      const level = event.target.dataset.level;
+      if (!level) return;
+      const layer = regionLayers[level];
+      if (event.target.checked) layer.addTo(map);
+      else map.removeLayer(layer);
+    });
+
+    Promise.all([
+      fetch("data/regions.geojson").then((response) => response.json()),
+      fetch("data/places.geojson").then((response) => response.json())
+    ]).then(([regions, places]) => {
+      addRegions(regions);
+      addPlaces(places);
+      const fit = () => map.fitBounds(boroughLayer.getBounds(), { padding: [16, 16] });
+      document.getElementById("fit").addEventListener("click", fit);
+      fit();
+    }).catch((error) => {
+      document.querySelector(".sub").textContent = "Could not load the map data. Open this page over http, not as a file.";
+      console.error(error);
+    });
+  </script>
+</body>
+</html>
