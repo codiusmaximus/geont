@@ -1,0 +1,20 @@
+{
+  "task_id": "category_inference__easy__0003",
+  "type": "category_inference",
+  "difficulty": "easy",
+  "rule_tags": [
+    "is_a_inheritance"
+  ],
+  "anonymised": false,
+  "question": "Is Mail Boxes Etc. UK a ParcelServices place?",
+  "facts": [
+    [
+      "P0289",
+      "is_a",
+      "ParcelShop"
+    ]
+  ],
+  "answer_type": "bool",
+  "answer": true,
+  "seed": 42
+}

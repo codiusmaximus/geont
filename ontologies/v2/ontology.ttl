@@ -1,0 +1,21 @@
+@prefix : <https://geont.local/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:within a owl:ObjectProperty, owl:TransitiveProperty .
+:adjacent_to a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:comment "Not transitive. Regions at the same level never overlap: being within two different regions of the same level is a contradiction. OWL cannot express that spatial disjointness natively." .
+:is_a a owl:ObjectProperty .
+
+:Supermarket rdfs:subClassOf :Retail .
+:ConvenienceStore rdfs:subClassOf :Retail .
+:TrainStation rdfs:subClassOf :Mobility .
+:PetrolStation rdfs:subClassOf :Mobility .
+:PostOffice rdfs:subClassOf :ParcelServices .
+:ParcelShop rdfs:subClassOf :ParcelServices .
+:ParcelLocker rdfs:subClassOf :ParcelServices .
+:Hospital rdfs:subClassOf :Healthcare .
+:Clinic rdfs:subClassOf :Healthcare .
+:Pharmacy rdfs:subClassOf :Healthcare .
+:School rdfs:subClassOf :Education .
+:University rdfs:subClassOf :Education .

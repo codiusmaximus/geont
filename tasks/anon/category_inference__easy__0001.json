@@ -1,0 +1,20 @@
+{
+  "task_id": "category_inference__easy__0001",
+  "type": "category_inference",
+  "difficulty": "easy",
+  "rule_tags": [
+    "is_a_inheritance"
+  ],
+  "anonymised": true,
+  "question": "Is F132 a ParcelServices place?",
+  "facts": [
+    [
+      "P0132",
+      "is_a",
+      "ParcelLocker"
+    ]
+  ],
+  "answer_type": "bool",
+  "answer": true,
+  "seed": 42
+}

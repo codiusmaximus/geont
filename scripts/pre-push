@@ -1,0 +1,5 @@
+#!/bin/sh
+# Installed as .git/hooks/pre-push. Tests must pass, explore/data must be
+# committed, and the map and task index must match a fresh rebuild.
+cd "$(git rev-parse --show-toplevel)" || exit 1
+exec .venv/bin/python explore/check.py --strict

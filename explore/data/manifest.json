@@ -1,0 +1,12 @@
+{
+  "sha": "ce5c9be",
+  "dirty": true,
+  "date": "2026-11-25",
+  "tests": "14 passed in 31.34s",
+  "tests_ok": true,
+  "study_area": "Greater London",
+  "tasks": 48,
+  "validation": "PASS",
+  "places": 300,
+  "regions": 61
+}

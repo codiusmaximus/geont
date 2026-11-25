@@ -1,0 +1,20 @@
+@prefix : <https://geont.local/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:within a owl:ObjectProperty .
+:adjacent_to a owl:ObjectProperty .
+:is_a a owl:ObjectProperty .
+
+:Supermarket rdfs:subClassOf :Retail .
+:ConvenienceStore rdfs:subClassOf :Retail .
+:TrainStation rdfs:subClassOf :Mobility .
+:PetrolStation rdfs:subClassOf :Mobility .
+:PostOffice rdfs:subClassOf :ParcelServices .
+:ParcelShop rdfs:subClassOf :ParcelServices .
+:ParcelLocker rdfs:subClassOf :ParcelServices .
+:Hospital rdfs:subClassOf :Healthcare .
+:Clinic rdfs:subClassOf :Healthcare .
+:Pharmacy rdfs:subClassOf :Healthcare .
+:School rdfs:subClassOf :Education .
+:University rdfs:subClassOf :Education .

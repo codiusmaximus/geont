@@ -1,0 +1,28 @@
+{
+  "task_id": "combined_filter__easy__0002",
+  "type": "combined_filter",
+  "difficulty": "easy",
+  "rule_tags": [
+    "within_transitive",
+    "is_a_inheritance"
+  ],
+  "anonymised": false,
+  "question": "Which Education places are within Hammersmith and Fulham?",
+  "facts": [
+    [
+      "P0087",
+      "within",
+      "E09000013"
+    ],
+    [
+      "P0087",
+      "is_a",
+      "School"
+    ]
+  ],
+  "answer_type": "set",
+  "answer": [
+    "P0087"
+  ],
+  "seed": 42
+}

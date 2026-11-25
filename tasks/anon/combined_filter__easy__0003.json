@@ -1,0 +1,28 @@
+{
+  "task_id": "combined_filter__easy__0003",
+  "type": "combined_filter",
+  "difficulty": "easy",
+  "rule_tags": [
+    "within_transitive",
+    "is_a_inheritance"
+  ],
+  "anonymised": true,
+  "question": "Which Healthcare places are within U056?",
+  "facts": [
+    [
+      "P0045",
+      "within",
+      "E09000028"
+    ],
+    [
+      "P0045",
+      "is_a",
+      "Pharmacy"
+    ]
+  ],
+  "answer_type": "set",
+  "answer": [
+    "P0045"
+  ],
+  "seed": 42
+}

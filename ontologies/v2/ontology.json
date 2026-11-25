@@ -1,0 +1,13 @@
+{
+  "vocabulary": {
+    "types": ["NUTS0", "NUTS1", "NUTS2", "NUTS3", "Municipality", "Supermarket", "ConvenienceStore", "TrainStation", "PetrolStation", "PostOffice", "ParcelShop", "ParcelLocker", "Hospital", "Clinic", "Pharmacy", "School", "University", "Retail", "Mobility", "ParcelServices", "Healthcare", "Education"],
+    "relations": ["is_a", "subclass_of", "within", "adjacent_to"]
+  },
+  "rules": [
+    "within is transitive.",
+    "is_a inherits upward along subclass_of.",
+    "Regions at the same level never overlap. Being within two different regions of the same level is a contradiction.",
+    "adjacent_to is symmetric and not transitive.",
+    "Closed world: anything not stated or derivable is unknown."
+  ]
+}

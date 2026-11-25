@@ -1,0 +1,20 @@
+{
+  "task_id": "not_determinable__easy__0000",
+  "type": "not_determinable",
+  "difficulty": "easy",
+  "rule_tags": [
+    "closed_world"
+  ],
+  "anonymised": true,
+  "question": "Which NUTS-3 region is F054 within?",
+  "facts": [
+    [
+      "P0054",
+      "within",
+      "E09000008"
+    ]
+  ],
+  "answer_type": "CANNOT_DETERMINE",
+  "answer": "CANNOT_DETERMINE",
+  "seed": 42
+}

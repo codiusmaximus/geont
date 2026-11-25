@@ -286,7 +286,7 @@ Respond with JSON only: {"answer": <bool | string | list of names | "CANNOT_DETE
 
 ## Explore
 
-`explore/index.html` is a static map of the study area: boroughs, NUTS regions, and the sampled places. It is plain HTML plus GeoJSON, so GitHub Pages can serve it with no build. Regenerate the GeoJSON with `python explore/export.py` after `make truth`.
+`explore/index.html` is a static dashboard: the design, the London map, the task list, and the ontology texts. It fetches small JSON indexes, so GitHub Pages can serve it with no build. `make explore` rewrites those indexes. `make check` runs the tests and rewrites them. The pre-push hook runs the tests and refuses the push when they fail, when `explore/data` is uncommitted, or when the map and task index do not match a fresh rebuild.
 
 ## 11. Repo layout
 

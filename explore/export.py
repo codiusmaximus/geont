@@ -32,21 +32,22 @@ def _write(frame: gpd.GeoDataFrame, path: Path) -> None:
     print(f"{path.name}: {len(frame)} features, {path.stat().st_size} bytes")
 
 
-def main() -> None:
-    OUT.mkdir(parents=True, exist_ok=True)
+def main(out: Path | None = None) -> None:
+    target = out or OUT
+    target.mkdir(parents=True, exist_ok=True)
     regions = gpd.read_parquet(ROOT / "data" / "processed" / "regions.parquet")
     regions = regions.loc[regions["level"] != "NUTS0"].copy()
     metric = regions.to_crs("EPSG:27700")
     metric["geometry"] = metric.geometry.simplify(40).make_valid()
     _write(
         metric.to_crs(4326)[["region_id", "name", "level", "parent_id", "geometry"]],
-        OUT / "regions.geojson",
+        target / "regions.geojson",
     )
 
     places = gpd.read_parquet(ROOT / "data" / "processed" / "places.parquet")
     _write(
         places[["place_id", "name", "subcategory", "muni_id", "geometry"]].to_crs(4326),
-        OUT / "places.geojson",
+        target / "places.geojson",
     )
 
 

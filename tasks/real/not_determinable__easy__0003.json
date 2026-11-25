@@ -1,0 +1,20 @@
+{
+  "task_id": "not_determinable__easy__0003",
+  "type": "not_determinable",
+  "difficulty": "easy",
+  "rule_tags": [
+    "closed_world"
+  ],
+  "anonymised": false,
+  "question": "Which NUTS-3 region is London Road 494 Post Office within?",
+  "facts": [
+    [
+      "P0169",
+      "within",
+      "E09000024"
+    ]
+  ],
+  "answer_type": "CANNOT_DETERMINE",
+  "answer": "CANNOT_DETERMINE",
+  "seed": 42
+}

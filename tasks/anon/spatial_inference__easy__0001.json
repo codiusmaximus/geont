@@ -1,0 +1,25 @@
+{
+  "task_id": "spatial_inference__easy__0001",
+  "type": "spatial_inference",
+  "difficulty": "easy",
+  "rule_tags": [
+    "within_transitive"
+  ],
+  "anonymised": true,
+  "question": "Which NUTS-3 region is F077 within?",
+  "facts": [
+    [
+      "P0077",
+      "within",
+      "E09000006"
+    ],
+    [
+      "E09000006",
+      "within",
+      "UKI61"
+    ]
+  ],
+  "answer_type": "value",
+  "answer": "UKI61",
+  "seed": 42
+}

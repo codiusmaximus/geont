@@ -1,0 +1,7 @@
+{
+  "vocabulary": {
+    "types": ["NUTS0", "NUTS1", "NUTS2", "NUTS3", "Municipality", "Supermarket", "ConvenienceStore", "TrainStation", "PetrolStation", "PostOffice", "ParcelShop", "ParcelLocker", "Hospital", "Clinic", "Pharmacy", "School", "University", "Retail", "Mobility", "ParcelServices", "Healthcare", "Education"],
+    "relations": ["is_a", "subclass_of", "within", "adjacent_to"]
+  },
+  "rules": []
+}

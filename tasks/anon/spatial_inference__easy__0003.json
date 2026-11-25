@@ -1,0 +1,25 @@
+{
+  "task_id": "spatial_inference__easy__0003",
+  "type": "spatial_inference",
+  "difficulty": "easy",
+  "rule_tags": [
+    "within_transitive"
+  ],
+  "anonymised": true,
+  "question": "Which NUTS-3 region is F298 within?",
+  "facts": [
+    [
+      "P0298",
+      "within",
+      "E09000026"
+    ],
+    [
+      "E09000026",
+      "within",
+      "UKI53"
+    ]
+  ],
+  "answer_type": "value",
+  "answer": "UKI53",
+  "seed": 42
+}

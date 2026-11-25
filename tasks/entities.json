@@ -1,0 +1,1807 @@
+{
+  "P0001": {
+    "name": "Acupuncture",
+    "anon": "F001",
+    "kind": "place"
+  },
+  "P0002": {
+    "name": "Florida State University",
+    "anon": "F002",
+    "kind": "place"
+  },
+  "P0003": {
+    "name": "Monks Chemist",
+    "anon": "F003",
+    "kind": "place"
+  },
+  "P0004": {
+    "name": "ACPD Academy",
+    "anon": "F004",
+    "kind": "place"
+  },
+  "P0005": {
+    "name": "Broadway Candyland",
+    "anon": "F005",
+    "kind": "place"
+  },
+  "P0006": {
+    "name": "Nothing Hill Station",
+    "anon": "F006",
+    "kind": "place"
+  },
+  "P0007": {
+    "name": "BP",
+    "anon": "F007",
+    "kind": "place"
+  },
+  "P0008": {
+    "name": "Broadford Primary School",
+    "anon": "F008",
+    "kind": "place"
+  },
+  "P0009": {
+    "name": "LloydsPharmacy",
+    "anon": "F009",
+    "kind": "place"
+  },
+  "P0010": {
+    "name": "St. Thoma's Hospital",
+    "anon": "F010",
+    "kind": "place"
+  },
+  "P0011": {
+    "name": "Bromley Hospital",
+    "anon": "F011",
+    "kind": "place"
+  },
+  "P0012": {
+    "name": "Redden Court School",
+    "anon": "F012",
+    "kind": "place"
+  },
+  "P0013": {
+    "name": "Londis LONDIS CARSHALTON",
+    "anon": "F013",
+    "kind": "place"
+  },
+  "P0014": {
+    "name": "B&b Off Licence (dunton Express)",
+    "anon": "F014",
+    "kind": "place"
+  },
+  "P0015": {
+    "name": "Premier Kingsland",
+    "anon": "F015",
+    "kind": "place"
+  },
+  "P0016": {
+    "name": "West Middlesex University Hospital",
+    "anon": "F016",
+    "kind": "place"
+  },
+  "P0017": {
+    "name": "Tesco Express",
+    "anon": "F017",
+    "kind": "place"
+  },
+  "P0018": {
+    "name": "Croydon Day Hospital",
+    "anon": "F018",
+    "kind": "place"
+  },
+  "P0019": {
+    "name": "Little Ivy's Stay and Play",
+    "anon": "F019",
+    "kind": "place"
+  },
+  "P0020": {
+    "name": "The Company School Of Dance",
+    "anon": "F020",
+    "kind": "place"
+  },
+  "P0021": {
+    "name": "University of London Officers' Training Corps",
+    "anon": "F021",
+    "kind": "place"
+  },
+  "P0022": {
+    "name": "Sion Manning Secondary School",
+    "anon": "F022",
+    "kind": "place"
+  },
+  "P0023": {
+    "name": "Shaftesbury Park Primary School",
+    "anon": "F023",
+    "kind": "place"
+  },
+  "P0024": {
+    "name": "University College London",
+    "anon": "F024",
+    "kind": "place"
+  },
+  "P0025": {
+    "name": "Texaco",
+    "anon": "F025",
+    "kind": "place"
+  },
+  "P0026": {
+    "name": "Kingston Hospital NHS Foundation Trust, London, UK",
+    "anon": "F026",
+    "kind": "place"
+  },
+  "P0027": {
+    "name": "Abc Pharmacies",
+    "anon": "F027",
+    "kind": "place"
+  },
+  "P0028": {
+    "name": "Lidl",
+    "anon": "F028",
+    "kind": "place"
+  },
+  "P0029": {
+    "name": "ALDI",
+    "anon": "F029",
+    "kind": "place"
+  },
+  "P0030": {
+    "name": "Ashford International Train Station",
+    "anon": "F030",
+    "kind": "place"
+  },
+  "P0031": {
+    "name": "Evri ParcelShop",
+    "anon": "F031",
+    "kind": "place"
+  },
+  "P0032": {
+    "name": "Turkey Street Rail Station",
+    "anon": "F032",
+    "kind": "place"
+  },
+  "P0033": {
+    "name": "Walk In Clinic - Private Gp And Full Medical Check Up London",
+    "anon": "F033",
+    "kind": "place"
+  },
+  "P0034": {
+    "name": "Merton Park railway station",
+    "anon": "F034",
+    "kind": "place"
+  },
+  "P0035": {
+    "name": "Boots",
+    "anon": "F035",
+    "kind": "place"
+  },
+  "P0036": {
+    "name": "BP",
+    "anon": "F036",
+    "kind": "place"
+  },
+  "P0037": {
+    "name": "InPost",
+    "anon": "F037",
+    "kind": "place"
+  },
+  "P0038": {
+    "name": "Ok-mail",
+    "anon": "F038",
+    "kind": "place"
+  },
+  "P0039": {
+    "name": "Post Office-Downham Way",
+    "anon": "F039",
+    "kind": "place"
+  },
+  "P0040": {
+    "name": "Asda Superstore",
+    "anon": "F040",
+    "kind": "place"
+  },
+  "P0041": {
+    "name": "euroClinix DK",
+    "anon": "F041",
+    "kind": "place"
+  },
+  "P0042": {
+    "name": "Gower House School",
+    "anon": "F042",
+    "kind": "place"
+  },
+  "P0043": {
+    "name": "Gulf Market",
+    "anon": "F043",
+    "kind": "place"
+  },
+  "P0044": {
+    "name": "Richmond Railway Station (RMD)",
+    "anon": "F044",
+    "kind": "place"
+  },
+  "P0045": {
+    "name": "Boots",
+    "anon": "F045",
+    "kind": "place"
+  },
+  "P0046": {
+    "name": "Dandra Food & Wine London",
+    "anon": "F046",
+    "kind": "place"
+  },
+  "P0047": {
+    "name": "Figaro's Newsagents",
+    "anon": "F047",
+    "kind": "place"
+  },
+  "P0048": {
+    "name": "Canonbury Mini Market",
+    "anon": "F048",
+    "kind": "place"
+  },
+  "P0049": {
+    "name": "University College Hospital",
+    "anon": "F049",
+    "kind": "place"
+  },
+  "P0050": {
+    "name": "Bell Green Food&wine",
+    "anon": "F050",
+    "kind": "place"
+  },
+  "P0051": {
+    "name": "Costcutter - Wandsworth Bridge Road, London",
+    "anon": "F051",
+    "kind": "place"
+  },
+  "P0052": {
+    "name": "Euston Station Platform 15",
+    "anon": "F052",
+    "kind": "place"
+  },
+  "P0053": {
+    "name": "Great Portland Street Post Office",
+    "anon": "F053",
+    "kind": "place"
+  },
+  "P0054": {
+    "name": "LloydsPharmacy",
+    "anon": "F054",
+    "kind": "place"
+  },
+  "P0055": {
+    "name": "BPP University Students' Association",
+    "anon": "F055",
+    "kind": "place"
+  },
+  "P0056": {
+    "name": "JET",
+    "anon": "F056",
+    "kind": "place"
+  },
+  "P0057": {
+    "name": "Cambridge Heath railway station",
+    "anon": "F057",
+    "kind": "place"
+  },
+  "P0058": {
+    "name": "Sychet News Ag London",
+    "anon": "F058",
+    "kind": "place"
+  },
+  "P0059": {
+    "name": "InPost",
+    "anon": "F059",
+    "kind": "place"
+  },
+  "P0060": {
+    "name": "Boots",
+    "anon": "F060",
+    "kind": "place"
+  },
+  "P0061": {
+    "name": "The University of Law - London Bloomsbury",
+    "anon": "F061",
+    "kind": "place"
+  },
+  "P0062": {
+    "name": "Fit To Fly Antigen Test Shoreditch Hackney (in-clinic) + Recovery Certificate",
+    "anon": "F062",
+    "kind": "place"
+  },
+  "P0063": {
+    "name": "Lidl",
+    "anon": "F063",
+    "kind": "place"
+  },
+  "P0064": {
+    "name": "Pcr Tests Muswell Hill - Bounds Green - N10 - Fit To Fly Certificate - Antigen In Clinic",
+    "anon": "F064",
+    "kind": "place"
+  },
+  "P0065": {
+    "name": "Hamburger University",
+    "anon": "F065",
+    "kind": "place"
+  },
+  "P0066": {
+    "name": "Mayfield Spar Petrol station",
+    "anon": "F066",
+    "kind": "place"
+  },
+  "P0067": {
+    "name": "Basingstoke Train Station",
+    "anon": "F067",
+    "kind": "place"
+  },
+  "P0068": {
+    "name": "Devonshire Hospital",
+    "anon": "F068",
+    "kind": "place"
+  },
+  "P0069": {
+    "name": "Texaco",
+    "anon": "F069",
+    "kind": "place"
+  },
+  "P0070": {
+    "name": "Esso",
+    "anon": "F070",
+    "kind": "place"
+  },
+  "P0071": {
+    "name": "Post Office-Swingate Lane",
+    "anon": "F071",
+    "kind": "place"
+  },
+  "P0072": {
+    "name": "InPost",
+    "anon": "F072",
+    "kind": "place"
+  },
+  "P0073": {
+    "name": "Nisa Local",
+    "anon": "F073",
+    "kind": "place"
+  },
+  "P0074": {
+    "name": "Anglia Ruskin University",
+    "anon": "F074",
+    "kind": "place"
+  },
+  "P0075": {
+    "name": "Centre for Catalan Studies, Queen Mary University of London",
+    "anon": "F075",
+    "kind": "place"
+  },
+  "P0076": {
+    "name": "Waitrose & Partners",
+    "anon": "F076",
+    "kind": "place"
+  },
+  "P0077": {
+    "name": "Bromley Post Office",
+    "anon": "F077",
+    "kind": "place"
+  },
+  "P0078": {
+    "name": "\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438 \u0423\u041d\u0413 \u043b\u0435\u043a\u0430\u0440 - \u041b\u043e\u043d\u0434\u043e\u043d: \u0423\u0448\u0438, \u043d\u043e\u0441, \u0433\u044a\u0440\u043b\u043e - Val Clinic",
+    "anon": "F078",
+    "kind": "place"
+  },
+  "P0079": {
+    "name": "UPS Access Point",
+    "anon": "F079",
+    "kind": "place"
+  },
+  "P0080": {
+    "name": "UPS Access Point",
+    "anon": "F080",
+    "kind": "place"
+  },
+  "P0081": {
+    "name": "Post Office",
+    "anon": "F081",
+    "kind": "place"
+  },
+  "P0082": {
+    "name": "InPost",
+    "anon": "F082",
+    "kind": "place"
+  },
+  "P0083": {
+    "name": "Annunaki Enterprises",
+    "anon": "F083",
+    "kind": "place"
+  },
+  "P0084": {
+    "name": "JFS School",
+    "anon": "F084",
+    "kind": "place"
+  },
+  "P0085": {
+    "name": "Cholesterol Clinic For Children And Families",
+    "anon": "F085",
+    "kind": "place"
+  },
+  "P0086": {
+    "name": "Alan's Home Care",
+    "anon": "F086",
+    "kind": "place"
+  },
+  "P0087": {
+    "name": "Ark Burlington Danes Academy",
+    "anon": "F087",
+    "kind": "place"
+  },
+  "P0088": {
+    "name": "G W Pharmaceuticals",
+    "anon": "F088",
+    "kind": "place"
+  },
+  "P0089": {
+    "name": "Enfield Town railway station",
+    "anon": "F089",
+    "kind": "place"
+  },
+  "P0090": {
+    "name": "The Annunciation Infant School",
+    "anon": "F090",
+    "kind": "place"
+  },
+  "P0091": {
+    "name": "Chingford Church of England Junior School",
+    "anon": "F091",
+    "kind": "place"
+  },
+  "P0092": {
+    "name": "Hospital of St Thomas of Acre",
+    "anon": "F092",
+    "kind": "place"
+  },
+  "P0093": {
+    "name": "Woodlands Healthcare Hospitals",
+    "anon": "F093",
+    "kind": "place"
+  },
+  "P0094": {
+    "name": "Woods Chemist",
+    "anon": "F094",
+    "kind": "place"
+  },
+  "P0095": {
+    "name": "Harris Academy Tottenham",
+    "anon": "F095",
+    "kind": "place"
+  },
+  "P0096": {
+    "name": "Inga Clinic - The Doctor's Clinic",
+    "anon": "F096",
+    "kind": "place"
+  },
+  "P0097": {
+    "name": "Waitrose and Partners",
+    "anon": "F097",
+    "kind": "place"
+  },
+  "P0098": {
+    "name": "Barlby Primary School",
+    "anon": "F098",
+    "kind": "place"
+  },
+  "P0099": {
+    "name": "JET",
+    "anon": "F099",
+    "kind": "place"
+  },
+  "P0100": {
+    "name": "Yeep",
+    "anon": "F100",
+    "kind": "place"
+  },
+  "P0101": {
+    "name": "Post Office-Roehampton High Street 35",
+    "anon": "F101",
+    "kind": "place"
+  },
+  "P0102": {
+    "name": "Kingshead Chemist",
+    "anon": "F102",
+    "kind": "place"
+  },
+  "P0103": {
+    "name": "Ilford University ",
+    "anon": "F103",
+    "kind": "place"
+  },
+  "P0104": {
+    "name": "Texaco",
+    "anon": "F104",
+    "kind": "place"
+  },
+  "P0105": {
+    "name": "ESSO Station",
+    "anon": "F105",
+    "kind": "place"
+  },
+  "P0106": {
+    "name": "Queen Mary University",
+    "anon": "F106",
+    "kind": "place"
+  },
+  "P0107": {
+    "name": "University of London Worldwide",
+    "anon": "F107",
+    "kind": "place"
+  },
+  "P0108": {
+    "name": "Lidl",
+    "anon": "F108",
+    "kind": "place"
+  },
+  "P0109": {
+    "name": "Budgens",
+    "anon": "F109",
+    "kind": "place"
+  },
+  "P0110": {
+    "name": "Ealing Broadway Central Station",
+    "anon": "F110",
+    "kind": "place"
+  },
+  "P0111": {
+    "name": "Maplestead Pharmacy",
+    "anon": "F111",
+    "kind": "place"
+  },
+  "P0112": {
+    "name": "London Slimming Clinic",
+    "anon": "F112",
+    "kind": "place"
+  },
+  "P0113": {
+    "name": "Ponders End railway station",
+    "anon": "F113",
+    "kind": "place"
+  },
+  "P0114": {
+    "name": "Sutton Enquiry Office",
+    "anon": "F114",
+    "kind": "place"
+  },
+  "P0115": {
+    "name": "Heathrow Express Station -T1/T3",
+    "anon": "F115",
+    "kind": "place"
+  },
+  "P0116": {
+    "name": "Chiswick Delivery Office",
+    "anon": "F116",
+    "kind": "place"
+  },
+  "P0117": {
+    "name": "Mailability",
+    "anon": "F117",
+    "kind": "place"
+  },
+  "P0118": {
+    "name": "Chelsea And Westminster Hospital Delivery Bay",
+    "anon": "F118",
+    "kind": "place"
+  },
+  "P0119": {
+    "name": "Quick Stop London",
+    "anon": "F119",
+    "kind": "place"
+  },
+  "P0120": {
+    "name": "Afro Caribbean Food Centre",
+    "anon": "F120",
+    "kind": "place"
+  },
+  "P0121": {
+    "name": "SPAR",
+    "anon": "F121",
+    "kind": "place"
+  },
+  "P0122": {
+    "name": "Selsdon All In One",
+    "anon": "F122",
+    "kind": "place"
+  },
+  "P0123": {
+    "name": "Teddington Delivery Office",
+    "anon": "F123",
+    "kind": "place"
+  },
+  "P0124": {
+    "name": "Royal Docks Academy",
+    "anon": "F124",
+    "kind": "place"
+  },
+  "P0125": {
+    "name": "Medical HDU Northwick Park Hospital",
+    "anon": "F125",
+    "kind": "place"
+  },
+  "P0126": {
+    "name": "Haselbury Food&wine",
+    "anon": "F126",
+    "kind": "place"
+  },
+  "P0127": {
+    "name": "Abbey Wood Secondary School",
+    "anon": "F127",
+    "kind": "place"
+  },
+  "P0128": {
+    "name": "Bowes Road Clinic",
+    "anon": "F128",
+    "kind": "place"
+  },
+  "P0129": {
+    "name": "Aldi Sud",
+    "anon": "F129",
+    "kind": "place"
+  },
+  "P0130": {
+    "name": "Barnes Food Fair",
+    "anon": "F130",
+    "kind": "place"
+  },
+  "P0131": {
+    "name": "InPost",
+    "anon": "F131",
+    "kind": "place"
+  },
+  "P0132": {
+    "name": "Yeep",
+    "anon": "F132",
+    "kind": "place"
+  },
+  "P0133": {
+    "name": "Evri ParcelShop",
+    "anon": "F133",
+    "kind": "place"
+  },
+  "P0134": {
+    "name": "Coopers",
+    "anon": "F134",
+    "kind": "place"
+  },
+  "P0135": {
+    "name": "Forest Hill Railway Station (FOH)",
+    "anon": "F135",
+    "kind": "place"
+  },
+  "P0136": {
+    "name": "Sia Pharmacy",
+    "anon": "F136",
+    "kind": "place"
+  },
+  "P0137": {
+    "name": "InPost",
+    "anon": "F137",
+    "kind": "place"
+  },
+  "P0138": {
+    "name": "Wickham Road Post Box",
+    "anon": "F138",
+    "kind": "place"
+  },
+  "P0139": {
+    "name": "UPS Access Point",
+    "anon": "F139",
+    "kind": "place"
+  },
+  "P0140": {
+    "name": "Sudbury & Harrow Road railway station",
+    "anon": "F140",
+    "kind": "place"
+  },
+  "P0141": {
+    "name": "Gidea Park railway station",
+    "anon": "F141",
+    "kind": "place"
+  },
+  "P0142": {
+    "name": "Sainsbury's Local",
+    "anon": "F142",
+    "kind": "place"
+  },
+  "P0143": {
+    "name": "Norwood Mini Market",
+    "anon": "F143",
+    "kind": "place"
+  },
+  "P0144": {
+    "name": "Hounslow Heath Post Office",
+    "anon": "F144",
+    "kind": "place"
+  },
+  "P0145": {
+    "name": "Iceland",
+    "anon": "F145",
+    "kind": "place"
+  },
+  "P0146": {
+    "name": "Aldi Sud",
+    "anon": "F146",
+    "kind": "place"
+  },
+  "P0147": {
+    "name": "Post Office-Redbridge",
+    "anon": "F147",
+    "kind": "place"
+  },
+  "P0148": {
+    "name": "Cda Clinic",
+    "anon": "F148",
+    "kind": "place"
+  },
+  "P0149": {
+    "name": "Iceland",
+    "anon": "F149",
+    "kind": "place"
+  },
+  "P0150": {
+    "name": "Athavan Superstore Harrow",
+    "anon": "F150",
+    "kind": "place"
+  },
+  "P0151": {
+    "name": "Loughborough University",
+    "anon": "F151",
+    "kind": "place"
+  },
+  "P0152": {
+    "name": "Kingston Food & Wine",
+    "anon": "F152",
+    "kind": "place"
+  },
+  "P0153": {
+    "name": "Genesis Supermarket",
+    "anon": "F153",
+    "kind": "place"
+  },
+  "P0154": {
+    "name": "Boots",
+    "anon": "F154",
+    "kind": "place"
+  },
+  "P0155": {
+    "name": "Arden University at Ealing Green College",
+    "anon": "F155",
+    "kind": "place"
+  },
+  "P0156": {
+    "name": "London Metropolitan University - Goulston Street",
+    "anon": "F156",
+    "kind": "place"
+  },
+  "P0157": {
+    "name": "Vauxhall Railway Station (VXH)",
+    "anon": "F157",
+    "kind": "place"
+  },
+  "P0158": {
+    "name": "Lidl",
+    "anon": "F158",
+    "kind": "place"
+  },
+  "P0159": {
+    "name": "Edgware Post Office",
+    "anon": "F159",
+    "kind": "place"
+  },
+  "P0160": {
+    "name": "Shell",
+    "anon": "F160",
+    "kind": "place"
+  },
+  "P0161": {
+    "name": "Centre for Catalan Studies, Queen Mary University of London",
+    "anon": "F161",
+    "kind": "place"
+  },
+  "P0162": {
+    "name": "Amazon Locker - CLIMBER",
+    "anon": "F162",
+    "kind": "place"
+  },
+  "P0163": {
+    "name": "Saint Merry's Hospital.",
+    "anon": "F163",
+    "kind": "place"
+  },
+  "P0164": {
+    "name": "Fordham University London",
+    "anon": "F164",
+    "kind": "place"
+  },
+  "P0165": {
+    "name": "Tesco Superstore",
+    "anon": "F165",
+    "kind": "place"
+  },
+  "P0166": {
+    "name": "Burnt Ash Hill Post Office",
+    "anon": "F166",
+    "kind": "place"
+  },
+  "P0167": {
+    "name": "Amazon Locker - Broad",
+    "anon": "F167",
+    "kind": "place"
+  },
+  "P0168": {
+    "name": "Step By Step Nursery",
+    "anon": "F168",
+    "kind": "place"
+  },
+  "P0169": {
+    "name": "London Road 494 Post Office",
+    "anon": "F169",
+    "kind": "place"
+  },
+  "P0170": {
+    "name": "Flu Jabs Clinic Welling - Bellegrove Pharmacy",
+    "anon": "F170",
+    "kind": "place"
+  },
+  "P0171": {
+    "name": "Iceland Foods",
+    "anon": "F171",
+    "kind": "place"
+  },
+  "P0172": {
+    "name": "Shell",
+    "anon": "F172",
+    "kind": "place"
+  },
+  "P0173": {
+    "name": "Queen Mary University Of London",
+    "anon": "F173",
+    "kind": "place"
+  },
+  "P0174": {
+    "name": "Morrisons",
+    "anon": "F174",
+    "kind": "place"
+  },
+  "P0175": {
+    "name": "Amazon Locker - Juniper",
+    "anon": "F175",
+    "kind": "place"
+  },
+  "P0176": {
+    "name": "Chingford Hall Primary School",
+    "anon": "F176",
+    "kind": "place"
+  },
+  "P0177": {
+    "name": "InPost",
+    "anon": "F177",
+    "kind": "place"
+  },
+  "P0178": {
+    "name": "Osm Pharma",
+    "anon": "F178",
+    "kind": "place"
+  },
+  "P0179": {
+    "name": "Royal Mail",
+    "anon": "F179",
+    "kind": "place"
+  },
+  "P0180": {
+    "name": "LloydsPharmacy",
+    "anon": "F180",
+    "kind": "place"
+  },
+  "P0181": {
+    "name": "InPost",
+    "anon": "F181",
+    "kind": "place"
+  },
+  "P0182": {
+    "name": "Central railway station (London)",
+    "anon": "F182",
+    "kind": "place"
+  },
+  "P0183": {
+    "name": "Shell",
+    "anon": "F183",
+    "kind": "place"
+  },
+  "P0184": {
+    "name": "Hertfordshire University",
+    "anon": "F184",
+    "kind": "place"
+  },
+  "P0185": {
+    "name": "Stanmore Hospital",
+    "anon": "F185",
+    "kind": "place"
+  },
+  "P0186": {
+    "name": "Asda",
+    "anon": "F186",
+    "kind": "place"
+  },
+  "P0187": {
+    "name": "University of Ulster, London",
+    "anon": "F187",
+    "kind": "place"
+  },
+  "P0188": {
+    "name": "DHL Express Service Point",
+    "anon": "F188",
+    "kind": "place"
+  },
+  "P0189": {
+    "name": "Boots Pharmacy",
+    "anon": "F189",
+    "kind": "place"
+  },
+  "P0190": {
+    "name": "Costcutter",
+    "anon": "F190",
+    "kind": "place"
+  },
+  "P0191": {
+    "name": "Yeep",
+    "anon": "F191",
+    "kind": "place"
+  },
+  "P0192": {
+    "name": "Priory Hospital Enfield",
+    "anon": "F192",
+    "kind": "place"
+  },
+  "P0193": {
+    "name": "InPost",
+    "anon": "F193",
+    "kind": "place"
+  },
+  "P0194": {
+    "name": "Arsenal Mini Market London",
+    "anon": "F194",
+    "kind": "place"
+  },
+  "P0195": {
+    "name": "Nisa Local",
+    "anon": "F195",
+    "kind": "place"
+  },
+  "P0196": {
+    "name": "InPost",
+    "anon": "F196",
+    "kind": "place"
+  },
+  "P0197": {
+    "name": "Royal Mail",
+    "anon": "F197",
+    "kind": "place"
+  },
+  "P0198": {
+    "name": "Same Day Clinic Limited",
+    "anon": "F198",
+    "kind": "place"
+  },
+  "P0199": {
+    "name": "Post Office-Lea Bridge Road 333",
+    "anon": "F199",
+    "kind": "place"
+  },
+  "P0200": {
+    "name": "Modern Montessori International Ltd.",
+    "anon": "F200",
+    "kind": "place"
+  },
+  "P0201": {
+    "name": "Munster Road Post Office",
+    "anon": "F201",
+    "kind": "place"
+  },
+  "P0202": {
+    "name": "Central Foundation Boys' School",
+    "anon": "F202",
+    "kind": "place"
+  },
+  "P0203": {
+    "name": "San Marino Mail UK",
+    "anon": "F203",
+    "kind": "place"
+  },
+  "P0204": {
+    "name": "South Harrow Post Office",
+    "anon": "F204",
+    "kind": "place"
+  },
+  "P0205": {
+    "name": "Co-op Food",
+    "anon": "F205",
+    "kind": "place"
+  },
+  "P0206": {
+    "name": "Queen Charlotte's and Chelsea Hospital",
+    "anon": "F206",
+    "kind": "place"
+  },
+  "P0207": {
+    "name": "ALDI",
+    "anon": "F207",
+    "kind": "place"
+  },
+  "P0208": {
+    "name": "Post Office (Royal Hospital Chelsea)",
+    "anon": "F208",
+    "kind": "place"
+  },
+  "P0209": {
+    "name": "Lidl",
+    "anon": "F209",
+    "kind": "place"
+  },
+  "P0210": {
+    "name": "UPS Access Point",
+    "anon": "F210",
+    "kind": "place"
+  },
+  "P0211": {
+    "name": "Department of Aeronautics - Imperial College London",
+    "anon": "F211",
+    "kind": "place"
+  },
+  "P0212": {
+    "name": "Kiki's Children's Clinic",
+    "anon": "F212",
+    "kind": "place"
+  },
+  "P0213": {
+    "name": "London International University",
+    "anon": "F213",
+    "kind": "place"
+  },
+  "P0214": {
+    "name": "Healthside Travel Clinic and Weight Management Pharmacy",
+    "anon": "F214",
+    "kind": "place"
+  },
+  "P0215": {
+    "name": "West London Mental Health Trust, St. Bernard's Hospital",
+    "anon": "F215",
+    "kind": "place"
+  },
+  "P0216": {
+    "name": "Violet Road Service Station",
+    "anon": "F216",
+    "kind": "place"
+  },
+  "P0217": {
+    "name": "Norbury High School for Girls ",
+    "anon": "F217",
+    "kind": "place"
+  },
+  "P0218": {
+    "name": "Londis Park Lane",
+    "anon": "F218",
+    "kind": "place"
+  },
+  "P0219": {
+    "name": "InPost",
+    "anon": "F219",
+    "kind": "place"
+  },
+  "P0220": {
+    "name": "Kings Cross Station",
+    "anon": "F220",
+    "kind": "place"
+  },
+  "P0221": {
+    "name": "Roehampton Hospital",
+    "anon": "F221",
+    "kind": "place"
+  },
+  "P0222": {
+    "name": "UPS Access Point",
+    "anon": "F222",
+    "kind": "place"
+  },
+  "P0223": {
+    "name": "Boots",
+    "anon": "F223",
+    "kind": "place"
+  },
+  "P0224": {
+    "name": "Islamic University , Kustia",
+    "anon": "F224",
+    "kind": "place"
+  },
+  "P0225": {
+    "name": "Martin Way",
+    "anon": "F225",
+    "kind": "place"
+  },
+  "P0226": {
+    "name": "Barnes Bridge railway station",
+    "anon": "F226",
+    "kind": "place"
+  },
+  "P0227": {
+    "name": "Universal Hospital Supplies",
+    "anon": "F227",
+    "kind": "place"
+  },
+  "P0228": {
+    "name": "Asda Tottenham High Road",
+    "anon": "F228",
+    "kind": "place"
+  },
+  "P0229": {
+    "name": "Blue Gate Fields Infants' School",
+    "anon": "F229",
+    "kind": "place"
+  },
+  "P0230": {
+    "name": "Stanley Primary School",
+    "anon": "F230",
+    "kind": "place"
+  },
+  "P0231": {
+    "name": "Unissense Ltd.",
+    "anon": "F231",
+    "kind": "place"
+  },
+  "P0232": {
+    "name": "Amazon Locker - Agate",
+    "anon": "F232",
+    "kind": "place"
+  },
+  "P0233": {
+    "name": "Sidcup Filling Station",
+    "anon": "F233",
+    "kind": "place"
+  },
+  "P0234": {
+    "name": "Asda South Ruislip",
+    "anon": "F234",
+    "kind": "place"
+  },
+  "P0235": {
+    "name": "Spencer Road Halt railway station",
+    "anon": "F235",
+    "kind": "place"
+  },
+  "P0236": {
+    "name": "Yeep",
+    "anon": "F236",
+    "kind": "place"
+  },
+  "P0237": {
+    "name": "Bromley Filling Station",
+    "anon": "F237",
+    "kind": "place"
+  },
+  "P0238": {
+    "name": "InPost",
+    "anon": "F238",
+    "kind": "place"
+  },
+  "P0239": {
+    "name": "Kings Cross Train Station",
+    "anon": "F239",
+    "kind": "place"
+  },
+  "P0240": {
+    "name": "Kundola General Store",
+    "anon": "F240",
+    "kind": "place"
+  },
+  "P0241": {
+    "name": "Post Office",
+    "anon": "F241",
+    "kind": "place"
+  },
+  "P0242": {
+    "name": "InPost",
+    "anon": "F242",
+    "kind": "place"
+  },
+  "P0243": {
+    "name": "InPost",
+    "anon": "F243",
+    "kind": "place"
+  },
+  "P0244": {
+    "name": "Hampton Hill Local",
+    "anon": "F244",
+    "kind": "place"
+  },
+  "P0245": {
+    "name": "Education Academy, Mile End Hospital",
+    "anon": "F245",
+    "kind": "place"
+  },
+  "P0246": {
+    "name": "Aaa Convenience Store",
+    "anon": "F246",
+    "kind": "place"
+  },
+  "P0247": {
+    "name": "Wimbledon Railway Station (WIM)",
+    "anon": "F247",
+    "kind": "place"
+  },
+  "P0248": {
+    "name": "Post Office",
+    "anon": "F248",
+    "kind": "place"
+  },
+  "P0249": {
+    "name": "Iceland",
+    "anon": "F249",
+    "kind": "place"
+  },
+  "P0250": {
+    "name": "Woolwich Polytechnic School for Boys",
+    "anon": "F250",
+    "kind": "place"
+  },
+  "P0251": {
+    "name": "Post Office-Manor Road",
+    "anon": "F251",
+    "kind": "place"
+  },
+  "P0252": {
+    "name": "Royal Mail Islington Delivery Office",
+    "anon": "F252",
+    "kind": "place"
+  },
+  "P0253": {
+    "name": "Tesco Esso Express",
+    "anon": "F253",
+    "kind": "place"
+  },
+  "P0254": {
+    "name": "MBE Romford",
+    "anon": "F254",
+    "kind": "place"
+  },
+  "P0255": {
+    "name": "King's College Hospital",
+    "anon": "F255",
+    "kind": "place"
+  },
+  "P0256": {
+    "name": "Tesco Express",
+    "anon": "F256",
+    "kind": "place"
+  },
+  "P0257": {
+    "name": "Shell",
+    "anon": "F257",
+    "kind": "place"
+  },
+  "P0258": {
+    "name": "Balham Post Office",
+    "anon": "F258",
+    "kind": "place"
+  },
+  "P0259": {
+    "name": "Aldi Sud",
+    "anon": "F259",
+    "kind": "place"
+  },
+  "P0260": {
+    "name": "ESSO Station",
+    "anon": "F260",
+    "kind": "place"
+  },
+  "P0261": {
+    "name": "Upper Sydenham Drop & Collect Post Office",
+    "anon": "F261",
+    "kind": "place"
+  },
+  "P0262": {
+    "name": "Combridge University",
+    "anon": "F262",
+    "kind": "place"
+  },
+  "P0263": {
+    "name": "Kings College Hospital",
+    "anon": "F263",
+    "kind": "place"
+  },
+  "P0264": {
+    "name": "Amazon Counter - Collect+ CYBERCAFE",
+    "anon": "F264",
+    "kind": "place"
+  },
+  "P0265": {
+    "name": "Yeep",
+    "anon": "F265",
+    "kind": "place"
+  },
+  "P0266": {
+    "name": "Rapid Antigen Test Highgate - North London - Fit To Fly Test In-clinic",
+    "anon": "F266",
+    "kind": "place"
+  },
+  "P0267": {
+    "name": "Iceland",
+    "anon": "F267",
+    "kind": "place"
+  },
+  "P0268": {
+    "name": "InPost",
+    "anon": "F268",
+    "kind": "place"
+  },
+  "P0269": {
+    "name": "Shell",
+    "anon": "F269",
+    "kind": "place"
+  },
+  "P0270": {
+    "name": "Post Office",
+    "anon": "F270",
+    "kind": "place"
+  },
+  "P0271": {
+    "name": "Crofton Lane Post Office",
+    "anon": "F271",
+    "kind": "place"
+  },
+  "P0272": {
+    "name": "St Helen's School",
+    "anon": "F272",
+    "kind": "place"
+  },
+  "P0273": {
+    "name": "Post Office-Ley Street",
+    "anon": "F273",
+    "kind": "place"
+  },
+  "P0274": {
+    "name": "ESSO Station",
+    "anon": "F274",
+    "kind": "place"
+  },
+  "P0275": {
+    "name": "Royal London Hospital Clinic 3",
+    "anon": "F275",
+    "kind": "place"
+  },
+  "P0276": {
+    "name": "Post Office-Seven Sisters Road",
+    "anon": "F276",
+    "kind": "place"
+  },
+  "P0277": {
+    "name": "Palace Gates railway station",
+    "anon": "F277",
+    "kind": "place"
+  },
+  "P0278": {
+    "name": "Marlybone Rail Station",
+    "anon": "F278",
+    "kind": "place"
+  },
+  "P0279": {
+    "name": "Mail Shop",
+    "anon": "F279",
+    "kind": "place"
+  },
+  "P0280": {
+    "name": "Hainault Pharmacy",
+    "anon": "F280",
+    "kind": "place"
+  },
+  "P0281": {
+    "name": "Putney Pharmacy",
+    "anon": "F281",
+    "kind": "place"
+  },
+  "P0282": {
+    "name": "Esso",
+    "anon": "F282",
+    "kind": "place"
+  },
+  "P0283": {
+    "name": "Gipsy Hill railway station",
+    "anon": "F283",
+    "kind": "place"
+  },
+  "P0284": {
+    "name": "Sainsbury's Local",
+    "anon": "F284",
+    "kind": "place"
+  },
+  "P0285": {
+    "name": "The Royal London Hospital Museum",
+    "anon": "F285",
+    "kind": "place"
+  },
+  "P0286": {
+    "name": "Iceland",
+    "anon": "F286",
+    "kind": "place"
+  },
+  "P0287": {
+    "name": "Post Office",
+    "anon": "F287",
+    "kind": "place"
+  },
+  "P0288": {
+    "name": "Harrow Allergy Homeopathy Chiropody & Acupressure Clinic",
+    "anon": "F288",
+    "kind": "place"
+  },
+  "P0289": {
+    "name": "Mail Boxes Etc. UK",
+    "anon": "F289",
+    "kind": "place"
+  },
+  "P0290": {
+    "name": "Anatomicals",
+    "anon": "F290",
+    "kind": "place"
+  },
+  "P0291": {
+    "name": "JET",
+    "anon": "F291",
+    "kind": "place"
+  },
+  "P0292": {
+    "name": "Westbury Chemist",
+    "anon": "F292",
+    "kind": "place"
+  },
+  "P0293": {
+    "name": "Asda Clapham Junction Superstore",
+    "anon": "F293",
+    "kind": "place"
+  },
+  "P0294": {
+    "name": "Imperial College London",
+    "anon": "F294",
+    "kind": "place"
+  },
+  "P0295": {
+    "name": "Gulf",
+    "anon": "F295",
+    "kind": "place"
+  },
+  "P0296": {
+    "name": "Fulham Road Chelsea and West Minister Hospital",
+    "anon": "F296",
+    "kind": "place"
+  },
+  "P0297": {
+    "name": "InPost",
+    "anon": "F297",
+    "kind": "place"
+  },
+  "P0298": {
+    "name": "Mon\u00e9t Ward - Goodmayes Hospital",
+    "anon": "F298",
+    "kind": "place"
+  },
+  "P0299": {
+    "name": "Asda Hillingdon Express Petrol",
+    "anon": "F299",
+    "kind": "place"
+  },
+  "P0300": {
+    "name": "Kingston University London",
+    "anon": "F300",
+    "kind": "place"
+  },
+  "UK": {
+    "name": "United Kingdom",
+    "anon": "U001",
+    "kind": "region"
+  },
+  "UKI": {
+    "name": "London",
+    "anon": "U002",
+    "kind": "region"
+  },
+  "UKI3": {
+    "name": "Inner London \u2014 West",
+    "anon": "U003",
+    "kind": "region"
+  },
+  "UKI4": {
+    "name": "Inner London \u2014 East",
+    "anon": "U004",
+    "kind": "region"
+  },
+  "UKI5": {
+    "name": "Outer London \u2014 East and North East",
+    "anon": "U005",
+    "kind": "region"
+  },
+  "UKI6": {
+    "name": "Outer London \u2014 South",
+    "anon": "U006",
+    "kind": "region"
+  },
+  "UKI7": {
+    "name": "Outer London \u2014 West and North West",
+    "anon": "U007",
+    "kind": "region"
+  },
+  "UKI31": {
+    "name": "Camden and City of London",
+    "anon": "U008",
+    "kind": "region"
+  },
+  "UKI32": {
+    "name": "Westminster",
+    "anon": "U009",
+    "kind": "region"
+  },
+  "UKI33": {
+    "name": "Kensington & Chelsea and Hammersmith & Fulham",
+    "anon": "U010",
+    "kind": "region"
+  },
+  "UKI34": {
+    "name": "Wandsworth",
+    "anon": "U011",
+    "kind": "region"
+  },
+  "UKI41": {
+    "name": "Hackney and Newham",
+    "anon": "U012",
+    "kind": "region"
+  },
+  "UKI42": {
+    "name": "Tower Hamlets",
+    "anon": "U013",
+    "kind": "region"
+  },
+  "UKI43": {
+    "name": "Haringey and Islington",
+    "anon": "U014",
+    "kind": "region"
+  },
+  "UKI44": {
+    "name": "Lewisham and Southwark",
+    "anon": "U015",
+    "kind": "region"
+  },
+  "UKI45": {
+    "name": "Lambeth",
+    "anon": "U016",
+    "kind": "region"
+  },
+  "UKI51": {
+    "name": "Bexley and Greenwich",
+    "anon": "U017",
+    "kind": "region"
+  },
+  "UKI52": {
+    "name": "Barking & Dagenham and Havering",
+    "anon": "U018",
+    "kind": "region"
+  },
+  "UKI53": {
+    "name": "Redbridge and Waltham Forest",
+    "anon": "U019",
+    "kind": "region"
+  },
+  "UKI54": {
+    "name": "Enfield",
+    "anon": "U020",
+    "kind": "region"
+  },
+  "UKI61": {
+    "name": "Bromley",
+    "anon": "U021",
+    "kind": "region"
+  },
+  "UKI62": {
+    "name": "Croydon",
+    "anon": "U022",
+    "kind": "region"
+  },
+  "UKI63": {
+    "name": "Merton, Kingston upon Thames and Sutton",
+    "anon": "U023",
+    "kind": "region"
+  },
+  "UKI71": {
+    "name": "Barnet",
+    "anon": "U024",
+    "kind": "region"
+  },
+  "UKI72": {
+    "name": "Brent",
+    "anon": "U025",
+    "kind": "region"
+  },
+  "UKI73": {
+    "name": "Ealing",
+    "anon": "U026",
+    "kind": "region"
+  },
+  "UKI74": {
+    "name": "Harrow and Hillingdon",
+    "anon": "U027",
+    "kind": "region"
+  },
+  "UKI75": {
+    "name": "Hounslow and Richmond upon Thames",
+    "anon": "U028",
+    "kind": "region"
+  },
+  "E09000001": {
+    "name": "City of London",
+    "anon": "U029",
+    "kind": "region"
+  },
+  "E09000002": {
+    "name": "Barking and Dagenham",
+    "anon": "U030",
+    "kind": "region"
+  },
+  "E09000003": {
+    "name": "Barnet",
+    "anon": "U031",
+    "kind": "region"
+  },
+  "E09000004": {
+    "name": "Bexley",
+    "anon": "U032",
+    "kind": "region"
+  },
+  "E09000005": {
+    "name": "Brent",
+    "anon": "U033",
+    "kind": "region"
+  },
+  "E09000006": {
+    "name": "Bromley",
+    "anon": "U034",
+    "kind": "region"
+  },
+  "E09000007": {
+    "name": "Camden",
+    "anon": "U035",
+    "kind": "region"
+  },
+  "E09000008": {
+    "name": "Croydon",
+    "anon": "U036",
+    "kind": "region"
+  },
+  "E09000009": {
+    "name": "Ealing",
+    "anon": "U037",
+    "kind": "region"
+  },
+  "E09000010": {
+    "name": "Enfield",
+    "anon": "U038",
+    "kind": "region"
+  },
+  "E09000011": {
+    "name": "Greenwich",
+    "anon": "U039",
+    "kind": "region"
+  },
+  "E09000012": {
+    "name": "Hackney",
+    "anon": "U040",
+    "kind": "region"
+  },
+  "E09000013": {
+    "name": "Hammersmith and Fulham",
+    "anon": "U041",
+    "kind": "region"
+  },
+  "E09000014": {
+    "name": "Haringey",
+    "anon": "U042",
+    "kind": "region"
+  },
+  "E09000015": {
+    "name": "Harrow",
+    "anon": "U043",
+    "kind": "region"
+  },
+  "E09000016": {
+    "name": "Havering",
+    "anon": "U044",
+    "kind": "region"
+  },
+  "E09000017": {
+    "name": "Hillingdon",
+    "anon": "U045",
+    "kind": "region"
+  },
+  "E09000018": {
+    "name": "Hounslow",
+    "anon": "U046",
+    "kind": "region"
+  },
+  "E09000019": {
+    "name": "Islington",
+    "anon": "U047",
+    "kind": "region"
+  },
+  "E09000020": {
+    "name": "Kensington and Chelsea",
+    "anon": "U048",
+    "kind": "region"
+  },
+  "E09000021": {
+    "name": "Kingston upon Thames",
+    "anon": "U049",
+    "kind": "region"
+  },
+  "E09000022": {
+    "name": "Lambeth",
+    "anon": "U050",
+    "kind": "region"
+  },
+  "E09000023": {
+    "name": "Lewisham",
+    "anon": "U051",
+    "kind": "region"
+  },
+  "E09000024": {
+    "name": "Merton",
+    "anon": "U052",
+    "kind": "region"
+  },
+  "E09000025": {
+    "name": "Newham",
+    "anon": "U053",
+    "kind": "region"
+  },
+  "E09000026": {
+    "name": "Redbridge",
+    "anon": "U054",
+    "kind": "region"
+  },
+  "E09000027": {
+    "name": "Richmond upon Thames",
+    "anon": "U055",
+    "kind": "region"
+  },
+  "E09000028": {
+    "name": "Southwark",
+    "anon": "U056",
+    "kind": "region"
+  },
+  "E09000029": {
+    "name": "Sutton",
+    "anon": "U057",
+    "kind": "region"
+  },
+  "E09000030": {
+    "name": "Tower Hamlets",
+    "anon": "U058",
+    "kind": "region"
+  },
+  "E09000031": {
+    "name": "Waltham Forest",
+    "anon": "U059",
+    "kind": "region"
+  },
+  "E09000032": {
+    "name": "Wandsworth",
+    "anon": "U060",
+    "kind": "region"
+  },
+  "E09000033": {
+    "name": "Westminster",
+    "anon": "U061",
+    "kind": "region"
+  }
+}
