@@ -27,8 +27,8 @@ Does refining a geospatial ontology's **format**, **structure** and **layering**
 | ID | Content | Formats |
 |---|---|---|
 | `v0` | No ontology: facts only | plain English |
-| `v1` | Facts + definitions block (region levels, relation meanings, full category tree) | plain English |
-| `v2` | Facts + definitions + rules block | plain English, Turtle (RDF/OWL), JSON |
+| `v1` | Facts + definitions block (region levels, relation meanings, full category tree) | plain English, Turtle, JSON |
+| `v2` | Facts + definitions + rules block. The English block repeats the v1 definitions, then states the rules. | plain English, Turtle, JSON |
 | `v2S` *(optional)* | As v2, plus a structure section: the schema path and a lookup procedure | plain English |
 | `v2L` *(later)* | As v2, split into layers: vocabulary / rules / instances | plain English |
 | `v2M` *(optional)* | As v2, with facts materialised by the reasoner (closure added) | plain English |
@@ -296,12 +296,11 @@ The expected answer is **always** computed by the reasoner on the given facts, n
 `render(task, version, fmt, layout, anonymised) -> str`
 
 - The **ontology block** comes from `ontologies/<version>/` and is the same for every task (§3.1). v0 has no block.
-- The **facts block** is rendered from `task.facts` in the given `layout`:
+- The **facts block** is always plain English, in the given `layout`. Format does not change it.
   - `shuffled`: the task's stored order.
-  - `grouped`: the region hierarchy first, then places grouped by municipality. For Turtle and JSON, group by subject and order by hierarchy level.
-- **plain English facts:** `"Royal Hospital is a Hospital."`, `"Royal Hospital is within Carlisle."`
-- **Turtle:** prefixes, then the vocabulary (`owl:TransitiveProperty` for `within`, `owl:SymmetricProperty` for `adjacent_to`, `rdfs:subClassOf` for the categories), then the instances.
-- **JSON:** `{"vocabulary": …, "rules": […], "facts": [{"s":…, "p":…, "o":…}]}`
+  - `grouped`: the region hierarchy first, then places grouped by municipality.
+  - `"Royal Hospital is a Hospital."`, `"Royal Hospital is within Carlisle."`
+- **Turtle and JSON** are the ontology only, and only when that block is present (v1 and v2). Turtle states the vocabulary and `rdfs:subClassOf` lines. JSON states the same content as `{"s", "p", "o"}` triples. v0 has no triples.
 
 Static ontology text (definitions and rules per version and format) lives in `ontologies/<version>/<fmt>.*`. **The fact content must be identical across formats:** add a test that parses each rendering back into triples and compares them.
 

@@ -105,6 +105,47 @@
       color: var(--muted);
     }
     .split { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+    .chart { max-width: 640px; margin: 6px 0 22px; }
+    .chart svg { width: 100%; height: auto; display: block; }
+    .legend { display: flex; gap: 14px; margin: 0 0 4px; color: var(--muted); font-size: 12px; }
+    .legend i { display: inline-block; width: 9px; height: 9px; margin-right: 5px; vertical-align: -1px; }
+    .bars { margin: 18px 0 22px; max-width: 440px; }
+    .metric-row { display: grid; grid-template-columns: 2.4em 1fr 3.2em; gap: 10px; align-items: center; margin: 7px 0; }
+    .bar { height: 8px; background: var(--line); border-radius: 99px; }
+    .bar > span { display: block; height: 100%; background: var(--ink); border-radius: 99px; }
+    table.metrics { width: 100%; max-width: 1100px; }
+    table.metrics td { max-width: 32ch; }
+    table.metrics td.miss { color: #9f2d2d; }
+    button.link {
+      border: 0;
+      background: none;
+      padding: 0;
+      text-align: left;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 32px 16px;
+      background: rgba(28, 25, 23, 0.35);
+    }
+    .modal[hidden] { display: none; }
+    .modal .sheet {
+      width: min(860px, 100%);
+      max-height: calc(100vh - 64px);
+      overflow: auto;
+      padding: 16px 18px 22px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+    .modal .sheet h3 { margin-top: 12px; }
+    .modal pre { max-width: none; }
     @media (max-width: 800px) {
       .split, #map-view { grid-template-columns: 1fr; }
       .chips { display: none; }
@@ -209,10 +250,29 @@
 
     <section id="metrics" hidden>
       <h2>Metrics</h2>
-      <p id="metrics-body" class="muted">No results yet. The scorer will write explore/data/summary.json, with accuracy against difficulty for v0 and v2.</p>
+      <p id="metrics-body" class="muted">No results yet. A run writes explore/data/summary.json.</p>
       <div id="metrics-chart"></div>
     </section>
   </main>
+  <div id="prompt-modal" class="modal" hidden>
+    <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="filters">
+        <select id="modal-version">
+          <option>v0</option>
+          <option>v1</option>
+          <option>v2</option>
+        </select>
+        <select id="modal-format">
+          <option value="en">English</option>
+          <option value="json">JSON</option>
+          <option value="ttl">Turtle</option>
+        </select>
+        <button type="button" id="modal-close">Close</button>
+      </div>
+      <h3 id="modal-title"></h3>
+      <pre id="modal-prompt">Loading…</pre>
+    </div>
+  </div>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
     const state = { tasks: [], entities: null, current: null, task: null };
@@ -475,11 +535,226 @@ If the facts contain a contradiction, answer "CONTRADICTION".</div>
     }
 
     async function loadMetrics() {
-      const response = await fetch("explore/data/summary.json");
-      if (!response.ok) return;
+      const response = await fetch("explore/data/summary.json?t=" + Date.now());
+      const body = document.getElementById("metrics-body");
+      const chart = document.getElementById("metrics-chart");
+      if (!response.ok) {
+        body.textContent = "No results yet. A run writes explore/data/summary.json.";
+        chart.innerHTML = "";
+        return;
+      }
       const summary = await response.json();
-      document.getElementById("metrics-body").textContent = "";
-      document.getElementById("metrics-chart").innerHTML = `<pre>${JSON.stringify(summary, null, 2)}</pre>`;
+      const note = summary.note ? ` ${summary.note}` : "";
+      body.textContent = `${summary.model}, ${summary.when}. ${summary.scope} ${summary.tokens.toLocaleString()} tokens.${note}`;
+      const versions = summary.versions;
+      const difficulty = (summary.by_preset || []).map((group) => countGroup(group.preset, group.versions));
+      const byType = (summary.by_type || []).map((group) => countGroup(
+        group.type.replace("_inference", "").replace("_filter", "").replace("not_determinable", "abstain"),
+        group.versions,
+      ));
+      const typeHead = `<tr><th>Type</th>${versions.map((version) => `<th>${version}</th>`).join("")}</tr>`;
+      const typeRows = (summary.by_type || []).map((group) => {
+        const cells = group.versions.map((row) => `<td>${row.exact}/${row.n}</td>`).join("");
+        return `<tr><td>${escapeText(group.type)}</td>${cells}</tr>`;
+      }).join("");
+      const head = `<tr><th>Question</th><th>Gold</th>${versions.map((version) => `<th>${version}</th>`).join("")}</tr>`;
+      const rows = summary.tasks.map((task) => {
+        const cells = task.cells.map((cell) =>
+          `<td class="${cell.exact ? "" : "miss"}">${escapeText(cell.answer)}</td>`
+        ).join("");
+        return `<tr><td><button type="button" class="link" data-task="${task.task_id}">${escapeText(task.question)}</button><div class="muted">${escapeText(task.type)}</div></td><td>${escapeText(task.gold)}</td>${cells}</tr>`;
+      }).join("");
+      const formats = await fetch("explore/data/summary-formats.json?t=" + Date.now());
+      const formatBlock = formats.ok ? formatSection(summary, await formats.json()) : "";
+      chart.innerHTML = `<h3>English</h3><h3>By difficulty</h3>${groupedChart(difficulty, versions)}<h3>By task</h3>${groupedChart(byType, versions)}<table class="metrics">${typeHead}${typeRows}</table>${formatBlock}<h3>Each task</h3><table class="metrics">${head}${rows}</table>`;
+    }
+
+    function formatSection(english, formats) {
+      const columns = ["en", ...formats.formats];
+      const labels = { en: "English", ttl: "Turtle", json: "JSON" };
+      const head = `<tr><th></th>${columns.map((fmt) => `<th>${labels[fmt] || fmt}</th>`).join("")}</tr>`;
+      const body = formats.versions.map((version) => {
+        const cells = columns.map((fmt) => `<td>${formatCell(english, formats, version, fmt)}</td>`).join("");
+        return `<tr><td>${version}</td>${cells}</tr>`;
+      }).join("");
+      const formatGroups = columns.map((fmt) => {
+        const scores = formats.versions.map((version) => formatScore(english, formats, version, fmt));
+        return {
+          label: labels[fmt] || fmt,
+          n: scores[0] ? scores[0].n : 0,
+          values: Object.fromEntries(formats.versions.map((version, index) => [version, scores[index].exact])),
+        };
+      });
+      const typeHead = `<tr><th>Type</th>${formats.versions.flatMap((version) => columns.map((fmt) => `<th>${version} ${labels[fmt] || fmt}</th>`)).join("")}</tr>`;
+      const typeRows = (formats.by_type || []).map((group) => {
+        const cells = formats.versions.flatMap((version) =>
+          columns.map((fmt) => `<td>${formatCell(english, formats, version, fmt, null, group.type)}</td>`)
+        ).join("");
+        return `<tr><td>${escapeText(group.type)}</td>${cells}</tr>`;
+      }).join("");
+      return `<h3>Format</h3><p class="muted">${escapeText(formats.model)}, ${escapeText(formats.when)}. ${escapeText(formats.scope)} ${formats.tokens.toLocaleString()} tokens. The English column is the English run.</p>${groupedChart(formatGroups, formats.versions)}<table class="metrics">${head}${body}</table><h3>By type</h3><table class="metrics">${typeHead}${typeRows}</table>`;
+    }
+
+    function formatCell(english, formats, version, fmt, preset, taskType) {
+      if (fmt === "en") {
+        const groups = taskType
+          ? (english.by_type || [])
+          : preset
+            ? (english.by_preset || [])
+            : null;
+        if (!groups) {
+          const row = (english.by_version || []).find((item) => item.version === version);
+          return row ? `${row.exact}/${row.n}` : "";
+        }
+        const group = groups.find((item) => (taskType ? item.type === taskType : item.preset === preset));
+        const row = group && group.versions.find((item) => item.version === version);
+        return row ? `${row.exact}/${row.n}` : "";
+      }
+      const pool = taskType
+        ? ((formats.by_type || []).find((item) => item.type === taskType) || {}).cells
+        : preset
+          ? ((formats.by_preset || []).find((item) => item.preset === preset) || {}).cells
+          : formats.cells;
+      const row = (pool || []).find((item) => item.version === version && item.format === fmt);
+      return row && row.n ? `${row.exact}/${row.n}` : "";
+    }
+
+    const ontologyFiles = { en: "en.md", json: "ontology.json", ttl: "ontology.ttl" };
+    const promptCache = { task: null, text: {} };
+
+    document.getElementById("metrics-chart").addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-task]");
+      if (!button) return;
+      openPrompt(button.dataset.task, button.textContent);
+    });
+    document.getElementById("modal-close").addEventListener("click", closePrompt);
+    document.getElementById("prompt-modal").addEventListener("click", (event) => {
+      if (event.target.id === "prompt-modal") closePrompt();
+    });
+    document.getElementById("modal-version").addEventListener("change", showCachedPrompt);
+    document.getElementById("modal-format").addEventListener("change", showCachedPrompt);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closePrompt();
+    });
+
+    function closePrompt() {
+      document.getElementById("prompt-modal").hidden = true;
+    }
+
+    async function openPrompt(taskId, title) {
+      const modal = document.getElementById("prompt-modal");
+      document.getElementById("modal-title").textContent = title;
+      document.getElementById("modal-version").value = "v0";
+      document.getElementById("modal-format").value = "en";
+      document.getElementById("modal-prompt").textContent = "Loading…";
+      modal.hidden = false;
+      if (!state.entities) state.entities = await fetch("tasks/entities.json").then((response) => response.json());
+      promptCache.task = await fetch(`tasks/real/${taskId}.json`).then((response) => response.json());
+      promptCache.text = {};
+      showCachedPrompt();
+    }
+
+    async function showCachedPrompt() {
+      const version = document.getElementById("modal-version").value;
+      const format = document.getElementById("modal-format").value;
+      const key = `${version}/${format}`;
+      if (!promptCache.text[key]) promptCache.text[key] = await buildPrompt(promptCache.task, version, format);
+      document.getElementById("modal-prompt").textContent = promptCache.text[key];
+    }
+
+    async function buildPrompt(task, version, format) {
+      const facts = renderFacts(task);
+      const clause = version === "v0" ? "" : " and an ontology";
+      const ontology = version === "v0" ? "" : `${(await ontologyBlock(version, format)).trim()}\n\n`;
+      return `You are given facts about places and regions${clause}.
+Answer using ONLY the information provided. Do not use outside knowledge.
+If the answer cannot be derived, answer "CANNOT_DETERMINE".
+If the facts contain a contradiction, answer "CONTRADICTION".
+
+${ontology}Facts:
+${facts}
+
+Question: ${task.question}
+
+Respond with JSON only: {"answer": <bool | string | list of names | "CANNOT_DETERMINE" | "CONTRADICTION">}
+`;
+    }
+
+    async function ontologyBlock(version, format) {
+      const key = `${version}/${format}`;
+      if (!promptCache.text[key + ":onto"]) {
+        const response = await fetch(`ontologies/${version}/${ontologyFiles[format]}?t=${Date.now()}`);
+        promptCache.text[key + ":onto"] = response.ok ? await response.text() : "";
+      }
+      return promptCache.text[key + ":onto"];
+    }
+
+    function renderFacts(task) {
+      return task.facts.map(factLine).join("\n");
+    }
+
+    const seriesColor = { v0: "#d6d3d1", v1: "#1c1917", v2: "#78716c" };
+
+    function countGroup(label, rows) {
+      return {
+        label,
+        n: rows[0] ? rows[0].n : 0,
+        values: Object.fromEntries(rows.map((row) => [row.version, row.exact])),
+      };
+    }
+
+    function formatScore(english, formats, version, fmt) {
+      if (fmt === "en") {
+        const row = (english.by_version || []).find((item) => item.version === version);
+        return row ? { exact: row.exact, n: row.n } : { exact: 0, n: 0 };
+      }
+      const row = (formats.cells || []).find((item) => item.version === version && item.format === fmt);
+      return row ? { exact: row.exact, n: row.n } : { exact: 0, n: 0 };
+    }
+
+    function groupedChart(groups, ids) {
+      if (!groups.length || !ids.length) return "";
+      const groupSize = groups[0].n || 1;
+      const width = 640;
+      const height = 210;
+      const left = 40;
+      const right = 8;
+      const top = 18;
+      const bottom = 36;
+      const plotWidth = width - left - right;
+      const plotHeight = height - top - bottom;
+      const slot = plotWidth / groups.length;
+      const gap = 3;
+      const barWidth = Math.min(22, (slot - 28) / ids.length);
+      const block = ids.length * barWidth + (ids.length - 1) * gap;
+      const legend = `<div class="legend">${ids.map((id) => `<span><i style="background:${seriesColor[id] || "#1c1917"}"></i>${id}</span>`).join("")}</div>`;
+      const caption = `<p class="muted">Percent correct. Each group has ${groupSize} tasks.</p>`;
+      let grid = "";
+      for (const tick of [0, 25, 50, 75, 100]) {
+        const y = top + plotHeight - (tick / 100) * plotHeight;
+        grid += `<line x1="${left}" y1="${y.toFixed(1)}" x2="${width - right}" y2="${y.toFixed(1)}" stroke="#e7e5e4"/>`;
+        grid += `<text x="${left - 6}" y="${(y + 3).toFixed(1)}" text-anchor="end" fill="#57534e" font-size="10">${tick}%</text>`;
+      }
+      let bars = "";
+      groups.forEach((group, index) => {
+        const origin = left + index * slot + (slot - block) / 2;
+        ids.forEach((id, seriesIndex) => {
+          const exact = Number(group.values[id] || 0);
+          const percent = group.n ? Math.round((exact / group.n) * 100) : 0;
+          const barHeight = percent > 0 ? (percent / 100) * plotHeight : 0;
+          const x = origin + seriesIndex * (barWidth + gap);
+          const y = top + plotHeight - barHeight;
+          bars += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barWidth.toFixed(1)}" height="${barHeight.toFixed(1)}" fill="${seriesColor[id] || "#1c1917"}"><title>${id} ${group.label}: ${percent}% (${exact} of ${group.n})</title></rect>`;
+          bars += `<text x="${(x + barWidth / 2).toFixed(1)}" y="${Math.max(12, y - 4).toFixed(1)}" text-anchor="middle" fill="#57534e" font-size="10">${percent}</text>`;
+        });
+        bars += `<text x="${(left + index * slot + slot / 2).toFixed(1)}" y="${height - 14}" text-anchor="middle" fill="#1c1917" font-size="12">${group.label}</text>`;
+      });
+      return `${legend}${caption}<div class="chart"><svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Percent correct. Each group has ${groupSize} tasks.">${grid}${bars}</svg></div>`;
+    }
+
+    function barRow(label, row) {
+      const pct = Math.round(row.accuracy * 100);
+      return `<div class="metric-row"><span>${label}</span><span class="bar"><span style="width:${pct}%"></span></span><span>${row.exact}/${row.n}</span></div>`;
     }
 
     document.getElementById("onto-version").addEventListener("change", loadOntology);

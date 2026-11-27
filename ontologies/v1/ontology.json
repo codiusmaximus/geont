@@ -1,7 +1,18 @@
-{
-  "vocabulary": {
-    "types": ["NUTS0", "NUTS1", "NUTS2", "NUTS3", "Municipality", "Supermarket", "ConvenienceStore", "TrainStation", "PetrolStation", "PostOffice", "ParcelShop", "ParcelLocker", "Hospital", "Clinic", "Pharmacy", "School", "University", "VeterinaryClinic", "Retail", "Mobility", "ParcelServices", "Healthcare", "Education", "AnimalServices"],
-    "relations": ["is_a", "subclass_of", "within", "adjacent_to"]
-  },
-  "rules": []
-}
+[
+  {"s": "within", "p": "type", "o": "ObjectProperty"},
+  {"s": "adjacent_to", "p": "type", "o": "ObjectProperty"},
+  {"s": "is_a", "p": "type", "o": "ObjectProperty"},
+  {"s": "Supermarket", "p": "subclass_of", "o": "Retail"},
+  {"s": "ConvenienceStore", "p": "subclass_of", "o": "Retail"},
+  {"s": "TrainStation", "p": "subclass_of", "o": "Mobility"},
+  {"s": "PetrolStation", "p": "subclass_of", "o": "Mobility"},
+  {"s": "PostOffice", "p": "subclass_of", "o": "ParcelServices"},
+  {"s": "ParcelShop", "p": "subclass_of", "o": "ParcelServices"},
+  {"s": "ParcelLocker", "p": "subclass_of", "o": "ParcelServices"},
+  {"s": "Hospital", "p": "subclass_of", "o": "Healthcare"},
+  {"s": "Clinic", "p": "subclass_of", "o": "Healthcare"},
+  {"s": "Pharmacy", "p": "subclass_of", "o": "Healthcare"},
+  {"s": "School", "p": "subclass_of", "o": "Education"},
+  {"s": "University", "p": "subclass_of", "o": "Education"},
+  {"s": "VeterinaryClinic", "p": "subclass_of", "o": "AnimalServices"}
+]

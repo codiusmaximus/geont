@@ -1,0 +1,1307 @@
+{
+  "run_id": "20261127T154407Z-gpt-4o-mini",
+  "when": "27 Nov 2026",
+  "model": "gpt-4o-mini",
+  "temperature": 0.0,
+  "format": "en",
+  "split": "real",
+  "versions": [
+    "v0",
+    "v1",
+    "v2"
+  ],
+  "tokens": 114533,
+  "scope": "48 real tasks (easy, medium, hard). English only, one run. Anonymised twins, Turtle, and JSON are not in this run.",
+  "by_version": [
+    {
+      "version": "v0",
+      "exact": 17,
+      "n": 48,
+      "accuracy": 0.3541666666666667
+    },
+    {
+      "version": "v1",
+      "exact": 23,
+      "n": 48,
+      "accuracy": 0.4791666666666667
+    },
+    {
+      "version": "v2",
+      "exact": 23,
+      "n": 48,
+      "accuracy": 0.4791666666666667
+    }
+  ],
+  "by_preset": [
+    {
+      "preset": "easy",
+      "versions": [
+        {
+          "version": "v0",
+          "exact": 9,
+          "n": 16,
+          "accuracy": 0.5625
+        },
+        {
+          "version": "v1",
+          "exact": 12,
+          "n": 16,
+          "accuracy": 0.75
+        },
+        {
+          "version": "v2",
+          "exact": 11,
+          "n": 16,
+          "accuracy": 0.6875
+        }
+      ]
+    },
+    {
+      "preset": "medium",
+      "versions": [
+        {
+          "version": "v0",
+          "exact": 3,
+          "n": 16,
+          "accuracy": 0.1875
+        },
+        {
+          "version": "v1",
+          "exact": 4,
+          "n": 16,
+          "accuracy": 0.25
+        },
+        {
+          "version": "v2",
+          "exact": 5,
+          "n": 16,
+          "accuracy": 0.3125
+        }
+      ]
+    },
+    {
+      "preset": "hard",
+      "versions": [
+        {
+          "version": "v0",
+          "exact": 5,
+          "n": 16,
+          "accuracy": 0.3125
+        },
+        {
+          "version": "v1",
+          "exact": 7,
+          "n": 16,
+          "accuracy": 0.4375
+        },
+        {
+          "version": "v2",
+          "exact": 7,
+          "n": 16,
+          "accuracy": 0.4375
+        }
+      ]
+    }
+  ],
+  "by_type": [
+    {
+      "type": "category_inference",
+      "versions": [
+        {
+          "version": "v0",
+          "exact": 5,
+          "n": 12,
+          "accuracy": 0.4166666666666667
+        },
+        {
+          "version": "v1",
+          "exact": 12,
+          "n": 12,
+          "accuracy": 1.0
+        },
+        {
+          "version": "v2",
+          "exact": 12,
+          "n": 12,
+          "accuracy": 1.0
+        }
+      ]
+    },
+    {
+      "type": "combined_filter",
+      "versions": [
+        {
+          "version": "v0",
+          "exact": 3,
+          "n": 12,
+          "accuracy": 0.25
+        },
+        {
+          "version": "v1",
+          "exact": 4,
+          "n": 12,
+          "accuracy": 0.3333333333333333
+        },
+        {
+          "version": "v2",
+          "exact": 3,
+          "n": 12,
+          "accuracy": 0.25
+        }
+      ]
+    },
+    {
+      "type": "not_determinable",
+      "versions": [
+        {
+          "version": "v0",
+          "exact": 9,
+          "n": 12,
+          "accuracy": 0.75
+        },
+        {
+          "version": "v1",
+          "exact": 7,
+          "n": 12,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "version": "v2",
+          "exact": 7,
+          "n": 12,
+          "accuracy": 0.5833333333333334
+        }
+      ]
+    },
+    {
+      "type": "spatial_inference",
+      "versions": [
+        {
+          "version": "v0",
+          "exact": 0,
+          "n": 12,
+          "accuracy": 0.0
+        },
+        {
+          "version": "v1",
+          "exact": 0,
+          "n": 12,
+          "accuracy": 0.0
+        },
+        {
+          "version": "v2",
+          "exact": 1,
+          "n": 12,
+          "accuracy": 0.08333333333333333
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "category_inference__dx_x0_log__0000",
+      "type": "category_inference",
+      "question": "Is Amazon Locker - Broad a Mobility place?",
+      "gold": "false",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "false"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "false"
+        }
+      ]
+    },
+    {
+      "task_id": "category_inference__dx_x0_log__0001",
+      "type": "category_inference",
+      "question": "Is Gidea Park railway station an Education place?",
+      "gold": "false",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "false"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "false"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "false"
+        }
+      ]
+    },
+    {
+      "task_id": "category_inference__dx_x0_log__0002",
+      "type": "category_inference",
+      "question": "Is Stanmore Hospital a Healthcare facility?",
+      "gold": "true",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "true"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "true"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "true"
+        }
+      ]
+    },
+    {
+      "task_id": "category_inference__dx_x0_log__0003",
+      "type": "category_inference",
+      "question": "Is Bromley Post Office a ParcelServices place?",
+      "gold": "true",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "true"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "true"
+        }
+      ]
+    },
+    {
+      "task_id": "category_inference__dx_x100_shuf__0000",
+      "type": "category_inference",
+      "question": "Is Amazon Locker - Broad a Mobility place?",
+      "gold": "false",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "false"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "false"
+        }
+      ]
+    },
+    {
+      "task_id": "category_inference__dx_x100_shuf__0001",
+      "type": "category_inference",
+      "question": "Is Gidea Park railway station an Education place?",
+      "gold": "false",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "false"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "false"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "false"
+        }
+      ]
+    },
+    {
+      "task_id": "category_inference__dx_x100_shuf__0002",
+      "type": "category_inference",
+      "question": "Is Stanmore Hospital a Healthcare facility?",
+      "gold": "true",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "true"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "true"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "true"
+        }
+      ]
+    },
+    {
+      "task_id": "category_inference__dx_x100_shuf__0003",
+      "type": "category_inference",
+      "question": "Is Bromley Post Office a ParcelServices place?",
+      "gold": "true",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "false"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "true"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "true"
+        }
+      ]
+    },
+    {
+      "task_id": "category_inference__dx_x25_shuf__0000",
+      "type": "category_inference",
+      "question": "Is Amazon Locker - Broad a Mobility place?",
+      "gold": "false",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "false"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "false"
+        }
+      ]
+    },
+    {
+      "task_id": "category_inference__dx_x25_shuf__0001",
+      "type": "category_inference",
+      "question": "Is Gidea Park railway station an Education place?",
+      "gold": "false",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "false"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "false"
+        }
+      ]
+    },
+    {
+      "task_id": "category_inference__dx_x25_shuf__0002",
+      "type": "category_inference",
+      "question": "Is Stanmore Hospital a Healthcare facility?",
+      "gold": "true",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "true"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "true"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "true"
+        }
+      ]
+    },
+    {
+      "task_id": "category_inference__dx_x25_shuf__0003",
+      "type": "category_inference",
+      "question": "Is Bromley Post Office a ParcelServices place?",
+      "gold": "true",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "false"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "true"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "true"
+        }
+      ]
+    },
+    {
+      "task_id": "combined_filter__d2_x0_log__0000",
+      "type": "combined_filter",
+      "question": "Which Retail places are within Harrow and Hillingdon?",
+      "gold": "Lidl, Iceland, Athavan Superstore Harrow, Asda South Ruislip, Aldi Sud",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "Lidl, Iceland, Athavan Superstore Harrow, Asda South Ruislip, Aldi Sud"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "Lidl, Iceland, Athavan Superstore Harrow, Asda South Ruislip, Aldi Sud"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "Lidl, Iceland, Athavan Superstore Harrow, Asda South Ruislip, Aldi Sud"
+        }
+      ]
+    },
+    {
+      "task_id": "combined_filter__d2_x0_log__0001",
+      "type": "combined_filter",
+      "question": "Which Healthcare places are within Enfield?",
+      "gold": "Bowes Road Clinic, LloydsPharmacy, Priory Hospital Enfield, Universal Hospital Supplies",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "Bowes Road Clinic, LloydsPharmacy, Priory Hospital Enfield, Universal Hospital Supplies"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "Bowes Road Clinic, LloydsPharmacy, Priory Hospital Enfield, Universal Hospital Supplies"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "Bowes Road Clinic, LloydsPharmacy, Priory Hospital Enfield, Universal Hospital Supplies"
+        }
+      ]
+    },
+    {
+      "task_id": "combined_filter__d2_x0_log__0002",
+      "type": "combined_filter",
+      "question": "Which ParcelServices places are within Westminster?",
+      "gold": "Ok-mail, Great Portland Street Post Office, Mail Boxes Etc. UK",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": ""
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "Ok-mail, Great Portland Street Post Office, Mail Boxes Etc. UK"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Great Portland Street Post Office, Mail Boxes Etc. UK"
+        }
+      ]
+    },
+    {
+      "task_id": "combined_filter__d2_x0_log__0003",
+      "type": "combined_filter",
+      "question": "Which Mobility places are within Hackney and Newham?",
+      "gold": "Central railway station (London)",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "Central railway station (London)"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "Central railway station (London)"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "Central railway station (London)"
+        }
+      ]
+    },
+    {
+      "task_id": "combined_filter__d3_x100_shuf__0000",
+      "type": "combined_filter",
+      "question": "Which Retail places are within Outer London \u2014 West and North West?",
+      "gold": "Lidl, Dandra Food & Wine London, Lidl, Barnes Food Fair, Iceland, Athavan Superstore Harrow, Asda, Asda South Ruislip, Kundola General Store, Hampton Hill Local, Aldi Sud",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "Kundola General Store, Aaa Convenience Store, Sainsbury's Local, Quick Stop London, Alan's Home Care, Dandra Food & Wine London, Genesis Supermarket, Budgens, Haselbury Food&wine, Hampton Hill Local, Athavan Superstore Harrow, Barnes Food Fair, Asda Hillingdon Express Petrol, Asda South Ruislip, Asda Tottenham High Road, Asda Clapham Junction Superstore, Asda Superstore, Iceland, Lidl, Tesco Esso Express, Shell, Esso"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Iceland, Asda, Asda South Ruislip, Aldi Sud, Co-op Food, Costcutter - Wandsworth Bridge Road, London, Kundola General Store, B&b Off Licence (dunton Express), Arsenal Mini Market London, Figaro's Newsagents, Quick Stop London, Alan's Home Care, Barnes Food Fair, Genesis Supermarket, Budgens, Haselbury Food&wine, Hampton Hill Local, Sainsbury's Local"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Iceland, Asda, Aldi Sud, Lidl, Co-op Food, Costcutter - Wandsworth Bridge Road, London, Kundola General Store, B&b Off Licence (dunton Express), Arsenal Mini Market London, Figaro's Newsagents, Quick Stop London, Alan's Home Care, Barnes Food Fair, Dandra Food & Wine London, Genesis Supermarket, Budgens, Haselbury Food&wine, Hampton Hill Local, Sainsbury's Local"
+        }
+      ]
+    },
+    {
+      "task_id": "combined_filter__d3_x100_shuf__0001",
+      "type": "combined_filter",
+      "question": "Which Healthcare places are within Outer London \u2014 East and North East?",
+      "gold": "\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438 \u0423\u041d\u0413 \u043b\u0435\u043a\u0430\u0440 - \u041b\u043e\u043d\u0434\u043e\u043d: \u0423\u0448\u0438, \u043d\u043e\u0441, \u0433\u044a\u0440\u043b\u043e - Val Clinic, Maplestead Pharmacy, London Slimming Clinic, Chelsea And Westminster Hospital Delivery Bay, Bowes Road Clinic, Flu Jabs Clinic Welling - Bellegrove Pharmacy, LloydsPharmacy, Priory Hospital Enfield, Universal Hospital Supplies, Hainault Pharmacy, Mon\u00e9t Ward - Goodmayes Hospital",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "Mon\u00e9t Ward - Goodmayes Hospital, Barking and Dagenham, Havering, Enfield, Waltham Forest, Redbridge"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Bromley Hospital, Mon\u00e9t Ward - Goodmayes Hospital, St. Thoma's Hospital, King's College Hospital, University College Hospital, West London Mental Health Trust, St. Bernard's Hospital, Education Academy, Mile End Hospital, Croydon Day Hospital, Royal London Hospital Clinic 3"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Bromley Hospital, Mon\u00e9t Ward - Goodmayes Hospital, St. Thoma's Hospital, King's College Hospital, University College Hospital, Chelsea And Westminster Hospital Delivery Bay, West London Mental Health Trust, St. Bernard's Hospital, Education Academy, Mile End Hospital, Medical HDU Northwick Park Hospital, Royal London Hospital Clinic 3"
+        }
+      ]
+    },
+    {
+      "task_id": "combined_filter__d3_x100_shuf__0002",
+      "type": "combined_filter",
+      "question": "Which ParcelServices places are within Inner London \u2014 West?",
+      "gold": "Ok-mail, Great Portland Street Post Office, Post Office-Roehampton High Street 35, Evri ParcelShop, UPS Access Point, Amazon Locker - Juniper, Munster Road Post Office, Post Office (Royal Hospital Chelsea), Balham Post Office, Mail Shop, Mail Boxes Etc. UK",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "Evri ParcelShop, Chiswick Delivery Office, UPS Access Point, Post Office (Royal Hospital Chelsea), Mail Boxes Etc. UK, Post Office-Manor Road"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Evri ParcelShop, Mail Shop, Post Office (Royal Hospital Chelsea), Post Office-Manor Road, Mail Boxes Etc. UK, Chiswick Delivery Office, UPS Access Point, Munster Road Post Office, Great Portland Street Post Office, Balham Post Office, Royal Mail Islington Delivery Office, Upper Sydenham Drop & Collect Post Office, Hounslow Heath Post Office, Burnt Ash Hill Post Office, Ok-mail"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Evri ParcelShop, Mail Shop, Post Office (Royal Hospital Chelsea), Post Office-Manor Road, Great Portland Street Post Office, Munster Road Post Office, Royal Mail, Balham Post Office, Ok-mail, Upper Sydenham Drop & Collect Post Office, Chiswick Delivery Office, Burnt Ash Hill Post Office, Hounslow Heath Post Office, Post Office-Roehampton High Street 35, Post Office-Swingate Lane, Crofton Lane Post Office, Sutton Enquiry Office, Mail Boxes Etc. UK, UPS Access Point, Amazon Locker - Juniper, InPost, Yeep"
+        }
+      ]
+    },
+    {
+      "task_id": "combined_filter__d3_x100_shuf__0003",
+      "type": "combined_filter",
+      "question": "Which Mobility places are within Inner London \u2014 East?",
+      "gold": "Texaco, Cambridge Heath railway station, Basingstoke Train Station, Texaco, Forest Hill Railway Station (FOH), Vauxhall Railway Station (VXH), Central railway station (London), Violet Road Service Station, Palace Gates railway station, Esso, Gipsy Hill railway station",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "Hackney and Newham"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Euston Station Platform 15, Central railway station (London), Cambridge Heath railway station, Forest Hill Railway Station (FOH), Basingstoke Train Station, Vauxhall Railway Station (VXH), Turkey Street Rail Station, Nothing Hill Station"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Richmond Railway Station, Cambridge Heath railway station, Euston Station Platform 15, Forest Hill Railway Station, Vauxhall Railway Station, Basingstoke Train Station, Central railway station (London), Nothing Hill Station"
+        }
+      ]
+    },
+    {
+      "task_id": "combined_filter__d3_x25_shuf__0000",
+      "type": "combined_filter",
+      "question": "Which Retail places are within Outer London \u2014 West and North West?",
+      "gold": "Lidl, Dandra Food & Wine London, Lidl, Barnes Food Fair, Iceland, Athavan Superstore Harrow, Asda, Asda South Ruislip, Kundola General Store, Hampton Hill Local, Aldi Sud",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "Asda, Lidl, Waitrose & Partners, Aldi Sud, Iceland, Asda Tottenham High Road, Asda Clapham Junction Superstore, Asda South Ruislip"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Asda, Lidl, Waitrose & Partners, Aldi Sud, Iceland, Asda Tottenham High Road, Asda Clapham Junction Superstore, Sainsbury's Local, Barnes Food Fair, Dandra Food & Wine London, Athavan Superstore Harrow, Hampton Hill Local"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Asda, Lidl, Aldi Sud, Waitrose & Partners, Asda Tottenham High Road, Asda Clapham Junction Superstore, Iceland, Dandra Food & Wine London, Sainsbury's Local, Barnes Food Fair, Athavan Superstore Harrow"
+        }
+      ]
+    },
+    {
+      "task_id": "combined_filter__d3_x25_shuf__0001",
+      "type": "combined_filter",
+      "question": "Which Healthcare places are within Outer London \u2014 East and North East?",
+      "gold": "\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438 \u0423\u041d\u0413 \u043b\u0435\u043a\u0430\u0440 - \u041b\u043e\u043d\u0434\u043e\u043d: \u0423\u0448\u0438, \u043d\u043e\u0441, \u0433\u044a\u0440\u043b\u043e - Val Clinic, Maplestead Pharmacy, London Slimming Clinic, Chelsea And Westminster Hospital Delivery Bay, Bowes Road Clinic, Flu Jabs Clinic Welling - Bellegrove Pharmacy, LloydsPharmacy, Priory Hospital Enfield, Universal Hospital Supplies, Hainault Pharmacy, Mon\u00e9t Ward - Goodmayes Hospital",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "Hospital of St Thomas of Acre, Universal Hospital Supplies, West Middlesex University Hospital, Priory Hospital Enfield, Mon\u00e9t Ward - Goodmayes Hospital, Chelsea And Westminster Hospital Delivery Bay, London Slimming Clinic, Cholesterol Clinic For Children And Families, Flu Jabs Clinic Welling - Bellegrove Pharmacy, Bowes Road Clinic, \u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438 \u0423\u041d\u0413 \u043b\u0435\u043a\u0430\u0440 - \u041b\u043e\u043d\u0434\u043e\u043d: \u0423\u0448\u0438, \u043d\u043e\u0441, \u0433\u044a\u0440\u043b\u043e - Val Clinic"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Chelsea And Westminster Hospital Delivery Bay, Universal Hospital Supplies, West Middlesex University Hospital, Mon\u00e9t Ward - Goodmayes Hospital, Priory Hospital Enfield"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Hospital of St Thomas of Acre, Universal Hospital Supplies, West Middlesex University Hospital, Priory Hospital Enfield, Mon\u00e9t Ward - Goodmayes Hospital, Chelsea And Westminster Hospital Delivery Bay"
+        }
+      ]
+    },
+    {
+      "task_id": "combined_filter__d3_x25_shuf__0002",
+      "type": "combined_filter",
+      "question": "Which ParcelServices places are within Inner London \u2014 West?",
+      "gold": "Ok-mail, Great Portland Street Post Office, Post Office-Roehampton High Street 35, Evri ParcelShop, UPS Access Point, Amazon Locker - Juniper, Munster Road Post Office, Post Office (Royal Hospital Chelsea), Balham Post Office, Mail Shop, Mail Boxes Etc. UK",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "UPS Access Point, Mail Boxes Etc. UK, Evri ParcelShop, Post Office (Royal Hospital Chelsea)"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Great Portland Street Post Office, Post Office (Royal Hospital Chelsea), Post Office-Swingate Lane, Ok-mail, Royal Mail, San Marino Mail UK, Post Office"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Great Portland Street Post Office, Post Office (Royal Hospital Chelsea), Post Office-Swingate Lane, Ok-mail, Royal Mail Islington Delivery Office, San Marino Mail UK, Post Office"
+        }
+      ]
+    },
+    {
+      "task_id": "combined_filter__d3_x25_shuf__0003",
+      "type": "combined_filter",
+      "question": "Which Mobility places are within Inner London \u2014 East?",
+      "gold": "Texaco, Cambridge Heath railway station, Basingstoke Train Station, Texaco, Forest Hill Railway Station (FOH), Vauxhall Railway Station (VXH), Central railway station (London), Violet Road Service Station, Palace Gates railway station, Esso, Gipsy Hill railway station",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Cambridge Heath railway station, Basingstoke Train Station, Vauxhall Railway Station (VXH), Forest Hill Railway Station (FOH), Central railway station (London), Gipsy Hill railway station, Wimbledon Railway Station (WIM), Gidea Park railway station, Enfield Town railway station"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Cambridge Heath railway station, Basingstoke Train Station, Central railway station (London), Vauxhall Railway Station (VXH), Forest Hill Railway Station (FOH), Gipsy Hill railway station, Wimbledon Railway Station (WIM), Gidea Park railway station, Enfield Town railway station"
+        }
+      ]
+    },
+    {
+      "task_id": "not_determinable__d2_x0_log__0000",
+      "type": "not_determinable",
+      "question": "Which NUTS-3 region is Martin Way within?",
+      "gold": "CANNOT_DETERMINE",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    },
+    {
+      "task_id": "not_determinable__d2_x0_log__0001",
+      "type": "not_determinable",
+      "question": "Which NUTS-3 region is The University of Law - London Bloomsbury within?",
+      "gold": "CANNOT_DETERMINE",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    },
+    {
+      "task_id": "not_determinable__d2_x0_log__0002",
+      "type": "not_determinable",
+      "question": "Which NUTS-3 region is InPost within?",
+      "gold": "CANNOT_DETERMINE",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    },
+    {
+      "task_id": "not_determinable__d2_x0_log__0003",
+      "type": "not_determinable",
+      "question": "Which NUTS-3 region is Tesco Express within?",
+      "gold": "CANNOT_DETERMINE",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    },
+    {
+      "task_id": "not_determinable__d3_x25_shuf__0000",
+      "type": "not_determinable",
+      "question": "Which NUTS-2 region is Martin Way within?",
+      "gold": "CANNOT_DETERMINE",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Merton"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Merton"
+        }
+      ]
+    },
+    {
+      "task_id": "not_determinable__d3_x25_shuf__0001",
+      "type": "not_determinable",
+      "question": "Which NUTS-2 region is The University of Law - London Bloomsbury within?",
+      "gold": "CANNOT_DETERMINE",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Camden"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Camden"
+        }
+      ]
+    },
+    {
+      "task_id": "not_determinable__d3_x25_shuf__0002",
+      "type": "not_determinable",
+      "question": "Which NUTS-2 region is InPost within?",
+      "gold": "CANNOT_DETERMINE",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "Richmond upon Thames"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Richmond upon Thames"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Richmond upon Thames"
+        }
+      ]
+    },
+    {
+      "task_id": "not_determinable__d3_x25_shuf__0003",
+      "type": "not_determinable",
+      "question": "Which NUTS-2 region is Tesco Express within?",
+      "gold": "CANNOT_DETERMINE",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "Lambeth"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Lambeth"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Lambeth"
+        }
+      ]
+    },
+    {
+      "task_id": "not_determinable__d4_x100_shuf__0000",
+      "type": "not_determinable",
+      "question": "Which NUTS-1 region is Martin Way within?",
+      "gold": "CANNOT_DETERMINE",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    },
+    {
+      "task_id": "not_determinable__d4_x100_shuf__0001",
+      "type": "not_determinable",
+      "question": "Which NUTS-1 region is The University of Law - London Bloomsbury within?",
+      "gold": "CANNOT_DETERMINE",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    },
+    {
+      "task_id": "not_determinable__d4_x100_shuf__0002",
+      "type": "not_determinable",
+      "question": "Which NUTS-1 region is InPost within?",
+      "gold": "CANNOT_DETERMINE",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "Richmond upon Thames"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Richmond upon Thames"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Richmond upon Thames"
+        }
+      ]
+    },
+    {
+      "task_id": "not_determinable__d4_x100_shuf__0003",
+      "type": "not_determinable",
+      "question": "Which NUTS-1 region is Tesco Express within?",
+      "gold": "CANNOT_DETERMINE",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    },
+    {
+      "task_id": "spatial_inference__d2_x0_log__0000",
+      "type": "spatial_inference",
+      "question": "Which NUTS-3 region is Post Office-Lea Bridge Road 333 within?",
+      "gold": "Redbridge and Waltham Forest",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Redbridge"
+        }
+      ]
+    },
+    {
+      "task_id": "spatial_inference__d2_x0_log__0001",
+      "type": "spatial_inference",
+      "question": "Which NUTS-3 region is Gipsy Hill railway station within?",
+      "gold": "Lambeth",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    },
+    {
+      "task_id": "spatial_inference__d2_x0_log__0002",
+      "type": "spatial_inference",
+      "question": "Which NUTS-3 region is Coopers within?",
+      "gold": "Brent",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Brent"
+        }
+      ]
+    },
+    {
+      "task_id": "spatial_inference__d2_x0_log__0003",
+      "type": "spatial_inference",
+      "question": "Which NUTS-3 region is JET within?",
+      "gold": "Redbridge and Waltham Forest",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "Waltham Forest"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Waltham Forest"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Waltham Forest"
+        }
+      ]
+    },
+    {
+      "task_id": "spatial_inference__d3_x25_shuf__0000",
+      "type": "spatial_inference",
+      "question": "Which NUTS-2 region is Post Office-Lea Bridge Road 333 within?",
+      "gold": "Outer London \u2014 East and North East",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "Waltham Forest"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "Waltham Forest"
+        },
+        {
+          "version": "v2",
+          "exact": true,
+          "answer": "Outer London \u2014 East and North East"
+        }
+      ]
+    },
+    {
+      "task_id": "spatial_inference__d3_x25_shuf__0001",
+      "type": "spatial_inference",
+      "question": "Which NUTS-2 region is Gipsy Hill railway station within?",
+      "gold": "Inner London \u2014 East",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "Lambeth"
+        }
+      ]
+    },
+    {
+      "task_id": "spatial_inference__d3_x25_shuf__0002",
+      "type": "spatial_inference",
+      "question": "Which NUTS-2 region is Coopers within?",
+      "gold": "Outer London \u2014 West and North West",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    },
+    {
+      "task_id": "spatial_inference__d3_x25_shuf__0003",
+      "type": "spatial_inference",
+      "question": "Which NUTS-2 region is JET within?",
+      "gold": "Outer London \u2014 East and North East",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    },
+    {
+      "task_id": "spatial_inference__d4_x100_shuf__0000",
+      "type": "spatial_inference",
+      "question": "Which NUTS-1 region is Post Office-Lea Bridge Road 333 within?",
+      "gold": "London",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "Waltham Forest"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    },
+    {
+      "task_id": "spatial_inference__d4_x100_shuf__0001",
+      "type": "spatial_inference",
+      "question": "Which NUTS-1 region is Gipsy Hill railway station within?",
+      "gold": "London",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    },
+    {
+      "task_id": "spatial_inference__d4_x100_shuf__0002",
+      "type": "spatial_inference",
+      "question": "Which NUTS-1 region is Coopers within?",
+      "gold": "London",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    },
+    {
+      "task_id": "spatial_inference__d4_x100_shuf__0003",
+      "type": "spatial_inference",
+      "question": "Which NUTS-1 region is JET within?",
+      "gold": "London",
+      "cells": [
+        {
+          "version": "v0",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v1",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        },
+        {
+          "version": "v2",
+          "exact": false,
+          "answer": "CANNOT_DETERMINE"
+        }
+      ]
+    }
+  ],
+  "note": "v2 English is the v1 definitions plus the five rules."
+}

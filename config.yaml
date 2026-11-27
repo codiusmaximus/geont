@@ -39,6 +39,8 @@ tasks:
 conditions:
   - {version: v0, format: en}
   - {version: v1, format: en}
+  - {version: v1, format: ttl}
+  - {version: v1, format: json}
   - {version: v2, format: en}
   - {version: v2, format: ttl}
   - {version: v2, format: json}

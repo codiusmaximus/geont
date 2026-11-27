@@ -1,0 +1,282 @@
+{
+  "experiment": "format",
+  "run_id": "20261127T155858Z-gpt-4o-mini",
+  "when": "27 Nov 2026",
+  "model": "gpt-4o-mini",
+  "temperature": 0,
+  "versions": [
+    "v1",
+    "v2"
+  ],
+  "formats": [
+    "ttl",
+    "json"
+  ],
+  "tokens": 345527,
+  "scope": "48 real tasks. v1 and v2 in Turtle and JSON. Separate from the English run.",
+  "cells": [
+    {
+      "version": "v1",
+      "format": "ttl",
+      "exact": 25,
+      "n": 48,
+      "accuracy": 0.5208333333333334
+    },
+    {
+      "version": "v1",
+      "format": "json",
+      "exact": 15,
+      "n": 48,
+      "accuracy": 0.3125
+    },
+    {
+      "version": "v2",
+      "format": "ttl",
+      "exact": 22,
+      "n": 48,
+      "accuracy": 0.4583333333333333
+    },
+    {
+      "version": "v2",
+      "format": "json",
+      "exact": 12,
+      "n": 48,
+      "accuracy": 0.25
+    }
+  ],
+  "by_preset": [
+    {
+      "preset": "easy",
+      "cells": [
+        {
+          "version": "v1",
+          "format": "ttl",
+          "exact": 10,
+          "n": 16,
+          "accuracy": 0.625
+        },
+        {
+          "version": "v1",
+          "format": "json",
+          "exact": 8,
+          "n": 16,
+          "accuracy": 0.5
+        },
+        {
+          "version": "v2",
+          "format": "ttl",
+          "exact": 8,
+          "n": 16,
+          "accuracy": 0.5
+        },
+        {
+          "version": "v2",
+          "format": "json",
+          "exact": 4,
+          "n": 16,
+          "accuracy": 0.25
+        }
+      ]
+    },
+    {
+      "preset": "medium",
+      "cells": [
+        {
+          "version": "v1",
+          "format": "ttl",
+          "exact": 7,
+          "n": 16,
+          "accuracy": 0.4375
+        },
+        {
+          "version": "v1",
+          "format": "json",
+          "exact": 2,
+          "n": 16,
+          "accuracy": 0.125
+        },
+        {
+          "version": "v2",
+          "format": "ttl",
+          "exact": 7,
+          "n": 16,
+          "accuracy": 0.4375
+        },
+        {
+          "version": "v2",
+          "format": "json",
+          "exact": 3,
+          "n": 16,
+          "accuracy": 0.1875
+        }
+      ]
+    },
+    {
+      "preset": "hard",
+      "cells": [
+        {
+          "version": "v1",
+          "format": "ttl",
+          "exact": 8,
+          "n": 16,
+          "accuracy": 0.5
+        },
+        {
+          "version": "v1",
+          "format": "json",
+          "exact": 5,
+          "n": 16,
+          "accuracy": 0.3125
+        },
+        {
+          "version": "v2",
+          "format": "ttl",
+          "exact": 7,
+          "n": 16,
+          "accuracy": 0.4375
+        },
+        {
+          "version": "v2",
+          "format": "json",
+          "exact": 5,
+          "n": 16,
+          "accuracy": 0.3125
+        }
+      ]
+    }
+  ],
+  "by_type": [
+    {
+      "type": "category_inference",
+      "cells": [
+        {
+          "version": "v1",
+          "format": "ttl",
+          "exact": 12,
+          "n": 12,
+          "accuracy": 1.0
+        },
+        {
+          "version": "v1",
+          "format": "json",
+          "exact": 6,
+          "n": 12,
+          "accuracy": 0.5
+        },
+        {
+          "version": "v2",
+          "format": "ttl",
+          "exact": 11,
+          "n": 12,
+          "accuracy": 0.9166666666666666
+        },
+        {
+          "version": "v2",
+          "format": "json",
+          "exact": 6,
+          "n": 12,
+          "accuracy": 0.5
+        }
+      ]
+    },
+    {
+      "type": "combined_filter",
+      "cells": [
+        {
+          "version": "v1",
+          "format": "ttl",
+          "exact": 4,
+          "n": 12,
+          "accuracy": 0.3333333333333333
+        },
+        {
+          "version": "v1",
+          "format": "json",
+          "exact": 1,
+          "n": 12,
+          "accuracy": 0.08333333333333333
+        },
+        {
+          "version": "v2",
+          "format": "ttl",
+          "exact": 3,
+          "n": 12,
+          "accuracy": 0.25
+        },
+        {
+          "version": "v2",
+          "format": "json",
+          "exact": 0,
+          "n": 12,
+          "accuracy": 0.0
+        }
+      ]
+    },
+    {
+      "type": "not_determinable",
+      "cells": [
+        {
+          "version": "v1",
+          "format": "ttl",
+          "exact": 7,
+          "n": 12,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "version": "v1",
+          "format": "json",
+          "exact": 7,
+          "n": 12,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "version": "v2",
+          "format": "ttl",
+          "exact": 7,
+          "n": 12,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "version": "v2",
+          "format": "json",
+          "exact": 5,
+          "n": 12,
+          "accuracy": 0.4166666666666667
+        }
+      ]
+    },
+    {
+      "type": "spatial_inference",
+      "cells": [
+        {
+          "version": "v1",
+          "format": "ttl",
+          "exact": 2,
+          "n": 12,
+          "accuracy": 0.16666666666666666
+        },
+        {
+          "version": "v1",
+          "format": "json",
+          "exact": 1,
+          "n": 12,
+          "accuracy": 0.08333333333333333
+        },
+        {
+          "version": "v2",
+          "format": "ttl",
+          "exact": 1,
+          "n": 12,
+          "accuracy": 0.08333333333333333
+        },
+        {
+          "version": "v2",
+          "format": "json",
+          "exact": 1,
+          "n": 12,
+          "accuracy": 0.08333333333333333
+        }
+      ]
+    }
+  ]
+}
